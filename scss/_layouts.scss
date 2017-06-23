@@ -1,0 +1,7 @@
+.navbar {
+  &.fixed-top {
+    + .container-fluid {
+      padding-top: 3.5rem;
+    }
+  }
+}

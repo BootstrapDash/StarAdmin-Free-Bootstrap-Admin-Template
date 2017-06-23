@@ -1,0 +1,26 @@
+.navbar {
+  .navbar-brand {
+    color: lighten($gray-dark, 20%);
+    font-size: 2rem;
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($gray-dark, 10%);
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: lighten($brand-primary, 50%);
+    }
+  }
+}
+
+@media (max-width:991px) {
+  .navbar {
+    flex-direction: row;
+  }
+  .navbar-collapse {
+    display: flex;
+    margin-top: .5rem;
+  }
+}

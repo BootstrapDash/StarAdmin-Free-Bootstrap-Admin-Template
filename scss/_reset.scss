@@ -1,0 +1,9 @@
+html,
+body {
+  overflow-x: hidden;
+}
+button {
+  &:focus {
+    outline: 0;
+  }
+}

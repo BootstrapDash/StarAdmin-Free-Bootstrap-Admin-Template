@@ -1,0 +1,14 @@
+.navbar{
+  .search {
+    width: 200px;
+    border-radius: 100px;
+    font-size: 14px;
+    transition: 0.5s ease-in;
+    &:focus {
+      width: 240px;
+    }
+  }
+}
+.input-group-addon {
+  width: 40px;
+}

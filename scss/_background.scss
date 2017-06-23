@@ -1,0 +1,6 @@
+.bg-white {
+  @include bg(white);
+}
+.bg-primary-gradient {
+  @include bg-gradient($brand-gradient-left,$brand-gradient-right);
+}

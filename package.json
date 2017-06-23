@@ -1,0 +1,36 @@
+{
+  "name": "star",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "tether": "^1.4.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "chart.js": "^2.6.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-bower-src": "^0.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bootstrapdash",
+  "url": "http://www.bootstrapdash.com/",
+  "copyright": "",
+  "license": ""
+}
