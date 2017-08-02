@@ -1,0 +1,114 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "gulp-filter@^4.0.0",
+        "scope": null,
+        "escapedName": "gulp-filter",
+        "name": "gulp-filter",
+        "rawSpec": "^4.0.0",
+        "spec": ">=4.0.0 <5.0.0",
+        "type": "range"
+      },
+      "/var/www/html/Project/star"
+    ]
+  ],
+  "_from": "gulp-filter@>=4.0.0 <5.0.0",
+  "_id": "gulp-filter@4.0.0",
+  "_inCache": true,
+  "_location": "/gulp-filter",
+  "_nodeVersion": "4.3.0",
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/gulp-filter-4.0.0.tgz_1456828231357_0.5486240203026682"
+  },
+  "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "gulp-filter@^4.0.0",
+    "scope": null,
+    "escapedName": "gulp-filter",
+    "name": "gulp-filter",
+    "rawSpec": "^4.0.0",
+    "spec": ">=4.0.0 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gulp-filter/-/gulp-filter-4.0.0.tgz",
+  "_shasum": "395f58a256c559cdb9e0d157f1caaf5248a38dcb",
+  "_shrinkwrap": null,
+  "_spec": "gulp-filter@^4.0.0",
+  "_where": "/var/www/html/Project/star",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sindresorhus/gulp-filter/issues"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "multimatch": "^2.0.0",
+    "streamfilter": "^1.0.5"
+  },
+  "description": "Filter files in a vinyl stream",
+  "devDependencies": {
+    "mocha": "*",
+    "xo": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "395f58a256c559cdb9e0d157f1caaf5248a38dcb",
+    "tarball": "https://registry.npmjs.org/gulp-filter/-/gulp-filter-4.0.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "gitHead": "317ec39721b463fda90ba0d9a458cea98e2cfc49",
+  "homepage": "https://github.com/sindresorhus/gulp-filter",
+  "keywords": [
+    "gulpplugin",
+    "filter",
+    "ignore",
+    "file",
+    "files",
+    "match",
+    "minimatch",
+    "glob",
+    "globbing"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "sindresorhus",
+      "email": "sindresorhus@gmail.com"
+    }
+  ],
+  "name": "gulp-filter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sindresorhus/gulp-filter.git"
+  },
+  "scripts": {
+    "test": "xo && mocha"
+  },
+  "version": "4.0.0",
+  "xo": {
+    "envs": [
+      "node",
+      "mocha"
+    ]
+  }
+}

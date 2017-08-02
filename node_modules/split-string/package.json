@@ -1,0 +1,138 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "split-string@^1.0.1",
+        "scope": null,
+        "escapedName": "split-string",
+        "name": "split-string",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "/var/www/html/Project/star/node_modules/group-array"
+    ]
+  ],
+  "_from": "split-string@>=1.0.1 <2.0.0",
+  "_id": "split-string@1.0.1",
+  "_inCache": true,
+  "_location": "/split-string",
+  "_nodeVersion": "6.10.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/split-string-1.0.1.tgz_1491952105612_0.6221484744455665"
+  },
+  "_npmUser": {
+    "name": "doowb",
+    "email": "brian.woodward@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "split-string@^1.0.1",
+    "scope": null,
+    "escapedName": "split-string",
+    "name": "split-string",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/group-array"
+  ],
+  "_resolved": "https://registry.npmjs.org/split-string/-/split-string-1.0.1.tgz",
+  "_shasum": "bcbab3f4152acee3a0d6ab2479c0d2879c3db3ce",
+  "_shrinkwrap": null,
+  "_spec": "split-string@^1.0.1",
+  "_where": "/var/www/html/Project/star/node_modules/group-array",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/split-string/issues"
+  },
+  "contributors": [
+    {
+      "name": "Brian Woodward",
+      "email": "brian.woodward@gmail.com",
+      "url": "https://twitter.com/doowb"
+    },
+    {
+      "name": "Jon Schlinkert",
+      "email": "jon.schlinkert@sellside.com",
+      "url": "http://twitter.com/jonschlinkert"
+    }
+  ],
+  "dependencies": {
+    "extend-shallow": "^2.0.1"
+  },
+  "description": "Split a string on a character except when the character is escaped.",
+  "devDependencies": {
+    "gulp-format-md": "^0.1.11",
+    "mocha": "^3.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "bcbab3f4152acee3a0d6ab2479c0d2879c3db3ce",
+    "tarball": "https://registry.npmjs.org/split-string/-/split-string-1.0.1.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "gitHead": "e88c24d4ca8453e2d466956f0c73ee9ccd93051d",
+  "homepage": "https://github.com/jonschlinkert/split-string",
+  "keywords": [
+    "character",
+    "escape",
+    "split",
+    "string"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "doowb",
+      "email": "brian.woodward@gmail.com"
+    },
+    {
+      "name": "jonschlinkert",
+      "email": "github@sellside.com"
+    }
+  ],
+  "name": "split-string",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonschlinkert/split-string.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "verb": {
+    "related": {
+      "list": [
+        "deromanize",
+        "randomatic",
+        "repeat-string",
+        "romanize"
+      ]
+    },
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  },
+  "version": "1.0.1"
+}

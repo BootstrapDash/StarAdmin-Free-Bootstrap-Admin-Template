@@ -8,6 +8,7 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "jquery": "^3.2.1",
+    "perfect-scrollbar": "^0.7.1",
     "tether": "^1.4.0"
   },
   "devDependencies": {

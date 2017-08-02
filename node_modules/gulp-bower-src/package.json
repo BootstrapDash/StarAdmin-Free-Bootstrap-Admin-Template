@@ -1,0 +1,117 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "gulp-bower-src@^0.1.0",
+        "scope": null,
+        "escapedName": "gulp-bower-src",
+        "name": "gulp-bower-src",
+        "rawSpec": "^0.1.0",
+        "spec": ">=0.1.0 <0.2.0",
+        "type": "range"
+      },
+      "/var/www/html/Project/star"
+    ]
+  ],
+  "_from": "gulp-bower-src@>=0.1.0 <0.2.0",
+  "_id": "gulp-bower-src@0.1.0",
+  "_inCache": true,
+  "_location": "/gulp-bower-src",
+  "_npmUser": {
+    "name": "bclozel",
+    "email": "bclozel@gopivotal.com"
+  },
+  "_npmVersion": "1.4.14",
+  "_phantomChildren": {
+    "clone-stats": "0.0.1",
+    "core-util-is": "1.0.2",
+    "escape-string-regexp": "1.0.5",
+    "get-stdin": "4.0.1",
+    "inherits": "2.0.3",
+    "isarray": "0.0.1",
+    "lodash._escapehtmlchar": "2.4.1",
+    "lodash._escapestringchar": "2.4.1",
+    "lodash._isnative": "2.4.1",
+    "lodash._reunescapedhtml": "2.4.1",
+    "lodash._shimkeys": "2.4.1",
+    "lodash.defaults": "2.4.1",
+    "lodash.isobject": "2.4.1",
+    "lodash.values": "2.4.1",
+    "meow": "3.7.0",
+    "multipipe": "0.1.2",
+    "string_decoder": "0.10.31"
+  },
+  "_requested": {
+    "raw": "gulp-bower-src@^0.1.0",
+    "scope": null,
+    "escapedName": "gulp-bower-src",
+    "name": "gulp-bower-src",
+    "rawSpec": "^0.1.0",
+    "spec": ">=0.1.0 <0.2.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gulp-bower-src/-/gulp-bower-src-0.1.0.tgz",
+  "_shasum": "137859b7e1f326b4a8d841d14ea1bba3ed6ed185",
+  "_shrinkwrap": null,
+  "_spec": "gulp-bower-src@^0.1.0",
+  "_where": "/var/www/html/Project/star",
+  "author": {
+    "name": "Brian Clozel",
+    "email": "bclozel@gopivotal.com",
+    "url": "http://spring.io"
+  },
+  "bugs": {
+    "url": "https://github.com/bclozel/gulp-bower-src/issues"
+  },
+  "dependencies": {
+    "dependency-graph": "~0.1.0",
+    "gulp-util": "~2.2.0"
+  },
+  "description": "gulp-src bower files",
+  "devDependencies": {
+    "event-stream": "~3.1.0",
+    "gulp": "~3.8.0",
+    "mocha": "*",
+    "should": "~4.0.4"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "137859b7e1f326b4a8d841d14ea1bba3ed6ed185",
+    "tarball": "https://registry.npmjs.org/gulp-bower-src/-/gulp-bower-src-0.1.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "gitHead": "218e135d528edb2e1eb18de8b7f58081c504a244",
+  "homepage": "https://github.com/bclozel/gulp-bower-src",
+  "keywords": [
+    "gulpplugin",
+    "bower",
+    "overrides",
+    "components"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "bclozel",
+      "email": "bclozel@gopivotal.com"
+    }
+  ],
+  "name": "gulp-bower-src",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bclozel/gulp-bower-src.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "0.1.0"
+}

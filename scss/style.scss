@@ -1,6 +1,9 @@
 @import "variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "mixins/_background.scss";
+@import "../node_modules/bootstrap-select/sass/bootstrap-select";
+@import "mixins/background";
+@import "mixins/animation";
+@import "mixins/font_import";
 @import "sidebar";
 @import "navbar";
 @import "inputs";
@@ -8,6 +11,9 @@
 @import "icons";
 @import "typography";
 @import "misc";
-@import "layouts";
 @import "reset";
 @import "footer";
+@import "layouts";
+@import "components/buttons";
+@import "components/dropdown";
+@import "themes";

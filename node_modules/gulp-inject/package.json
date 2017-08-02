@@ -1,0 +1,126 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "gulp-inject",
+        "scope": null,
+        "escapedName": "gulp-inject",
+        "name": "gulp-inject",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/var/www/html/Project/star"
+    ]
+  ],
+  "_from": "gulp-inject@latest",
+  "_id": "gulp-inject@4.2.0",
+  "_inCache": true,
+  "_location": "/gulp-inject",
+  "_nodeVersion": "6.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/gulp-inject-4.2.0.tgz_1482261376351_0.40899496898055077"
+  },
+  "_npmUser": {
+    "name": "joakimbeng",
+    "email": "joakim@beng.se"
+  },
+  "_npmVersion": "3.10.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "gulp-inject",
+    "scope": null,
+    "escapedName": "gulp-inject",
+    "name": "gulp-inject",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gulp-inject/-/gulp-inject-4.2.0.tgz",
+  "_shasum": "5d6af52f24963aa0de22993dec846e1e792ab653",
+  "_shrinkwrap": null,
+  "_spec": "gulp-inject",
+  "_where": "/var/www/html/Project/star",
+  "author": {
+    "name": "Joakim Carlstein",
+    "email": "joakim@klei.se",
+    "url": "http://joakim.beng.se"
+  },
+  "bugs": {
+    "url": "https://github.com/klei/gulp-inject/issues"
+  },
+  "dependencies": {
+    "arrify": "^1.0.1",
+    "escape-string-regexp": "^1.0.5",
+    "event-stream": "^3.1.0",
+    "group-array": "^0.3.0",
+    "gulp-util": "^3.0.0",
+    "stream-to-array": "^2.3.0",
+    "through2": "^2.0.1"
+  },
+  "description": "A javascript, stylesheet and webcomponent injection plugin for Gulp, i.e. inject file references into your index.html",
+  "devDependencies": {
+    "mocha": "~2.0.1",
+    "should": "^4.0.4",
+    "standard-version": "^2.2.1",
+    "strip-color": "^0.1.0",
+    "xo": "^0.13.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5d6af52f24963aa0de22993dec846e1e792ab653",
+    "tarball": "https://registry.npmjs.org/gulp-inject/-/gulp-inject-4.2.0.tgz"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "gitHead": "c978fd7494c9f005040340555a41b081e4081655",
+  "homepage": "https://github.com/klei/gulp-inject",
+  "keywords": [
+    "gulpplugin",
+    "inject",
+    "stylesheets",
+    "webcomponents",
+    "scripts",
+    "index"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "joakimbeng",
+      "email": "joakim@klei.se"
+    }
+  ],
+  "name": "gulp-inject",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/klei/gulp-inject.git"
+  },
+  "scripts": {
+    "lint": "xo",
+    "pretest": "npm run -s lint",
+    "release": "standard-version",
+    "test": "mocha -R spec src/**/*_test.js"
+  },
+  "version": "4.2.0",
+  "xo": {
+    "space": true,
+    "envs": [
+      "node"
+    ],
+    "rules": {
+      "object-shorthand": [
+        2,
+        "never"
+      ]
+    }
+  }
+}

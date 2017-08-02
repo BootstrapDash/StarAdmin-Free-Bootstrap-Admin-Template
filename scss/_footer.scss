@@ -1,4 +1,11 @@
 .footer {
   background: darken($white-smoke, 5%);
+  margin-left: $sidebar-width-lg;
   padding: 1rem;
+  transition: all .8s ease;
+  width: calc(100% - #{$sidebar-width-lg});
+  @media (max-width: 991px) {
+    margin-left: 0;
+    width: 100%;
+  }
 }

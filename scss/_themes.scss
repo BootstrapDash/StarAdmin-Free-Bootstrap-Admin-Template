@@ -1,0 +1,71 @@
+body,html{
+	font-family: $popins;
+	font-weight: 400;
+	font-size: 0.9rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.progress-slim{
+	height:4px;
+}
+.table-striped tbody tr:nth-of-type(2n+1){
+	background-color: #f1f4f8;
+}
+.txt-brand-color{
+	color: $brand-primary;
+}
+.progress-bar{
+	font-weight: 600;
+}
+input{
+	font-family: $popins;
+	font-size:13px;
+}
+.card{
+	border-color: $brand-border-color;
+}
+
+.content-wrapper {
+    padding: 2rem 1.5rem;
+}
+ 
+table.center-aligned-table{
+	thead{
+		tr{
+			th{
+				white-space: nowrap;
+			}
+		}
+	}
+	tr{
+		border-bottom: 1px solid #f3f1f1;
+		td{
+			vertical-align: middle;
+			border-top:none;
+			padding: 0.35rem 0.75rem;
+		}
+	}
+}
+
+
+.table th, .table td {
+    border-top: 1px solid #f3f1f1;
+    padding: 0.55rem;
+    vertical-align: middle;
+}
+
+.badge{
+	padding: 0.30em 0.45em;
+}
+
+
+form.forms-sample {
+	@extend .row;
+	.form-group {
+		@extend .col-xl-6;
+		@extend .col-lg-6;
+		@extend .col-md-6;
+		@extend .col-sm-6;
+		@extend .col-12;
+	}
+}

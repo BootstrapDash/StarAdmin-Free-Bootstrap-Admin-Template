@@ -1,16 +1,60 @@
 .navbar {
-  .navbar-brand {
-    color: lighten($gray-dark, 20%);
-    font-size: 2rem;
-    &:hover,
-    &:focus,
-    &:active {
-      color: lighten($gray-dark, 10%);
+  .navbar-brand-wrapper {
+    @include sidebar-toggle-animation();
+    width: $sidebar-width-lg;
+
+    .navbar-brand {
+      color: lighten($gray-dark, 20%);
+      font-size: 2rem;
+      margin-right: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: lighten($gray-dark, 10%);
+      }
+      img {
+        max-width: 100%;
+        width: 60%;
+        margin: auto;
+      }
+    }
+    .brand-logo-mini {
+      display: none;
     }
   }
-  .navbar-nav {
+
+  .navbar-menu-wrapper {
+    @include sidebar-toggle-animation();
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - #{$sidebar-width-lg});
+    .navbar-toggler{
+      border: none;
+      font-family: $popins;
+      font-size: 16px;
+      span{
+        font-size:18px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  ul.navbar-nav {
+    @extend .flex-row;
+    li{
+      margin-right:20px;
+      a.profile-pic{
+        img{
+          width:35px;
+        }
+      }
+    }
     .nav-link {
       color: lighten($brand-primary, 50%);
+      i{
+        font-size:19px;
+      }
     }
   }
 }
@@ -18,7 +62,17 @@
 @media (max-width:991px) {
   .navbar {
     flex-direction: row;
+    .navbar-brand-wrapper {
+      width: 75px;
+      .brand-logo {
+        display: none;
+      }
+      .brand-logo-mini {
+        display: inline-block;
+      }
+    }
   }
+
   .navbar-collapse {
     display: flex;
     margin-top: .5rem;

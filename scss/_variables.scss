@@ -1,5 +1,31 @@
-$brand-primary: #6d68aa;
+$brand-primary: #1991eb;
 $white-smoke: #f2f7f8;
-$brand-gradient-left: #614285;
-$brand-gradient-right: #7b92d3;
-$navbar-height : 3.5rem;
+$brand-gradient-left: #318be3;
+$brand-gradient-right: #04befe;
+$navbar-height: 3.5rem;
+$user-info-height : 222px;
+$sidebar-width-lg: 215px;
+$sidebar-width-mini: 185px;
+$sidebar-width-icon: 70px;
+$boxed-container-width: 96%;
+
+
+$green : #36af47;
+$red : #ed1c24;
+$blue: #2ca0f7;
+$orange : #f7981c;
+
+
+
+
+///// Bootstrap Variables ////////
+
+$brand-info:  $blue !default;
+$brand-border-color : rgba(33, 170, 237, 0.1);
+// $font-size-base: 0.9rem;
+
+
+///// Fonts ////////
+
+$popins : 'Poppins', sans-serif;
+$source_sans : 'Source Sans Pro', sans-serif;

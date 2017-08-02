@@ -1,0 +1,5 @@
+{
+    "dependencies":{
+        "simple_slash_in_main":"*"
+    }
+}
