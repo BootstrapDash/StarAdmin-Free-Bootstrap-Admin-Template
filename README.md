@@ -18,7 +18,6 @@
 	<img src="screenshot.png" width="100%" style="margin-top: 30px" alt="">
 
 
-	<pre>
 		 <h1>Credits:</h1>
 		 <hr>
 
@@ -31,13 +30,11 @@
 		- Google Maps
 		- Perfect Scrollbar
 		
-	</pre>
 
 	<h1>Browser Support:</h1>
 
 
 
-	<pre>
 		 <h1>Browser Support:</h1>
 		 <hr>
 
@@ -49,21 +46,17 @@
 		- Opera (latest)
 		- IE10+
 		
-	</pre>
 
 
-	<pre>
 		 <h1>License Information:</h1>
 		 <hr>
 
 
 		Star Admin is released under MIT license. Star Admin is a free Bootstrap 4 admin template developed from BootstrapDash. Feel free to download it, use it, share it, get creative with it. 
 
-	</pre>
 
 
 
-	<pre>
 		 <h1>How to use Star Admin?</h1>
 		 <hr>
 
@@ -111,10 +104,8 @@
 		5 - Now that your project has now kick-started, all you need to do now is to code, code, and code to your heart's content. 
 
 
-	</pre>
 
 
-	<pre>
 		 <h1>How to Contribute?:</h1>
 		 <hr>
 
@@ -131,10 +122,8 @@
 		4 - Make you valuable contribution
 		5 - Submit a pull request.
 
-	</pre>
 
 
-	<pre>
 		 <h1>Go Premium!!</h1>
 		 <hr>
 
@@ -144,7 +133,6 @@
 		Visit <a href="https://www.bootstrapdash.com" target="_blank">https://www.bootstrapdash.com</a> for more admin templates. 
 
 
-	</pre>
 
 
 
