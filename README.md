@@ -10,8 +10,8 @@ Although the template has a design like none other, it is easily customizable to
 
 <hr style="margin-bottom: 30px">
 
-<a href="http://www.bootstrapdash.com/demo/star-admin/index.html" target="_blank">
-	http://www.bootstrapdash.com/demo/star-admin/index.html
+<a href="https://www.bootstrapdash.com/demo/star-admin-free/index.html" target="_blank">
+	https://www.bootstrapdash.com/demo/star-admin-free/index.html
 </a>
 <img src="screenshot.png" width="100%" style="margin-top: 30px" alt="">
 <h1>Credits:</h1>
