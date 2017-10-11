@@ -3,88 +3,109 @@
   padding: 0;
   position: absolute;
   width: $sidebar-width-lg;
-  z-index: 11;
+  z-index: 1;
   @include sidebar-toggle-animation();
 
-  .user-info{
-    display:flex;
+  .user-info {
+    display: flex;
     flex-direction: column;
-    justify-content : center;
-    margin: 10px 0 40px 0;
-    img{
+    justify-content: center;
+    margin: 10px 0 40px;
+
+    img {
       max-width: 85px;
       width: 100%;
-      border-radius:100%;
-      margin: 0 auto 15px auto;
-      border:3px solid #fff;
+      border-radius: 100%;
+      margin: 0 auto 15px;
+      border: 3px solid #fff;
     }
-    p.name{
+
+    p.name {
       text-align: center;
       margin-bottom: 0;
       font-size: 13px;
       font-weight: 500;
     }
-    p.designation{
+
+    p.designation {
       text-align: center;
       margin-bottom: 15px;
       font-size: 12px;
       font-weight: 500;
       color: #cacdd7;
     }
-    span.online{
+
+    span.online {
       border-radius: 3px;
       background: #58d8a3;
       margin: auto;
-      text-align:center;
-      &:after{
+      text-align: center;
+
+      &:after {
         content: "Online";
-        color:#fff;
-        display:block;
-        font-size:10.5px;
-        padding: 2px 6px 0 6px;
+        color: #fff;
+        display: block;
+        font-size: 10.5px;
+        padding: 2px 6px 0;
       }
     }
   }
 
   .nav {
-    flex-direction: column;
-    padding:10px 20px 10px 20px;
+    display: block;
+    padding: 10px 0px 10px 20px;
+
+    .item-category{
+      color: grey;
+      font-weight: 500;
+    }
     .nav-item {
-      .collapse{
-        z-index:999;
+      &:last-child {
+        margin-bottom: 30px;
       }
-      .nav-link {
-        color: $gray-light;
+
+      .collapse {
+        z-index: 999;
+      }
+      .collapsing{
+        @include transition-duration(0s);
+      }
+
+      a.nav-link {
+        color: color(gray-light);
         padding: 1em;
         white-space: nowrap;
         font-size: 13px;
+        @extend .d-flex;
+        @extend %ellipsor;
         .fa {
-            &:first-child {
-              margin-right: .5em;
-            }
+          &:first-child {
+            margin-right: 0.5em;
+          }
         }
-        img{
-          width:16px;
-          height:16px;
+
+        img {
+          width: 16px;
+          height: 16px;
           margin-right: 15px;
         }
 
         .menu-title {
           display: inline-block;
+          @extend %ellipsor;
           .fa {
-            margin-left: .5em;
+            margin-left: 0.5em;
           }
         }
 
         &:hover {
-          color: darken($gray-light, 15%);
+          color: darken(color(gray-light), 15%);
         }
       }
 
       &.active {
         > .nav-link {
-
-          color: $brand-primary;
+          color: theme-color(primary);
         }
       }
     }
@@ -101,14 +122,6 @@
         }
       }
     }
-
-    .rtl & {
-      padding-right: 0;
-      &.sub-menu {
-        padding-left: 0;
-        padding-right: 2.5em;
-      }
-    }
   }
 
   &.sidebar-fixed {
@@ -119,17 +132,48 @@
     .nav {
       max-height: calc(100vh - 275px);
       overflow: auto;
+      position: relative;
+
+      &.sub-menu {
+        max-height: none;
+      }
     }
   }
+  //sidebar color variation Starts here
+  &.sidebar-dark {
+    background: theme-color(dark);
+    .user-info{
+      p.name {
+        color: #fff;
+      }
+    }
+    .nav {
+      .nav-item {
+        .nav-link {
+          .fa,
+          .menu-title {
+            color: $white;
+          }
+        }
+      }
+      &.sub-menu {
+        .nav-item {
+          .nav-link {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  //sidebar color variation Ends here
 }
-
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {
   .row-offcanvas {
     position: relative;
-    -webkit-transition: all .25s ease-out;
-    -o-transition: all .25s ease-out;
-    transition: all .25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
 
     &.row-offcanvas-right {
       right: 0;
@@ -170,8 +214,9 @@
     }
   }
 }
+@media screen and (max-width: 350px) {
+  //for smaller devices like iphone 5
 
-@media screen and (max-width: 350px) { //for smaller devices like iphone 5
   .row-offcanvas {
     &.row-offcanvas-right {
       &.active {
@@ -182,6 +227,7 @@
         }
       }
     }
+
     .sidebar-offcanvas {
       width: 100%;
     }

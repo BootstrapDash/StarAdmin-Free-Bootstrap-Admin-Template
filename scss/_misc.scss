@@ -1,5 +1,5 @@
 .content-wrapper {
-  background: $white-smoke;
+  background: color(white-smoke);
   margin-left: $sidebar-width-lg;
   min-height: 100vh;
   padding: 2rem 1rem;
@@ -17,4 +17,9 @@
 .container-scroller {
   height: 100vh;
   position: relative;
+}
+pre {
+  background: color(gray-light)er;
+  padding: 15px;
+  font-size: 14px;
 }

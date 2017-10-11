@@ -4,7 +4,7 @@
 .bg-primary-gradient {
   @include bg-gradient($brand-gradient-left,$brand-gradient-right);
 }
- 
+
 .bg-success-gadient{
 	@include bg-gradient(#2bb415,#5ad946);
 }
@@ -14,9 +14,9 @@
 }
 
 .bg-warning-gadient{
-	@include bg-gradient($orange , #FFB656);
+	@include bg-gradient(theme-color(warning) , #FFB656);
 }
 
 .bg-danger-gadient{
-	@include bg-gradient($red , #f85258);
+	@include bg-gradient(theme-color(danger) , #f85258);
 }

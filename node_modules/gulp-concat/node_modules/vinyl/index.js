@@ -4,13 +4,13 @@ var path = require('path');
 var isBuffer = require('buffer').Buffer.isBuffer;
 
 var clone = require('clone');
-var isStream = require('is-stream');
 var cloneable = require('cloneable-readable');
 var replaceExt = require('replace-ext');
 var cloneStats = require('clone-stats');
 var cloneBuffer = require('clone-buffer');
 var removeTrailingSep = require('remove-trailing-separator');
 
+var isStream = require('./lib/is-stream');
 var normalize = require('./lib/normalize');
 var inspectStream = require('./lib/inspect-stream');
 

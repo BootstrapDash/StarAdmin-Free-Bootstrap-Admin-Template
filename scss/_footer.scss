@@ -1,5 +1,5 @@
 .footer {
-  background: darken($white-smoke, 5%);
+  background: darken(color(white-smoke), 5%);
   margin-left: $sidebar-width-lg;
   padding: 1rem;
   transition: all .8s ease;

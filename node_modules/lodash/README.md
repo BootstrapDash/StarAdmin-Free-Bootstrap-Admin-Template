@@ -1,128 +1,121 @@
-# Lo-Dash v1.0.2
+# lodash v3.10.1
 
-A utility library delivering consistency, [customization](http://lodash.com/custom-builds), [performance](http://lodash.com/benchmarks), & [extras](http://lodash.com/#features).
+The [modern build](https://github.com/lodash/lodash/wiki/Build-Differences) of [lodash](https://lodash.com/) exported as [Node.js](http://nodejs.org/)/[io.js](https://iojs.org/) modules.
 
-## Download
-
-* Lo-Dash builds (for modern environments):<br>
-[Development](https://raw.github.com/lodash/lodash/v1.0.2/dist/lodash.js) and
-[Production](https://raw.github.com/lodash/lodash/v1.0.2/dist/lodash.min.js)
-
-* Lo-Dash compatibility builds (for legacy and modern environments):<br>
-[Development](https://raw.github.com/lodash/lodash/v1.0.2/dist/lodash.compat.js) and
-[Production](https://raw.github.com/lodash/lodash/v1.0.2/dist/lodash.compat.min.js)
-
-* Underscore compatibility builds:<br>
-[Development](https://raw.github.com/lodash/lodash/v1.0.2/dist/lodash.underscore.js) and
-[Production](https://raw.github.com/lodash/lodash/v1.0.2/dist/lodash.underscore.min.js)
-
-* For optimal file size, [create a custom build](http://lodash.com/custom-builds) with only the features you need
-
-## Dive in
-
-We’ve got [API docs](http://lodash.com/docs), [benchmarks](http://lodash.com/benchmarks), and [unit tests](http://lodash.com/tests).
-
-For a list of upcoming features, check out our [roadmap](https://github.com/lodash/lodash/wiki/Roadmap).
-
-The full changelog is available [here](https://github.com/lodash/lodash/wiki/Changelog).
-
-## Installation and usage
-
-In browsers:
-
-```html
-<script src="lodash.js"></script>
+Generated using [lodash-cli](https://www.npmjs.com/package/lodash-cli):
+```bash
+$ lodash modularize modern exports=node -o ./
+$ lodash modern -d -o ./index.js
 ```
 
-Using [`npm`](http://npmjs.org/):
+## Installation
+
+Using npm:
 
 ```bash
-npm install lodash
-
-npm install -g lodash
-npm link lodash
+$ {sudo -H} npm i -g npm
+$ npm i --save lodash
 ```
 
-To avoid potential issues, update `npm` before installing Lo-Dash:
-
-```bash
-npm install npm -g
-```
-
-In [Node.js](http://nodejs.org/) and [RingoJS v0.8.0+](http://ringojs.org/):
+In Node.js/io.js:
 
 ```js
+// load the modern build
 var _ = require('lodash');
-
-// or as a drop-in replacement for Underscore
-var _ = require('lodash/lodash.underscore');
+// or a method category
+var array = require('lodash/array');
+// or a method (great for smaller builds with browserify/webpack)
+var chunk = require('lodash/array/chunk');
 ```
 
-**Note:** If Lo-Dash is installed globally, run [`npm link lodash`](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation/) in your project’s root directory before requiring it.
+See the [package source](https://github.com/lodash/lodash/tree/3.10.1-npm) for more details.
 
-In [RingoJS v0.7.0-](http://ringojs.org/):
+**Note:**<br>
+Don’t assign values to the [special variable](http://nodejs.org/api/repl.html#repl_repl_features) `_` when in the REPL.<br>
+Install [n_](https://www.npmjs.com/package/n_) for a REPL that includes lodash by default.
 
-```js
-var _ = require('lodash')._;
-```
+## Module formats
 
-In [Rhino](http://www.mozilla.org/rhino/):
+lodash is also available in a variety of other builds & module formats.
 
-```js
-load('lodash.js');
-```
+ * npm packages for [modern](https://www.npmjs.com/package/lodash), [compatibility](https://www.npmjs.com/package/lodash-compat), & [per method](https://www.npmjs.com/browse/keyword/lodash-modularized) builds
+ * AMD modules for [modern](https://github.com/lodash/lodash/tree/3.10.1-amd) & [compatibility](https://github.com/lodash/lodash-compat/tree/3.10.1-amd) builds
+ * ES modules for the [modern](https://github.com/lodash/lodash/tree/3.10.1-es) build
 
-In an AMD loader like [RequireJS](http://requirejs.org/):
+## Further Reading
 
-```js
-require({
-  'paths': {
-    'underscore': 'path/to/lodash'
-  }
-},
-['underscore'], function(_) {
-  console.log(_.VERSION);
-});
-```
-
-## Resources
-
-For more information check out these articles, screencasts, and other videos over Lo-Dash:
-
- * Posts
-  - [Say “Hello” to Lo-Dash](http://kitcambridge.be/blog/say-hello-to-lo-dash/)
-
- * Videos
-  - [Introducing Lo-Dash](https://vimeo.com/44154599)
-  - [Lo-Dash optimizations and custom builds](https://vimeo.com/44154601)
-  - [Lo-Dash’s origin and why it’s a better utility belt](https://vimeo.com/44154600)
-  - [Unit testing in Lo-Dash](https://vimeo.com/45865290)
-  - [Lo-Dash’s approach to native method use](https://vimeo.com/48576012)
-  - [CascadiaJS: Lo-Dash for a better utility belt](http://www.youtube.com/watch?v=dpPy4f_SeEk)
+  * [API Documentation](https://lodash.com/docs)
+  * [Build Differences](https://github.com/lodash/lodash/wiki/Build-Differences)
+  * [Changelog](https://github.com/lodash/lodash/wiki/Changelog)
+  * [Roadmap](https://github.com/lodash/lodash/wiki/Roadmap)
+  * [More Resources](https://github.com/lodash/lodash/wiki/Resources)
 
 ## Features
 
- * AMD loader support ([RequireJS](http://requirejs.org/), [curl.js](https://github.com/cujojs/curl), etc.)
- * [_(…)](http://lodash.com/docs#_) supports intuitive chaining
- * [_.at](http://lodash.com/docs#at) for cherry-picking collection values
- * [_.bindKey](http://lodash.com/docs#bindKey) for binding [*“lazy”* defined](http://michaux.ca/articles/lazy-function-definition-pattern) methods
- * [_.cloneDeep](http://lodash.com/docs#cloneDeep) for deep cloning arrays and objects
- * [_.contains](http://lodash.com/docs#contains) accepts a `fromIndex` argument
- * [_.forEach](http://lodash.com/docs#forEach) is chainable and supports exiting iteration early
- * [_.forIn](http://lodash.com/docs#forIn) for iterating over an object’s own and inherited properties
- * [_.forOwn](http://lodash.com/docs#forOwn) for iterating over an object’s own properties
- * [_.isPlainObject](http://lodash.com/docs#isPlainObject) checks if values are created by the `Object` constructor
- * [_.merge](http://lodash.com/docs#merge) for a deep [_.extend](http://lodash.com/docs#extend)
- * [_.partial](http://lodash.com/docs#partial) and [_.partialRight](http://lodash.com/docs#partialRight) for partial application without `this` binding
- * [_.template](http://lodash.com/docs#template) supports [*“imports”* options](http://lodash.com/docs#templateSettings_imports), [ES6 template delimiters](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-7.8.6), and [sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)
- * [_.where](http://lodash.com/docs#where) supports deep object comparisons
- * [_.clone](http://lodash.com/docs#clone), [_.omit](http://lodash.com/docs#omit), [_.pick](http://lodash.com/docs#pick),
-   [and more…](http://lodash.com/docs "_.assign, _.cloneDeep, _.first, _.initial, _.isEqual, _.last, _.merge, _.rest") accept `callback` and `thisArg` arguments
- * [_.contains](http://lodash.com/docs#contains), [_.size](http://lodash.com/docs#size), [_.toArray](http://lodash.com/docs#toArray),
-   [and more…](http://lodash.com/docs "_.at, _.countBy, _.every, _.filter, _.find, _.forEach, _.groupBy, _.invoke, _.map, _.max, _.min, _.pluck, _.reduce, _.reduceRight, _.reject, _.shuffle, _.some, _.sortBy, _.where") accept strings
- * [_.filter](http://lodash.com/docs#filter), [_.find](http://lodash.com/docs#find), [_.map](http://lodash.com/docs#map),
-   [and more…](http://lodash.com/docs "_.countBy, _.every, _.first, _.groupBy, _.initial, _.last, _.max, _.min, _.reject, _.rest, _.some, _.sortBy, _.sortedIndex, _.uniq") support *“_.pluck”* and *“_.where”* `callback` shorthands
+ * ~100% [code coverage](https://coveralls.io/r/lodash)
+ * Follows [semantic versioning](http://semver.org/) for releases
+ * [Lazily evaluated](http://filimanjaro.com/blog/2014/introducing-lazy-evaluation/) chaining
+ * [_(…)](https://lodash.com/docs#_) supports implicit chaining
+ * [_.ary](https://lodash.com/docs#ary) & [_.rearg](https://lodash.com/docs#rearg) to change function argument limits & order
+ * [_.at](https://lodash.com/docs#at) for cherry-picking collection values
+ * [_.attempt](https://lodash.com/docs#attempt) to execute functions which may error without a try-catch
+ * [_.before](https://lodash.com/docs#before) to complement [_.after](https://lodash.com/docs#after)
+ * [_.bindKey](https://lodash.com/docs#bindKey) for binding [*“lazy”*](http://michaux.ca/articles/lazy-function-definition-pattern) defined methods
+ * [_.chunk](https://lodash.com/docs#chunk) for splitting an array into chunks of a given size
+ * [_.clone](https://lodash.com/docs#clone) supports shallow cloning of `Date` & `RegExp` objects
+ * [_.cloneDeep](https://lodash.com/docs#cloneDeep) for deep cloning arrays & objects
+ * [_.curry](https://lodash.com/docs#curry) & [_.curryRight](https://lodash.com/docs#curryRight) for creating [curried](http://hughfdjackson.com/javascript/why-curry-helps/) functions
+ * [_.debounce](https://lodash.com/docs#debounce) & [_.throttle](https://lodash.com/docs#throttle) are cancelable & accept options for more control
+ * [_.defaultsDeep](https://lodash.com/docs#defaultsDeep) for recursively assigning default properties
+ * [_.fill](https://lodash.com/docs#fill) to fill arrays with values
+ * [_.findKey](https://lodash.com/docs#findKey) for finding keys
+ * [_.flow](https://lodash.com/docs#flow) to complement [_.flowRight](https://lodash.com/docs#flowRight) (a.k.a `_.compose`)
+ * [_.forEach](https://lodash.com/docs#forEach) supports exiting early
+ * [_.forIn](https://lodash.com/docs#forIn) for iterating all enumerable properties
+ * [_.forOwn](https://lodash.com/docs#forOwn) for iterating own properties
+ * [_.get](https://lodash.com/docs#get) & [_.set](https://lodash.com/docs#set) for deep property getting & setting
+ * [_.gt](https://lodash.com/docs#gt), [_.gte](https://lodash.com/docs#gte), [_.lt](https://lodash.com/docs#lt), & [_.lte](https://lodash.com/docs#lte) relational methods
+ * [_.inRange](https://lodash.com/docs#inRange) for checking whether a number is within a given range
+ * [_.isNative](https://lodash.com/docs#isNative) to check for native functions
+ * [_.isPlainObject](https://lodash.com/docs#isPlainObject) & [_.toPlainObject](https://lodash.com/docs#toPlainObject) to check for & convert to `Object` objects
+ * [_.isTypedArray](https://lodash.com/docs#isTypedArray) to check for typed arrays
+ * [_.mapKeys](https://lodash.com/docs#mapKeys) for mapping keys to an object
+ * [_.matches](https://lodash.com/docs#matches) supports deep object comparisons
+ * [_.matchesProperty](https://lodash.com/docs#matchesProperty) to complement [_.matches](https://lodash.com/docs#matches) & [_.property](https://lodash.com/docs#property)
+ * [_.merge](https://lodash.com/docs#merge) for a deep [_.extend](https://lodash.com/docs#extend)
+ * [_.method](https://lodash.com/docs#method) & [_.methodOf](https://lodash.com/docs#methodOf) to create functions that invoke methods
+ * [_.modArgs](https://lodash.com/docs#modArgs) for more advanced functional composition
+ * [_.parseInt](https://lodash.com/docs#parseInt) for consistent cross-environment behavior
+ * [_.pull](https://lodash.com/docs#pull), [_.pullAt](https://lodash.com/docs#pullAt), & [_.remove](https://lodash.com/docs#remove) for mutating arrays
+ * [_.random](https://lodash.com/docs#random) supports returning floating-point numbers
+ * [_.restParam](https://lodash.com/docs#restParam) & [_.spread](https://lodash.com/docs#spread) for applying rest parameters & spreading arguments to functions
+ * [_.runInContext](https://lodash.com/docs#runInContext) for collisionless mixins & easier mocking
+ * [_.slice](https://lodash.com/docs#slice) for creating subsets of array-like values
+ * [_.sortByAll](https://lodash.com/docs#sortByAll) & [_.sortByOrder](https://lodash.com/docs#sortByOrder) for sorting by multiple properties & orders
+ * [_.support](https://lodash.com/docs#support) for flagging environment features
+ * [_.template](https://lodash.com/docs#template) supports [*“imports”*](https://lodash.com/docs#templateSettings-imports) options & [ES template delimiters](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-template-literal-lexical-components)
+ * [_.transform](https://lodash.com/docs#transform) as a powerful alternative to [_.reduce](https://lodash.com/docs#reduce) for transforming objects
+ * [_.unzipWith](https://lodash.com/docs#unzipWith) & [_.zipWith](https://lodash.com/docs#zipWith) to specify how grouped values should be combined
+ * [_.valuesIn](https://lodash.com/docs#valuesIn) for getting values of all enumerable properties
+ * [_.xor](https://lodash.com/docs#xor) to complement [_.difference](https://lodash.com/docs#difference), [_.intersection](https://lodash.com/docs#intersection), & [_.union](https://lodash.com/docs#union)
+ * [_.add](https://lodash.com/docs#add), [_.round](https://lodash.com/docs#round), [_.sum](https://lodash.com/docs#sum), &
+   [more](https://lodash.com/docs "_.ceil & _.floor") math methods
+ * [_.bind](https://lodash.com/docs#bind), [_.curry](https://lodash.com/docs#curry), [_.partial](https://lodash.com/docs#partial), &
+   [more](https://lodash.com/docs "_.bindKey, _.curryRight, _.partialRight") support customizable argument placeholders
+ * [_.capitalize](https://lodash.com/docs#capitalize), [_.trim](https://lodash.com/docs#trim), &
+   [more](https://lodash.com/docs "_.camelCase, _.deburr, _.endsWith, _.escapeRegExp, _.kebabCase, _.pad, _.padLeft, _.padRight, _.repeat, _.snakeCase, _.startCase, _.startsWith, _.trimLeft, _.trimRight, _.trunc, _.words") string methods
+ * [_.clone](https://lodash.com/docs#clone), [_.isEqual](https://lodash.com/docs#isEqual), &
+   [more](https://lodash.com/docs "_.assign, _.cloneDeep, _.merge") accept customizer callbacks
+ * [_.dropWhile](https://lodash.com/docs#dropWhile), [_.takeWhile](https://lodash.com/docs#takeWhile), &
+   [more](https://lodash.com/docs "_.drop, _.dropRight, _.dropRightWhile, _.take, _.takeRight, _.takeRightWhile") to complement [_.first](https://lodash.com/docs#first), [_.initial](https://lodash.com/docs#initial), [_.last](https://lodash.com/docs#last), & [_.rest](https://lodash.com/docs#rest)
+ * [_.findLast](https://lodash.com/docs#findLast), [_.findLastKey](https://lodash.com/docs#findLastKey), &
+   [more](https://lodash.com/docs "_.curryRight, _.dropRight, _.dropRightWhile, _.flowRight, _.forEachRight, _.forInRight, _.forOwnRight, _.padRight, partialRight, _.takeRight, _.trimRight, _.takeRightWhile") right-associative methods
+ * [_.includes](https://lodash.com/docs#includes), [_.toArray](https://lodash.com/docs#toArray), &
+   [more](https://lodash.com/docs "_.at, _.countBy, _.every, _.filter, _.find, _.findLast, _.findWhere, _.forEach, _.forEachRight, _.groupBy, _.indexBy, _.invoke, _.map, _.max, _.min, _.partition, _.pluck, _.reduce, _.reduceRight, _.reject, _.shuffle, _.size, _.some, _.sortBy, _.sortByAll, _.sortByOrder, _.sum, _.where") accept strings
+ * [_#commit](https://lodash.com/docs#prototype-commit) & [_#plant](https://lodash.com/docs#prototype-plant) for working with chain sequences
+ * [_#thru](https://lodash.com/docs#thru) to pass values thru a chain sequence
 
 ## Support
 
-Lo-Dash has been tested in at least Chrome 5~24, Firefox 1~18, IE 6-10, Opera 9.25-12, Safari 3-6, Node.js 0.4.8-0.8.20, Narwhal 0.3.2, PhantomJS 1.8.1, RingoJS 0.9, and Rhino 1.7RC5.
+Tested in Chrome 43-44, Firefox 38-39, IE 6-11, MS Edge, Safari 5-8, ChakraNode 0.12.2, io.js 2.5.0, Node.js 0.8.28, 0.10.40, & 0.12.7, PhantomJS 1.9.8, RingoJS 0.11, & Rhino 1.7.6.
+Automated [browser](https://saucelabs.com/u/lodash) & [CI](https://travis-ci.org/lodash/lodash/) test runs are available. Special thanks to [Sauce Labs](https://saucelabs.com/) for providing automated browser testing.
