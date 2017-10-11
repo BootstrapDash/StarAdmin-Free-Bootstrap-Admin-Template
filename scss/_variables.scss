@@ -1,31 +1,65 @@
-$brand-primary: #1991eb;
-$white-smoke: #f2f7f8;
 $brand-gradient-left: #318be3;
 $brand-gradient-right: #04befe;
 $navbar-height: 3.5rem;
 $user-info-height : 222px;
 $sidebar-width-lg: 215px;
-$sidebar-width-mini: 185px;
 $sidebar-width-icon: 70px;
-$boxed-container-width: 96%;
 
 
-$green : #36af47;
-$red : #ed1c24;
-$blue: #2ca0f7;
-$orange : #f7981c;
+
+$blue:    #1991EB;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #FF0017;
+$orange:  #FFC105;
+$yellow:  #ffc107;
+$green:   #08D419;
+$teal:    #58d8a3;
+$cyan:    #17a2b8;
+$white:   #ffffff;
+
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  white-smoke: #f2f7f8,
+  gray: $gray-600,
+  gray-light: #636c72,
+  gray-lightest: #f7f7f9,
+  gray-dark: #292b2c
+);
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-300,
+  success: $green,
+  info: $cyan,
+  warning: $orange,
+  danger: $red,
+  light: $gray-100,
+  dark: #424964
+);
 
 
 
 
 ///// Bootstrap Variables ////////
 
-$brand-info:  $blue !default;
 $brand-border-color : rgba(33, 170, 237, 0.1);
-// $font-size-base: 0.9rem;
+$border-property : 1px solid color(gray-light);
 
 
 ///// Fonts ////////
 
 $popins : 'Poppins', sans-serif;
 $source_sans : 'Source Sans Pro', sans-serif;
+$gudea : 'Gudea', sans-serif;

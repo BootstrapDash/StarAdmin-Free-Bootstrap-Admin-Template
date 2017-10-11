@@ -43,7 +43,6 @@ input[type=button]::-moz-focus-inner,
 input[type=submit]::-moz-focus-inner,
 input[type=file]>input[type=button]::-moz-focus-inner,
 select::-moz-focus-inner {
-    border: 0;
     outline: 0
 }
 

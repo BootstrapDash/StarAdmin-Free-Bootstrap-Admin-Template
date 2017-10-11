@@ -11,6 +11,8 @@ var rename = require('gulp-rename');
 var del = require('del');
 var runSequence = require('run-sequence');
 var replace = require('gulp-replace');
+var injectPartials = require('gulp-inject-partials');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.paths = {
     dist: 'dist',
@@ -50,7 +52,9 @@ gulp.task('serve:lite', function() {
 
 gulp.task('sass', function () {
     return gulp.src('./scss/style.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
 });
@@ -107,6 +111,32 @@ gulp.task('replace:bower', function(){
 
 gulp.task('build:dist', function(callback) {
     runSequence('clean:dist', 'copy:bower', 'copy:css', 'copy:img', 'copy:fonts', 'copy:js', 'copy:html', 'replace:bower', callback);
+});
+
+/*sequence for injecting partials and replacing paths*/
+gulp.task('inject', function() {
+  runSequence('injectPartial', 'replacePath');
+});
+
+/*inject partials like sidebar and navbar*/
+gulp.task('injectPartial', function () {
+  return gulp.src("./**/*.html", { base: "./" })
+    .pipe(injectPartials())
+    .pipe(gulp.dest("."));
+});
+
+/*replace image path and linking after injection*/
+gulp.task('replacePath', function(){
+  gulp.src('pages/*/*.html', { base: "./" })
+    .pipe(replace('src="images/', 'src="../../images/'))
+    .pipe(replace('href="pages/', 'href="../../pages/'))
+    .pipe(replace('href="index.html"', 'href="../../index.html"'))
+    .pipe(gulp.dest('.'));
+  gulp.src('pages/*.html', { base: "./" })
+    .pipe(replace('src="images/', 'src="../images/'))
+    .pipe(replace('"pages/', '"../pages/'))
+    .pipe(replace('href="index.html"', 'href="../index.html"'))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('default', ['serve']);

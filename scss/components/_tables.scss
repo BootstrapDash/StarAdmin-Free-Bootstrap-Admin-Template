@@ -1,0 +1,45 @@
+table.center-aligned-table {
+	thead {
+		tr {
+			th {
+				white-space: nowrap;
+				border-bottom: 1px;
+			}
+		}
+	}
+
+	tr {
+		border-bottom: 1px solid #f3f1f1;
+
+		td {
+			vertical-align: middle;
+			border-top: none;
+			padding: 0.75rem 0.75rem;
+		}
+	}
+}
+
+.table td,
+.table th {
+	border-top: 1px solid #f3f1f1;
+	padding: 0.75rem;
+	vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: #f5f5f5;
+}
+
+table{
+  thead{
+		th{
+			border-bottom: none !important;
+		}
+    tr{
+      th{
+        border-bottom:none;
+        font-weight: 600;
+      }
+    }
+  }
+}

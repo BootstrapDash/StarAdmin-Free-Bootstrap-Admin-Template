@@ -1,8 +1,8 @@
-# Fined [![Build Status][travis-image]][travis-url] [![Build Status][appveyor-image]][appveyor-url]
+# Fined [![Build Status][travis-img]][travis-url] [![Build Status][appveyor-img]][appveyor-url] [![Coverage][coveralls-img]][coveralls-url]
 
 > Find a file given a declaration of locations
 
-[![NPM](https://nodei.co/npm/fined.png)](https://nodei.co/npm/fined/)
+[![NPM][npm-img]][npm-url]
 
 ## Usage
 
@@ -58,10 +58,11 @@ This function returns a plain object which consists of following properties if a
 
 MIT
 
-
-[npm-image]: http://img.shields.io/badge/npm-v0.0.0-blue.svg
-[npm-url]: https://www.npmjs.org/package/fined
-[travis-image]: https://travis-ci.org/js-cli/fined.svg?branch=master
+[npm-img]: https://nodei.co/npm/fined.png
+[npm-url]: https://nodei.co/npm/fined/
+[travis-img]: https://travis-ci.org/js-cli/fined.svg?branch=master
 [travis-url]: https://travis-ci.org/js-cli/fined
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/js-cli/fined?branch=master&svg=true
+[appveyor-img]: https://ci.appveyor.com/api/projects/status/github/js-cli/fined?branch=master&svg=true
 [appveyor-url]: https://ci.appveyor.com/project/js-cli/fined
+[coveralls-img]: https://coveralls.io/repos/github/js-cli/fined/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/js-cli/fined?branch=master
