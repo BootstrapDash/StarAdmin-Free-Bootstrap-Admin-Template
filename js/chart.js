@@ -282,108 +282,142 @@ $(function() {
     });
   }
 
+  if ($("#sales-chart").length) {
+    var salesChartData ={
+      datasets: [{
+        data: [30, 40, 30],
+        backgroundColor: [
+            '#745af2',
+            '#5cd069',
+            '#fecb01'
+        ]
+      }],
+      labels: [
+          'Organic Sale',
+          'Search Engine',
+          'Marketing',
+      ]
+    };
+    var salesChartOptions = {
+      responsive: true,
+      cutoutPercentage: 70,
+      legend : false,
+      animation: {
+          animateScale: true,
+          animateRotate: true
+      }
+    };
+    var salesChartCanvas = $("#sales-chart").get(0).getContext("2d");
+    var salesChart = new Chart(salesChartCanvas, {
+      type: 'doughnut',
+      data: salesChartData,
+      options: salesChartOptions
+    });
+    $("#sales-chart-legend").html(salesChart.generateLegend());
+  }
+
 
   // Dashboard Chart
-  var browserTrafficData ={
-      datasets: [{
-        data: [20,20,10,30,20],
-        backgroundColor: [
-            'rgba(255,99,132,1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(75, 192, 117, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-        borderColor: [
-            'rgba(255,99,132,1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(75, 192, 117, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-      }],
+  var browserTrafficData = {
+    datasets: [{
+      data: [20, 20, 10, 30, 20],
+      backgroundColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(75, 192, 117, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(75, 192, 117, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+    }],
 
-      labels: [
-          'Firefox',
-          'Safari',
-          'Explorer',
-          'Chrome',
-          'Opera Mini'
-      ]
-    };
-    var multiAreaData = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [{
-            label: 'Facebook',
-            data: [8, 11, 13, 15, 12, 13, 16, 15, 13, 19, 11, 14],
-            borderColor: ['rgba(255, 99, 132, 0.5)'],
-            backgroundColor: ['rgba(255, 99, 132, 0.5)'],
-            borderWidth: 1,
-            fill: true
-        },
-        {
-            label: 'Twitter',
-            data: [7, 17, 12, 16, 14, 18, 16, 12, 15, 11, 13, 9],
-            borderColor: ['rgba(54, 162, 235, 0.5)'],
-            backgroundColor: ['rgba(54, 162, 235, 0.5)'],
-            borderWidth: 1,
-            fill: true
-        },
-        {
-            label: 'Linkedin',
-            data: [6, 14, 16, 20, 12, 18, 15, 12, 17, 19, 15, 11],
-            borderColor: ['rgba(255, 206, 86, 0.5)'],
-            backgroundColor: ['rgba(255, 206, 86, 0.5)'],
-            borderWidth: 1,
-            fill: true
+    labels: [
+      'Firefox',
+      'Safari',
+      'Explorer',
+      'Chrome',
+      'Opera Mini'
+    ]
+  };
+  var multiAreaData = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [{
+        label: 'Facebook',
+        data: [8, 11, 13, 15, 12, 13, 16, 15, 13, 19, 11, 14],
+        borderColor: ['rgba(255, 99, 132, 0.5)'],
+        backgroundColor: ['rgba(255, 99, 132, 0.5)'],
+        borderWidth: 1,
+        fill: true
+      },
+      {
+        label: 'Twitter',
+        data: [7, 17, 12, 16, 14, 18, 16, 12, 15, 11, 13, 9],
+        borderColor: ['rgba(54, 162, 235, 0.5)'],
+        backgroundColor: ['rgba(54, 162, 235, 0.5)'],
+        borderWidth: 1,
+        fill: true
+      },
+      {
+        label: 'Linkedin',
+        data: [6, 14, 16, 20, 12, 18, 15, 12, 17, 19, 15, 11],
+        borderColor: ['rgba(255, 206, 86, 0.5)'],
+        backgroundColor: ['rgba(255, 206, 86, 0.5)'],
+        borderWidth: 1,
+        fill: true
+      }
+    ]
+  };
+
+  var multiAreaOptions = {
+    plugins: {
+      filler: {
+        propagate: true
+      }
+    },
+    elements: {
+      point: {
+        radius: 0
+      }
+    },
+    scales: {
+      xAxes: [{
+        gridLines: {
+          display: false
         }
-      ]
-    };
-
-    var multiAreaOptions = {
-        plugins: {
-            filler: {
-                propagate: true
-            }
-        },
-        elements: {
-          point: {
-              radius: 0
-          }
-        },
-        scales: {
-          xAxes: [{
-                gridLines: {
-                    display:false
-                }
-            }],
-          yAxes: [{
-                gridLines: {
-                    display:false
-                }
-            }]
-          }
+      }],
+      yAxes: [{
+        gridLines: {
+          display: false
+        }
+      }]
     }
+  }
 
-    if($("#browserTrafficChart").length) {
-      var doughnutChartCanvas = $("#browserTrafficChart").get(0).getContext("2d");
-      var doughnutChart = new Chart(doughnutChartCanvas, {
-        type: 'doughnut',
-        data: browserTrafficData,
-        options: doughnutPieOptions
-      });
-    }
+  if ($("#browserTrafficChart").length) {
+    var doughnutChartCanvas = $("#browserTrafficChart").get(0).getContext("2d");
+    var doughnutChart = new Chart(doughnutChartCanvas, {
+      type: 'doughnut',
+      data: browserTrafficData,
+      options: doughnutPieOptions
+    });
+  }
 
-    if($("#areachart-multi").length) {
-      var multiAreaCanvas = $("#areachart-multi").get(0).getContext("2d");
-      var multiAreaChart = new Chart(multiAreaCanvas, {
-        type: 'line',
-        data: multiAreaData,
-        options: multiAreaOptions
-      });
-    }
+  if ($("#areachart-multi").length) {
+    var multiAreaCanvas = $("#areachart-multi").get(0).getContext("2d");
+    var multiAreaChart = new Chart(multiAreaCanvas, {
+      type: 'line',
+      data: multiAreaData,
+      options: multiAreaOptions
+    });
+  }
 
   // Dashboard Chart
 

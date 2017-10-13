@@ -80,8 +80,8 @@ input {
 .badge {
 	padding: 0.50em 0.55em;
 	font-weight: 500;
-	&.badge-warning{
-		color: #fff;
+	&.badge-warning,&.badge-success{
+		color: $white;
 	}
 }
 

@@ -77,7 +77,6 @@
         white-space: nowrap;
         font-size: 13px;
         @extend .d-flex;
-        @extend %ellipsor;
         .fa {
           &:first-child {
             margin-right: 0.5em;
@@ -124,48 +123,21 @@
     }
   }
 
-  &.sidebar-fixed {
-    @media(min-width: 992px) {
-      position: fixed;
-    }
-
-    .nav {
-      max-height: calc(100vh - 275px);
-      overflow: auto;
-      position: relative;
-
-      &.sub-menu {
-        max-height: none;
-      }
-    }
-  }
-  //sidebar color variation Starts here
-  &.sidebar-dark {
-    background: theme-color(dark);
-    .user-info{
-      p.name {
-        color: #fff;
-      }
-    }
-    .nav {
-      .nav-item {
-        .nav-link {
-          .fa,
-          .menu-title {
-            color: $white;
-          }
-        }
-      }
-      &.sub-menu {
-        .nav-item {
-          .nav-link {
-            color: $white;
-          }
-        }
-      }
-    }
-  }
-  //sidebar color variation Ends here
+  // &.sidebar-fixed {
+  //   @media(min-width: 992px) {
+  //     position: fixed;
+  //   }
+  //
+  //   .nav {
+  //     max-height: calc(100vh - 275px);
+  //     overflow: auto;
+  //     position: relative;
+  //
+  //     &.sub-menu {
+  //       max-height: none;
+  //     }
+  //   }
+  // }
 }
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {
