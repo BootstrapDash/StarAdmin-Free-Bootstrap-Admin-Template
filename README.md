@@ -7,7 +7,6 @@ Star Admin is packed with all the features that fit your needs but not cramped w
 
 Although the template has a design like none other, it is easily customizable to suit your requirements. Star Admin comes with a clean and well-commented code that makes it easy to work with the template. Thus making it an ideal pick for jump starting your project.
 
-<hr style="margin-bottom: 30px">
 
 <h1>Credits:</h1>
 
@@ -30,13 +29,11 @@ StarAdmin is designed to work flawlessly with all the latest and modern web brow
 - IE10+  
 
 <h1>License Information:</h1>
-<hr>
 
 
 Star Admin is released under MIT license. Star Admin is a free Bootstrap 4 admin template developed from BootstrapDash. Feel free to download it, use it, share it, get creative with it.
 
 <h1>How to use Star Admin?</h1>
-<hr>
 
 
 1 - Click the Clone or Download button in GitHub and download as a ZIP file or you can enter the command git clone https://github.com/BootstrapDash/StarAdmin-Free-Bootstrap-Admin-Template.git in you terminal to get a copy of this template.
@@ -50,7 +47,6 @@ Star Admin is released under MIT license. Star Admin is a free Bootstrap 4 admin
 5 - Now that your project has now kick-started, all you need to do now is to code, code, and code to your heart's content.
 
 <h1>How to Contribute?:</h1>
-<hr>
 
 
 We love your contributions and we welcome them wholeheartedly. We believe the more the merrier.
