@@ -1,4 +1,4 @@
-[![N|Solid](screenshot.jpg)](https://www.bootstrapdash.com/demo/star-admin-free/index.html)
+<a href="https://www.bootstrapdash.com/demo/star-admin-free/index.html" target="_blank"><img src="screenshot.jpg"></a>
 
 <h1>StarAdmin-Free-Bootstrap-Admin-Template</h1>
 Star Admin is a free responsive admin template built with Bootstrap 4. The template has colorful, attractive yet simple and elegant design. The template is well crafted, with all the components neatly and carefully designed and arranged within the template.
