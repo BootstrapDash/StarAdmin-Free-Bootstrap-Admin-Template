@@ -5,18 +5,18 @@
   @include bg-gradient($brand-gradient-left,$brand-gradient-right);
 }
 
-.bg-success-gadient{
+.bg-success-gradient{
 	@include bg-gradient(#2bb415,#5ad946);
 }
 
-.bg-info-gadient{
+.bg-info-gradient{
 	@include bg-gradient(#1991eb,#2ea1f8);
 }
 
-.bg-warning-gadient{
+.bg-warning-gradient{
 	@include bg-gradient(theme-color(warning) , #FFB656);
 }
 
-.bg-danger-gadient{
+.bg-danger-gradient{
 	@include bg-gradient(theme-color(danger) , #f85258);
 }
