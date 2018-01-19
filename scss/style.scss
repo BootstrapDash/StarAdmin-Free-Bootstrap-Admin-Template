@@ -1,10 +1,10 @@
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 @import "variables";
-@import "../node_modules/compass-mixins/lib/compass";
-@import "../node_modules/compass-mixins/lib/animate";
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "../node_modules/perfect-scrollbar/src/css/main";
+@import "~compass-mixins/lib/compass";
+@import "~compass-mixins/lib/animate";
+@import "~bootstrap/scss/bootstrap";
+@import "~perfect-scrollbar/src/css/main";
 @import "mixins/background";
 @import "mixins/animation";
 @import "mixins/font_import";
