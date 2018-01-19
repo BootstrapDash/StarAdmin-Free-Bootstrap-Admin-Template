@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "bootstrap": "4.0.0-beta",
+    "bootstrap": "4.0.0",
     "chart.js": "2.6.0",
     "flag-icon-css": "2.8.0",
     "font-awesome": "^4.7.0",
