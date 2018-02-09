@@ -12,7 +12,7 @@ Although the template has a design like none other, it is easily customizable to
 
 
 
-[![N|Solid](screenshot.jpg)](https://www.bootstrapdash.com/demo/star-admin-free/index.html)
+[![N|Solid](screenshot.jpg)](http://www.bootstrapdash.com/demo/star-admin-free/jquery/)
 <h1>Credits:</h1>
 
 - Bootstrap 4
