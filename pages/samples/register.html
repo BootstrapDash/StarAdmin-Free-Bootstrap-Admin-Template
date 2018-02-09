@@ -5,54 +5,79 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star Admin</title>
-  <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
-  <link rel="stylesheet" href="../../css/style.css" />
+  <title>Star Admin Free Bootstrap-4 Admin Dashboard Template</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../node_modules/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../node_modules/simple-line-icons/css/simple-line-icons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
 
 <body>
   <div class="container-scroller">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="content-wrapper full-page-wrapper d-flex align-items-center auth-pages">
-          <div class="card col-lg-4 mx-auto">
-            <div class="card-body px-5 py-5">
-              <h3 class="card-title text-left mb-3">Register</h3>
-              <form>
-                <div class="form-group">
-                  <input type="text" class="form-control p_input" placeholder="Username">
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control p_input" placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control p_input" placeholder="Password">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control p_input" placeholder="Repeat Password">
-                </div>
-                <div class="form-group d-flex align-items-center justify-content-between">
-                  <div class="form-check"><label><input type="checkbox" class="form-check-input">I Agree to the Terms & conditions</label></div>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-block enter-btn">LOG IN</button>
-                </div>
-                <p class="existing-user text-center pt-4 mb-0">Already have an acount?&nbsp;<a href="#">Sign up</a></p>
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth register-full-bg">
+        <div class="row w-100">
+          <div class="col-lg-4 mx-auto">
+            <div class="auth-form-light text-left p-5">
+              <h2>Register</h2>
+              <h4 class="font-weight-light">Hello! let's get started</h4>
+              <form class="pt-4">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                    <i class="mdi mdi-account"></i>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <i class="mdi mdi-eye"></i>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword2">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm password">
+                    <i class="mdi mdi-eye"></i>
+                  </div>
+                  <div class="mt-5">
+                    <a class="btn btn-block btn-primary btn-lg font-weight-medium" href="../../index.html">Register</a>
+                  </div>
+                  <div class="mt-2 w-75 mx-auto">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        I accept terms and conditions
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mt-2 text-center">
+                    <a href="login.html" class="auth-link text-black">Already have an account? <span class="font-weight-medium">Sign in</span></a>
+                  </div>
+                </form>                  
               </form>
             </div>
           </div>
         </div>
       </div>
+      <!-- content-wrapper ends -->
     </div>
+    <!-- page-body-wrapper ends -->
   </div>
-
+  <!-- container-scroller -->
+  <!-- plugins:js -->
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
   <script src="../../js/misc.js"></script>
+  <!-- endinject -->
 </body>
 
 </html>

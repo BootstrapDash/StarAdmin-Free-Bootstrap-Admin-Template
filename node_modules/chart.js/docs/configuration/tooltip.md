@@ -7,29 +7,29 @@ The tooltip configuration is passed into the `options.tooltips` namespace. The g
 | Name | Type | Default | Description
 | -----| ---- | --------| -----------
 | `enabled` | `Boolean` | `true` | Are tooltips enabled
-| `custom` | `Function` | `null` | See [custom tooltip](#custom-tooltips) section.
+| `custom` | `Function` | `null` | See [custom tooltip](#external-custom-tooltips) section.
 | `mode` | `String` | `'nearest'` | Sets which elements appear in the tooltip. [more...](../general/interactions/modes.md#interaction-modes).
 | `intersect` | `Boolean` | `true` | if true, the tooltip mode applies only when the mouse position intersects with an element. If false, the mode will be applied at all times.
 | `position` | `String` | `'average'` | The mode for positioning the tooltip. [more...](#position-modes)
 | `callbacks` | `Object` | | See the [callbacks section](#tooltip-callbacks)
 | `itemSort` | `Function` | | Sort tooltip items. [more...](#sort-callback)
 | `filter` | `Function` | | Filter tooltip items. [more...](#filter-callback)
-| `backgroundColor` | Color | `'rgba(0,0,0,0.8)'` | Background color of the tooltip.
+| `backgroundColor` | `Color` | `'rgba(0,0,0,0.8)'` | Background color of the tooltip.
 | `titleFontFamily` | `String` | `"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"` | title font
 | `titleFontSize` | `Number` | `12` | Title font size
 | `titleFontStyle` | `String` | `'bold'` | Title font style
-| `titleFontColor` | Color | `'#fff'` | Title font color
+| `titleFontColor` | `Color` | `'#fff'` | Title font color
 | `titleSpacing` | `Number` | `2` | Spacing to add to top and bottom of each title line.
 | `titleMarginBottom` | `Number` | `6` | Margin to add on bottom of title section.
 | `bodyFontFamily` | `String` | `"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"` | body line font
 | `bodyFontSize` | `Number` | `12` | Body font size
 | `bodyFontStyle` | `String` | `'normal'` | Body font style
-| `bodyFontColor` | Color | `'#fff'` | Body font color
+| `bodyFontColor` | `Color` | `'#fff'` | Body font color
 | `bodySpacing` | `Number` | `2` | Spacing to add to top and bottom of each tooltip item.
 | `footerFontFamily` | `String` | `"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"` | footer font
 | `footerFontSize` | `Number` | `12` | Footer font size
 | `footerFontStyle` | `String` | `'bold'` | Footer font style
-| `footerFontColor` | Color | `'#fff'` | Footer font color
+| `footerFontColor` | `Color` | `'#fff'` | Footer font color
 | `footerSpacing` | `Number` | `2` | Spacing to add to top and bottom of each fotter line.
 | `footerMarginTop` | `Number` | `6` | Margin to add before drawing the footer.
 | `xPadding` | `Number` | `6` | Padding to add on left and right of tooltip.
@@ -37,9 +37,9 @@ The tooltip configuration is passed into the `options.tooltips` namespace. The g
 | `caretPadding` | `Number` | `2` | Extra distance to move the end of the tooltip arrow away from the tooltip point.
 | `caretSize` | `Number` | `5` | Size, in px, of the tooltip arrow.
 | `cornerRadius` | `Number` | `6` | Radius of tooltip corner curves.
-| `multiKeyBackground` | Color | `'#fff'` | Color to draw behind the colored boxes when multiple items are in the tooltip
+| `multiKeyBackground` | `Color` | `'#fff'` | Color to draw behind the colored boxes when multiple items are in the tooltip
 | `displayColors` | `Boolean` | `true` | if true, color boxes are shown in the tooltip
-| `borderColor` | Color | `'rgba(0,0,0,0)'` | Color of the border
+| `borderColor` | `Color` | `'rgba(0,0,0,0)'` | Color of the border
 | `borderWidth` | `Number` | `0` | Size of the border
 
 ### Position Modes
@@ -51,19 +51,41 @@ The tooltip configuration is passed into the `options.tooltips` namespace. The g
 
 New modes can be defined by adding functions to the Chart.Tooltip.positioners map.
 
+Example:
+```javascript
+/**
+ * Custom positioner
+ * @function Chart.Tooltip.positioners.custom
+ * @param elements {Chart.Element[]} the tooltip elements
+ * @param eventPosition {Point} the position of the event in canvas coordinates
+ * @returns {Point} the tooltip position
+ */
+Chart.Tooltip.positioners.custom = function(elements, eventPosition) {
+    /** @type {Chart.Tooltip} */
+    var tooltip = this;
+	    
+    /* ... */
+	    
+    return {
+        x: 0,
+        y: 0
+    };
+}
+```
+
 ### Sort Callback
 
-Allows sorting of [tooltip items](#chart-configuration-tooltip-item-interface). Must implement at minimum a function that can be passed to [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).  This function can also accept a third parameter that is the data object passed to the chart.
+Allows sorting of [tooltip items](#tooltip-item-interface). Must implement at minimum a function that can be passed to [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).  This function can also accept a third parameter that is the data object passed to the chart.
 
 ### Filter Callback
 
-Allows filtering of [tooltip items](#chart-configuration-tooltip-item-interface). Must implement at minimum a function that can be passed to [Array.prototype.filter](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). This function can also accept a second parameter that is the data object passed to the chart.
+Allows filtering of [tooltip items](#tooltip-item-interface). Must implement at minimum a function that can be passed to [Array.prototype.filter](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). This function can also accept a second parameter that is the data object passed to the chart.
 
 ## Tooltip Callbacks
 
 The tooltip label configuration is nested below the tooltip configuration using the `callbacks` key. The tooltip has the following callbacks for providing text. For all functions, 'this' will be the tooltip object created from the Chart.Tooltip constructor.
 
-All functions are called with the same arguments: a [tooltip item](#chart-configuration-tooltip-item-interface) and the data object passed to the chart. All functions must return either a string or an array of strings. Arrays of strings are treated as multiple lines of text.
+All functions are called with the same arguments: a [tooltip item](#tooltip-item-interface) and the data object passed to the chart. All functions must return either a string or an array of strings. Arrays of strings are treated as multiple lines of text.
 
 | Name | Arguments | Description
 | ---- | --------- | -----------
@@ -74,6 +96,7 @@ All functions are called with the same arguments: a [tooltip item](#chart-config
 | `beforeLabel` | `tooltipItem, data` | Returns text to render before an individual label. This will be called for each item in the tooltip.
 | `label` | `tooltipItem, data` | Returns text to render for an individual item in the tooltip.
 | `labelColor` | `tooltipItem, chart` | Returns the colors to render for the tooltip item. [more...](#label-color-callback)
+| `labelTextColor` | `tooltipItem, chart` | Returns the colors for the text of the label for the tooltip item.
 | `afterLabel` | `tooltipItem, data` | Returns text to render after an individual label.
 | `afterBody` | `Array[tooltipItem], data` | Returns text to render after the body section
 | `beforeFooter` | `Array[tooltipItem], data` | Returns text to render before the footer section.
@@ -95,6 +118,9 @@ var chart = new Chart(ctx, {
                         borderColor: 'rgb(255, 0, 0)',
                         backgroundColor: 'rgb(255, 0, 0)'
                     }
+                },
+                labelTextColor:function(tooltipItem, chart){
+                    return '#543453';
                 }
             }
         }
@@ -239,7 +265,7 @@ The tooltip model contains parameters that can be used to render the tooltip.
 
     // Body
     // The body lines that need to be rendered
-    // Each pbject contains 3 parameters
+    // Each object contains 3 parameters
     // before: String[] // lines of text before the line with the color square
     // lines: String[], // lines of text to render as the main item with color square
     // after: String[], // lines of text to render after the main lines

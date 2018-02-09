@@ -154,7 +154,6 @@ function serveFile(path, type, string) {
 function getSocketJs (cp) {
 
     return [
-        cp.bs.getSocketIoScript(),
         cp.bs.getExternalSocketConnector({namespace: "/browser-sync-cp"})
     ].join(";");
 }

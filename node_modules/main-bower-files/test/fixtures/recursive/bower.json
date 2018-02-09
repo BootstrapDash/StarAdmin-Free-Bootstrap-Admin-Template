@@ -1,6 +1,0 @@
-{
-    "main": "./recursive.js",
-    "dependencies": {
-        "simple": "*"
-    } 
-}

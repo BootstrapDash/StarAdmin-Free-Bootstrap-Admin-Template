@@ -1,13 +1,5 @@
 var files = [
     {
-        name: "weinre",
-        context: "remote-debug",
-        active: false,
-        title: "Remote Debugger (weinre)",
-        tagline: "",
-        hidden: "<a href=\"%s\" target=\"_blank\">Access remote debugger (opens in a new tab)</a></p>"
-    },
-    {
         type: "css",
         context: "remote-debug",
         id: "__browser-sync-pesticide__",

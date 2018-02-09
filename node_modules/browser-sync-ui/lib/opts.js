@@ -1,10 +1,7 @@
 var Immutable  = require("immutable");
 
 var defaults = Immutable.fromJS({
-    port: 3001,
-    weinre: {
-        port: 8080
-    }
+    port: 3001
 });
 
 /**

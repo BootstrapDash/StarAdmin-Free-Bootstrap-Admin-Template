@@ -1,7 +1,7 @@
 /*!
  * array-slice <https://github.com/jonschlinkert/array-slice>
  *
- * Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+ * Copyright (c) 2014-2017, Jon Schlinkert.
  * Released under the MIT License.
  */
 
@@ -11,8 +11,8 @@ module.exports = function slice(arr, start, end) {
   var len = arr.length;
   var range = [];
 
-  start = idx(arr, start);
-  end = idx(arr, end, len);
+  start = idx(len, start);
+  end = idx(len, end, len);
 
   while (start < end) {
     range.push(arr[start++]);
@@ -20,9 +20,7 @@ module.exports = function slice(arr, start, end) {
   return range;
 };
 
-function idx(arr, pos, end) {
-  var len = arr.length;
-
+function idx(len, pos, end) {
   if (pos == null) {
     pos = end || 0;
   } else if (pos < 0) {

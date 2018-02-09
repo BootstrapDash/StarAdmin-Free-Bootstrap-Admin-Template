@@ -49,8 +49,43 @@ flaggedRespawn(v8flags, process.argv, function (ready, child) {
 
 ```
 
+
+## API
+
+### <u>flaggedRespawn(flags, argv, [ forcedFlags, ] callback) : Void</u>
+
+Respawns the script itself when *argv* has special flag contained in *flags* and/or *forcedFlags* is not empty. Because members of *flags* and *forcedFlags* are passed to `node` command, each of them needs to be a node flag or a V8 flag.
+
+#### Forbid respawning
+
+If `--no-respawning` flag is given in *argv*, this function does not respawned even if *argv* contains members of flags or *forcedFlags* is not empty. (This flag is also used internally to prevent from respawning more than once).
+
+#### Parameter:
+
+| Parameter     |  Type  | Description |
+|:--------------|:------:|:----------------------------------------------------|
+| *flags*       | Array  | An array of node flags and V8 flags which are available when present in *argv*. |
+| *argv*        | Array  | Command line arguments to respawn.   |
+| *forcedFlags* | Array or String  | An array of node flags or a string of a single flag and V8 flags for respawning forcely. |
+| *callback*    | function | A called function when not respawning or after respawned. |
+
+* **<u><i>callback</i>(ready, proc, argv) : Void</u>**
+
+    *callback* function is called both when respawned or not, and it can be distinguished by callback's argument: *ready*. (*ready* indicates whether a process spawned its child process (false) or not (true), but it does not indicate whether a process is a spawned child process or not. *ready* for a spawned child process is true.)
+    
+    *argv* is an array of command line arguments which is respawned (when *ready* is false) or is passed current process except flags within *flags* and `--no-respawning` (when *ready* is true).
+
+    **Parameter:**
+    
+    | Parameter |  Type   | Description               |
+    |:----------|:-------:|:--------------------------|
+    | *ready*   | boolean | True, if not respawning and is ready to execute main function. |
+    | *proc*    | object  | Child process object if respawned, otherwise current process object. |
+    | *argv*    | Array   | An array of command line arguments. |
+
 ## Release History
 
+* 2017-12-16 - v1.0.0 - Force/Forbid respawn, Improved API & testing
 * 2016-03-22 - v0.3.2 - fix issue with v8 flags values being dropped
 * 2014-09-12 - v0.3.1 - use `{ stdio: 'inherit' }` for spawn to maintain colors
 * 2014-09-11 - v0.3.0 - for real this time

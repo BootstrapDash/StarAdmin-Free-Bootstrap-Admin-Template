@@ -90,6 +90,11 @@ function req_ (id, cache) {
   }
   cache[id] = nm
   var fn
+  var setV8Flags = false
+  try {
+    require('v8').setFlagsFromString('--allow_natives_syntax')
+    setV8Flags = true
+  } catch (e) {}
   try {
     /* istanbul ignore else */
     if (ContextifyScript) {
@@ -105,6 +110,12 @@ function req_ (id, cache) {
     nm.loaded = true
   } finally {
     nm.loading = false
+    if (setV8Flags) {
+      // Ref: https://github.com/nodejs/node/blob/591a24b819d53a555463b1cbf9290a6d8bcc1bcb/lib/internal/bootstrap_node.js#L429-L434
+      var re = /^--allow[-_]natives[-_]syntax$/
+      if (!process.execArgv.some(function (s) { return re.test(s) }))
+        require('v8').setFlagsFromString('--noallow_natives_syntax')
+    }
   }
 
   return nm.exports

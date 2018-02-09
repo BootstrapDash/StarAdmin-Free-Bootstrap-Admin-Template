@@ -1,0 +1,100 @@
+/* Demo Styles */
+// Add spacing to Boostrap components for demo purpose
+
+.template-demo {
+  > .btn {
+    @extend .mt-2;
+    @extend .mr-2;
+  }
+
+  > .btn-toolbar {
+    @extend .mt-2;
+    @extend .mr-2;
+  }
+
+  > .btn-group {
+    @extend .mt-2;
+    @extend .mr-2;
+
+    .btn {
+      margin: 0 !important;
+    }
+  }
+
+  > h1,
+   > h3,
+   > h4,
+   > h5,
+   > h6,
+  > h2 {
+    border-top: 1px solid $border-color;
+    padding: 0.5rem 0 0;
+  }
+
+  .dropdown {
+    display: inline-block;
+    @extend .mr-2;
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    .breadcrumb {
+      margin-bottom: 1.375rem;
+    }
+
+    &:last-child {
+      .breadcrumb {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.purchace-popup {
+  > div {
+    @extend .grid-margin;
+
+    > span {
+      background: rgba(228, 228, 228, 0.46);
+      padding: 15px 20px;
+      @include border-radius(3px);
+
+      .btn {
+        margin-right: 20px;
+        font-weight: 500;
+        color: $white;
+        @include border-radius(5px);
+        &.download-button{
+          background: rgba(#e4e4e4,0.2);
+          color: darken(#e4e4e4,20%);
+          border:2px solid darken(#e4e4e4,10%);
+        }
+        &.purchase-button{
+          background-color: #d209fa;
+          @include filter-gradient(#d209fa, #4f81d4, horizontal);
+          @include background-image(linear-gradient(left, #d209fa 1%,#4f81d4 100%));
+          color: $white;
+          border: none;
+          line-height: 1;
+          vertical-align: middle;
+        }
+      }
+
+      p {
+        margin-bottom: auto;
+        margin-top: auto;
+        color: darken(#e4e4e4,40%);
+        font-weight: 400;
+        vertical-align: middle;
+        line-height: 1;
+      }
+
+      i {
+        vertical-align: middle;
+        line-height: 1;
+        margin: auto 0;
+        color: darken(#e4e4e4,20%);
+      }
+    }
+  }
+}

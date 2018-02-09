@@ -1,0 +1,31 @@
+/* Badges */
+
+
+.badge {
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: initial;
+  line-height: 1;
+  padding: 0.25rem 0.375rem;
+  font-family: $type-1;
+
+  &.badge-pill {
+    border-radius: 10rem;
+  }
+
+  &.badge-fw {
+    min-width: 70px;
+  }
+}
+/*Badge variations*/
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variations($value);
+  }
+}
+/*Badge outlined variations*/
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+    @include badge-outline-variations($value);
+  }
+}

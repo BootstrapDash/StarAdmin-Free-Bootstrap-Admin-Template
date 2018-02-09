@@ -1,4 +1,4 @@
-/*--Version 1.0.0--*/
+/* Reset Styles */
 
 body {
     padding: 0;
@@ -46,12 +46,22 @@ select::-moz-focus-inner {
     outline: 0
 }
 
-:focus {
-    outline: -webkit-focus-ring-color auto 0 !important
+input,
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    outline-width: 0;
+    outline-color: transparent;
+    box-shadow: none;
+    outline-style: none;
 }
 
 textarea {
-    resize: none
+    resize: none;
+    overflow-x: hidden;
 }
 
 .btn,

@@ -1,3 +1,5 @@
+## ISC License
+
 Copyright (c) 2014, Florian Reiterer
 
 Permission to use, copy, modify, and/or distribute this software for any

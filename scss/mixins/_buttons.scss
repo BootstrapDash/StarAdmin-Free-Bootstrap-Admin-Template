@@ -1,0 +1,48 @@
+@mixin social-button($color) {
+	background: $color;
+	color: color(white);
+
+	&:hover {
+		background: darken($color, 10%);
+	}
+
+	&.btn-link {
+		background: none;
+		color: $color;
+
+		&:hover {
+			color: darken($color, 10%);
+		}
+	}
+}
+
+@mixin button-inverse-variant($color, $color-hover: $white) {
+  color: $color;
+  background-color: rgba($color, 0.2);
+  background-image: none;
+  border-color: rgba($color, 0);
+  @include hover {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &.active,
+  &:active,
+  .show > &.dropdown-toggle {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
+}

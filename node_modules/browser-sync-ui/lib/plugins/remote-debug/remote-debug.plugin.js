@@ -1,4 +1,3 @@
-var weinre         = require("./weinre");
 //var compression     = require("./compression");
 //var noCachePlugin   = require("./no-cache");
 var overlayPlugin  = require("./overlay-grid/overlay-grid");
@@ -16,14 +15,6 @@ module.exports = {
      */
     "plugin": function (ui, bs) {
 
-        if (bs.options.get("scheme") === "https") {
-            ui.setMany(function (item) {
-                item.deleteIn(["clientFiles", "weinre"]);
-            });
-        } else {
-            ui.weinre = weinre.init(ui);
-        }
-
         ui.overlayGrid = overlayPlugin.init(ui, bs);
 
         //ui.noCache     = noCachePlugin.init(ui, bs);
@@ -40,11 +31,6 @@ module.exports = {
                 ui.disableElement(file);
             }
         });
-
-        /**
-         * Listen for weinre toggles
-         */
-        ui.listen("remote-debug:weinre", ui.weinre);
 
         /**
          * Listen for overlay-grid events

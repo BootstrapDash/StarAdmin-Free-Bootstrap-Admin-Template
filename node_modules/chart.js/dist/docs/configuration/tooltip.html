@@ -240,7 +240,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../general/colors.html">
+        <li class="chapter " data-level="1.3.3" data-path="../general/options.html">
+            
+                <a href="../general/options.html">
+            
+                    
+                    Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../general/colors.html">
             
                 <a href="../general/colors.html">
             
@@ -253,7 +266,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../general/fonts.html">
+        <li class="chapter " data-level="1.3.5" data-path="../general/fonts.html">
             
                 <a href="../general/fonts.html">
             
@@ -875,7 +888,7 @@
 <td><code>custom</code></td>
 <td><code>Function</code></td>
 <td><code>null</code></td>
-<td>See <a href="#custom-tooltips">custom tooltip</a> section.</td>
+<td>See <a href="#external-custom-tooltips">custom tooltip</a> section.</td>
 </tr>
 <tr>
 <td><code>mode</code></td>
@@ -915,7 +928,7 @@
 </tr>
 <tr>
 <td><code>backgroundColor</code></td>
-<td>Color</td>
+<td><code>Color</code></td>
 <td><code>&apos;rgba(0,0,0,0.8)&apos;</code></td>
 <td>Background color of the tooltip.</td>
 </tr>
@@ -939,7 +952,7 @@
 </tr>
 <tr>
 <td><code>titleFontColor</code></td>
-<td>Color</td>
+<td><code>Color</code></td>
 <td><code>&apos;#fff&apos;</code></td>
 <td>Title font color</td>
 </tr>
@@ -975,7 +988,7 @@
 </tr>
 <tr>
 <td><code>bodyFontColor</code></td>
-<td>Color</td>
+<td><code>Color</code></td>
 <td><code>&apos;#fff&apos;</code></td>
 <td>Body font color</td>
 </tr>
@@ -1005,7 +1018,7 @@
 </tr>
 <tr>
 <td><code>footerFontColor</code></td>
-<td>Color</td>
+<td><code>Color</code></td>
 <td><code>&apos;#fff&apos;</code></td>
 <td>Footer font color</td>
 </tr>
@@ -1053,7 +1066,7 @@
 </tr>
 <tr>
 <td><code>multiKeyBackground</code></td>
-<td>Color</td>
+<td><code>Color</code></td>
 <td><code>&apos;#fff&apos;</code></td>
 <td>Color to draw behind the colored boxes when multiple items are in the tooltip</td>
 </tr>
@@ -1065,7 +1078,7 @@
 </tr>
 <tr>
 <td><code>borderColor</code></td>
-<td>Color</td>
+<td><code>Color</code></td>
 <td><code>&apos;rgba(0,0,0,0)&apos;</code></td>
 <td>Color of the border</td>
 </tr>
@@ -1085,13 +1098,33 @@
 </ul>
 <p>&apos;average&apos; mode will place the tooltip at the average position of the items displayed in the tooltip. &apos;nearest&apos; will place the tooltip at the position of the element closest to the event position.</p>
 <p>New modes can be defined by adding functions to the Chart.Tooltip.positioners map.</p>
+<p>Example:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Custom positioner
+ * @function Chart.Tooltip.positioners.custom
+ * @param elements {Chart.Element[]} the tooltip elements
+ * @param eventPosition {Point} the position of the event in canvas coordinates
+ * @returns {Point} the tooltip position
+ */</span>
+Chart.Tooltip.positioners.custom = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">elements, eventPosition</span>) </span>{
+    <span class="hljs-comment">/** @type {Chart.Tooltip} */</span>
+    <span class="hljs-keyword">var</span> tooltip = <span class="hljs-keyword">this</span>;
+
+    <span class="hljs-comment">/* ... */</span>
+
+    <span class="hljs-keyword">return</span> {
+        x: <span class="hljs-number">0</span>,
+        y: <span class="hljs-number">0</span>
+    };
+}
+</code></pre>
 <h3 id="sort-callback">Sort Callback</h3>
-<p>Allows sorting of <a href="#chart-configuration-tooltip-item-interface">tooltip items</a>. Must implement at minimum a function that can be passed to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">Array.prototype.sort</a>.  This function can also accept a third parameter that is the data object passed to the chart.</p>
+<p>Allows sorting of <a href="#tooltip-item-interface">tooltip items</a>. Must implement at minimum a function that can be passed to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">Array.prototype.sort</a>.  This function can also accept a third parameter that is the data object passed to the chart.</p>
 <h3 id="filter-callback">Filter Callback</h3>
-<p>Allows filtering of <a href="#chart-configuration-tooltip-item-interface">tooltip items</a>. Must implement at minimum a function that can be passed to <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">Array.prototype.filter</a>. This function can also accept a second parameter that is the data object passed to the chart.</p>
+<p>Allows filtering of <a href="#tooltip-item-interface">tooltip items</a>. Must implement at minimum a function that can be passed to <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">Array.prototype.filter</a>. This function can also accept a second parameter that is the data object passed to the chart.</p>
 <h2 id="tooltip-callbacks">Tooltip Callbacks</h2>
 <p>The tooltip label configuration is nested below the tooltip configuration using the <code>callbacks</code> key. The tooltip has the following callbacks for providing text. For all functions, &apos;this&apos; will be the tooltip object created from the Chart.Tooltip constructor.</p>
-<p>All functions are called with the same arguments: a <a href="#chart-configuration-tooltip-item-interface">tooltip item</a> and the data object passed to the chart. All functions must return either a string or an array of strings. Arrays of strings are treated as multiple lines of text.</p>
+<p>All functions are called with the same arguments: a <a href="#tooltip-item-interface">tooltip item</a> and the data object passed to the chart. All functions must return either a string or an array of strings. Arrays of strings are treated as multiple lines of text.</p>
 <table>
 <thead>
 <tr>
@@ -1137,6 +1170,11 @@
 <td>Returns the colors to render for the tooltip item. <a href="#label-color-callback">more...</a></td>
 </tr>
 <tr>
+<td><code>labelTextColor</code></td>
+<td><code>tooltipItem, chart</code></td>
+<td>Returns the colors for the text of the label for the tooltip item.</td>
+</tr>
+<tr>
 <td><code>afterLabel</code></td>
 <td><code>tooltipItem, data</code></td>
 <td>Returns text to render after an individual label.</td>
@@ -1176,6 +1214,9 @@
                         borderColor: <span class="hljs-string">&apos;rgb(255, 0, 0)&apos;</span>,
                         backgroundColor: <span class="hljs-string">&apos;rgb(255, 0, 0)&apos;</span>
                     }
+                },
+                labelTextColor:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">tooltipItem, chart</span>)</span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;#543453&apos;</span>;
                 }
             }
         }
@@ -1307,7 +1348,7 @@
 
     <span class="hljs-comment">// Body</span>
     <span class="hljs-comment">// The body lines that need to be rendered</span>
-    <span class="hljs-comment">// Each pbject contains 3 parameters</span>
+    <span class="hljs-comment">// Each object contains 3 parameters</span>
     <span class="hljs-comment">// before: String[] // lines of text before the line with the color square</span>
     <span class="hljs-comment">// lines: String[], // lines of text to render as the main item with color square</span>
     <span class="hljs-comment">// after: String[], // lines of text to render after the main lines</span>
@@ -1402,7 +1443,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tooltip","level":"1.4.5","depth":2,"next":{"title":"Elements","level":"1.4.6","depth":2,"path":"configuration/elements.md","ref":"configuration/elements.md","articles":[]},"previous":{"title":"Title","level":"1.4.4","depth":2,"path":"configuration/title.md","ref":"configuration/title.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","anchorjs","chartjs","ga"],"root":"./docs","styles":{"website":"style.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchorjs":{"icon":"#","placement":"left","visible":"always"},"ga":{"configuration":"auto","token":"UA-28909194-3"},"theme-default":{"styles":{"website":"style.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{},"chartjs":{"defaults":null},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"chartjs","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.2"},"file":{"path":"configuration/tooltip.md","mtime":"2017-05-25T14:02:34.971Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-25T14:06:47.305Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tooltip","level":"1.4.5","depth":2,"next":{"title":"Elements","level":"1.4.6","depth":2,"path":"configuration/elements.md","ref":"configuration/elements.md","articles":[]},"previous":{"title":"Title","level":"1.4.4","depth":2,"path":"configuration/title.md","ref":"configuration/title.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","anchorjs","chartjs","ga"],"root":"./docs","styles":{"website":"style.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchorjs":{"icon":"#","placement":"left","visible":"always"},"ga":{"configuration":"auto","token":"UA-28909194-3"},"theme-default":{"styles":{"website":"style.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{},"chartjs":{"defaults":null},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"chartjs","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.2"},"file":{"path":"configuration/tooltip.md","mtime":"2017-10-28T15:03:49.266Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-28T15:09:53.587Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

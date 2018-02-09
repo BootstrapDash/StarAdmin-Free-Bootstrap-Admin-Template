@@ -47,6 +47,10 @@ describe('Core.Tooltip', function() {
 				options: {
 					tooltips: {
 						mode: 'index',
+						intersect: false,
+					},
+					hover: {
+						mode: 'index',
 						intersect: false
 					}
 				}
@@ -139,7 +143,7 @@ describe('Core.Tooltip', function() {
 				}]
 			}));
 
-			expect(tooltip._view.x).toBeCloseToPixel(263);
+			expect(tooltip._view.x).toBeCloseToPixel(266);
 			expect(tooltip._view.y).toBeCloseToPixel(155);
 		});
 
@@ -330,13 +334,14 @@ describe('Core.Tooltip', function() {
 			afterBody: [],
 			footer: [],
 			caretPadding: 2,
+			labelTextColors: ['#fff'],
 			labelColors: [{
 				borderColor: 'rgb(255, 0, 0)',
 				backgroundColor: 'rgb(0, 255, 0)'
 			}]
 		}));
 
-		expect(tooltip._view.x).toBeCloseToPixel(263);
+		expect(tooltip._view.x).toBeCloseToPixel(266);
 		expect(tooltip._view.y).toBeCloseToPixel(312);
 	});
 
@@ -393,6 +398,9 @@ describe('Core.Tooltip', function() {
 						},
 						afterFooter: function() {
 							return 'afterFooter';
+						},
+						labelTextColor: function() {
+							return 'labelTextColor';
 						}
 					}
 				}
@@ -476,6 +484,7 @@ describe('Core.Tooltip', function() {
 			afterBody: ['afterBody'],
 			footer: ['beforeFooter', 'footer', 'afterFooter'],
 			caretPadding: 2,
+			labelTextColors: ['labelTextColor', 'labelTextColor'],
 			labelColors: [{
 				borderColor: 'rgb(255, 0, 0)',
 				backgroundColor: 'rgb(0, 255, 0)'
@@ -485,7 +494,7 @@ describe('Core.Tooltip', function() {
 			}]
 		}));
 
-		expect(tooltip._view.x).toBeCloseToPixel(211);
+		expect(tooltip._view.x).toBeCloseToPixel(214);
 		expect(tooltip._view.y).toBeCloseToPixel(190);
 	});
 
@@ -565,7 +574,7 @@ describe('Core.Tooltip', function() {
 			}]
 		}));
 
-		expect(tooltip._view.x).toBeCloseToPixel(263);
+		expect(tooltip._view.x).toBeCloseToPixel(266);
 		expect(tooltip._view.y).toBeCloseToPixel(155);
 	});
 
@@ -812,5 +821,65 @@ describe('Core.Tooltip', function() {
 		// Second dispatch change event (same event), should not update tooltip
 		node.dispatchEvent(firstEvent);
 		expect(tooltip.update).not.toHaveBeenCalled();
+	});
+
+	describe('positioners', function() {
+		it('Should call custom positioner with correct parameters and scope', function() {
+
+			Chart.Tooltip.positioners.test = function() {
+				return {x: 0, y: 0};
+			};
+
+			spyOn(Chart.Tooltip.positioners, 'test').and.callThrough();
+
+			var chart = window.acquireChart({
+				type: 'line',
+				data: {
+					datasets: [{
+						label: 'Dataset 1',
+						data: [10, 20, 30],
+						pointHoverBorderColor: 'rgb(255, 0, 0)',
+						pointHoverBackgroundColor: 'rgb(0, 255, 0)'
+					}, {
+						label: 'Dataset 2',
+						data: [40, 40, 40],
+						pointHoverBorderColor: 'rgb(0, 0, 255)',
+						pointHoverBackgroundColor: 'rgb(0, 255, 255)'
+					}],
+					labels: ['Point 1', 'Point 2', 'Point 3']
+				},
+				options: {
+					tooltips: {
+						mode: 'nearest',
+						position: 'test'
+					}
+				}
+			});
+
+			// Trigger an event over top of the
+			var pointIndex = 1;
+			var datasetIndex = 0;
+			var meta = chart.getDatasetMeta(datasetIndex);
+			var point = meta.data[pointIndex];
+			var node = chart.canvas;
+			var rect = node.getBoundingClientRect();
+			var evt = new MouseEvent('mousemove', {
+				view: window,
+				bubbles: true,
+				cancelable: true,
+				clientX: rect.left + point._model.x,
+				clientY: rect.top + point._model.y
+			});
+
+			// Manually trigger rather than having an async test
+			node.dispatchEvent(evt);
+
+			var fn = Chart.Tooltip.positioners.test;
+			expect(fn.calls.count()).toBe(1);
+			expect(fn.calls.first().args[0] instanceof Array).toBe(true);
+			expect(fn.calls.first().args[1].hasOwnProperty('x')).toBe(true);
+			expect(fn.calls.first().args[1].hasOwnProperty('y')).toBe(true);
+			expect(fn.calls.first().object instanceof Chart.Tooltip).toBe(true);
+		});
 	});
 });

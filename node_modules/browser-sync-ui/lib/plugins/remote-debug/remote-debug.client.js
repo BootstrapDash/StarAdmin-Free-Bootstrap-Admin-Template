@@ -35,21 +35,10 @@
         }
 
         ctrl.toggleClientFile = function (item) {
-            if (item.name === "weinre") {
-                return ctrl.toggleWeinre(item);
-            }
             if (item.active) {
                 return ctrl.enable(item);
             }
             return ctrl.disable(item);
-        };
-
-        ctrl.toggleWeinre = function (item) {
-            Socket.uiEvent({
-                namespace: SECTION_NAME + ":weinre",
-                event: "toggle",
-                data: item.active
-            });
         };
 
         ctrl.toggleOverlayGrid = function (item) {

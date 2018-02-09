@@ -7,57 +7,45 @@
 
 'use strict';
 
-var toPath = require('to-object-path');
+var split = require('split-string');
 var extend = require('extend-shallow');
 var isPlainObject = require('is-plain-object');
 var isObject = require('is-extendable');
 
-module.exports = function(obj, path, val) {
+module.exports = function(obj, prop, val) {
   if (!isObject(obj)) {
     return obj;
   }
 
-  if (Array.isArray(path)) {
-    path = toPath(path);
+  if (Array.isArray(prop)) {
+    prop = [].concat.apply([], prop).join('.');
   }
 
-  if (typeof path !== 'string') {
+  if (typeof prop !== 'string') {
     return obj;
   }
 
-  var segs = path.split('.');
-  var len = segs.length, i = -1;
-  var res = obj;
-  var last;
+  var keys = split(prop, {sep: '.', brackets: true});
+  var len = keys.length;
+  var idx = -1;
+  var current = obj;
 
-  while (++i < len) {
-    var key = segs[i];
-
-    while (key[key.length - 1] === '\\') {
-      key = key.slice(0, -1) + '.' + segs[++i];
+  while (++idx < len) {
+    var key = keys[idx];
+    if (idx !== len - 1) {
+      if (!isObject(current[key])) {
+        current[key] = {};
+      }
+      current = current[key];
+      continue;
     }
 
-    if (i === len - 1) {
-      last = key;
-      break;
-    }
-
-    if (!isObject(obj[key])) {
-      obj[key] = {};
-    }
-    obj = obj[key];
-  }
-
-  if (obj.hasOwnProperty(last) && isObject(obj[last])) {
-    if (isPlainObject(val)) {
-      extend(obj[last], val);
+    if (isPlainObject(current[key]) && isPlainObject(val)) {
+      current[key] = extend({}, current[key], val);
     } else {
-      obj[last] = val;
+      current[key] = val;
     }
-
-  } else {
-    obj[last] = val;
   }
-  return res;
-};
 
+  return obj;
+};

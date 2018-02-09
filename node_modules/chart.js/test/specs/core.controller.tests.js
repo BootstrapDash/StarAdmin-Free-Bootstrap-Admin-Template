@@ -1,18 +1,5 @@
 describe('Chart', function() {
 
-	function waitForResize(chart, callback) {
-		var resizer = chart.canvas.parentNode._chartjs.resizer;
-		var content = resizer.contentWindow || resizer;
-		var state = content.document.readyState || 'complete';
-		var handler = function() {
-			Chart.helpers.removeEvent(content, 'load', handler);
-			Chart.helpers.removeEvent(content, 'resize', handler);
-			setTimeout(callback, 50);
-		};
-
-		Chart.helpers.addEvent(content, state !== 'complete'? 'load' : 'resize', handler);
-	}
-
 	// https://github.com/chartjs/Chart.js/issues/2481
 	// See global.deprecations.tests.js for backward compatibility
 	it('should be defined and prototype of chart instances', function() {
@@ -376,6 +363,91 @@ describe('Chart', function() {
 			});
 		});
 
+		// https://github.com/chartjs/Chart.js/issues/3790
+		it('should resize the canvas if attached to the DOM after construction', function(done) {
+			var canvas = document.createElement('canvas');
+			var wrapper = document.createElement('div');
+			var body = window.document.body;
+			var chart = new Chart(canvas, {
+				type: 'line',
+				options: {
+					responsive: true,
+					maintainAspectRatio: false
+				}
+			});
+
+			expect(chart).toBeChartOfSize({
+				dw: 0, dh: 0,
+				rw: 0, rh: 0,
+			});
+
+			wrapper.style.cssText = 'width: 455px; height: 355px';
+			wrapper.appendChild(canvas);
+			body.appendChild(wrapper);
+
+			waitForResize(chart, function() {
+				expect(chart).toBeChartOfSize({
+					dw: 455, dh: 355,
+					rw: 455, rh: 355,
+				});
+
+				body.removeChild(wrapper);
+				chart.destroy();
+				done();
+			});
+		});
+
+		it('should resize the canvas when attached to a different parent', function(done) {
+			var canvas = document.createElement('canvas');
+			var wrapper = document.createElement('div');
+			var body = window.document.body;
+			var chart = new Chart(canvas, {
+				type: 'line',
+				options: {
+					responsive: true,
+					maintainAspectRatio: false
+				}
+			});
+
+			expect(chart).toBeChartOfSize({
+				dw: 0, dh: 0,
+				rw: 0, rh: 0,
+			});
+
+			wrapper.style.cssText = 'width: 455px; height: 355px';
+			wrapper.appendChild(canvas);
+			body.appendChild(wrapper);
+
+			waitForResize(chart, function() {
+				var resizer = wrapper.firstChild;
+				expect(resizer.className).toBe('chartjs-size-monitor');
+				expect(resizer.tagName).toBe('DIV');
+				expect(chart).toBeChartOfSize({
+					dw: 455, dh: 355,
+					rw: 455, rh: 355,
+				});
+
+				var target = document.createElement('div');
+				target.style.cssText = 'width: 640px; height: 480px';
+				target.appendChild(canvas);
+				body.appendChild(target);
+
+				waitForResize(chart, function() {
+					expect(target.firstChild).toBe(resizer);
+					expect(wrapper.firstChild).toBe(null);
+					expect(chart).toBeChartOfSize({
+						dw: 640, dh: 480,
+						rw: 640, rh: 480,
+					});
+
+					body.removeChild(wrapper);
+					body.removeChild(target);
+					chart.destroy();
+					done();
+				});
+			});
+		});
+
 		// https://github.com/chartjs/Chart.js/issues/3521
 		it('should resize the canvas after the wrapper has been re-attached to the DOM', function(done) {
 			var chart = acquireChart({
@@ -417,6 +489,45 @@ describe('Chart', function() {
 					expect(chart).toBeChartOfSize({
 						dw: 455, dh: 355,
 						rw: 455, rh: 355,
+					});
+
+					done();
+				});
+			});
+		});
+
+		// https://github.com/chartjs/Chart.js/issues/4737
+		it('should resize the canvas when re-creating the chart', function(done) {
+			var chart = acquireChart({
+				options: {
+					responsive: true
+				}
+			}, {
+				wrapper: {
+					style: 'width: 320px'
+				}
+			});
+
+			waitForResize(chart, function() {
+				var canvas = chart.canvas;
+				expect(chart).toBeChartOfSize({
+					dw: 320, dh: 320,
+					rw: 320, rh: 320,
+				});
+
+				chart.destroy();
+				chart = new Chart(canvas, {
+					type: 'line',
+					options: {
+						responsive: true
+					}
+				});
+
+				canvas.parentNode.style.width = '455px';
+				waitForResize(chart, function() {
+					expect(chart).toBeChartOfSize({
+						dw: 455, dh: 455,
+						rw: 455, rh: 455,
 					});
 
 					done();
@@ -555,24 +666,77 @@ describe('Chart', function() {
 		});
 	});
 
+	describe('config.options.devicePixelRatio', function() {
+		beforeEach(function() {
+			this.devicePixelRatio = window.devicePixelRatio;
+			window.devicePixelRatio = 1;
+		});
+
+		afterEach(function() {
+			window.devicePixelRatio = this.devicePixelRatio;
+		});
+
+		// see https://github.com/chartjs/Chart.js/issues/3575
+		it ('should scale the render size but not the "implicit" display size', function() {
+			var chart = acquireChart({
+				options: {
+					responsive: false,
+					devicePixelRatio: 3
+				}
+			}, {
+				canvas: {
+					width: 320,
+					height: 240,
+				}
+			});
+
+			expect(chart).toBeChartOfSize({
+				dw: 320, dh: 240,
+				rw: 960, rh: 720,
+			});
+		});
+
+		it ('should scale the render size but not the "explicit" display size', function() {
+			var chart = acquireChart({
+				options: {
+					responsive: false,
+					devicePixelRatio: 3
+				}
+			}, {
+				canvas: {
+					style: 'width: 320px; height: 240px'
+				}
+			});
+
+			expect(chart).toBeChartOfSize({
+				dw: 320, dh: 240,
+				rw: 960, rh: 720,
+			});
+		});
+	});
+
 	describe('controller.destroy', function() {
-		it('should remove the resizer element when responsive: true', function() {
+		it('should remove the resizer element when responsive: true', function(done) {
 			var chart = acquireChart({
 				options: {
 					responsive: true
 				}
 			});
 
-			var wrapper = chart.canvas.parentNode;
-			var resizer = wrapper.firstChild;
+			waitForResize(chart, function() {
+				var wrapper = chart.canvas.parentNode;
+				var resizer = wrapper.firstChild;
+				expect(wrapper.childNodes.length).toBe(2);
+				expect(resizer.className).toBe('chartjs-size-monitor');
+				expect(resizer.tagName).toBe('DIV');
 
-			expect(wrapper.childNodes.length).toBe(2);
-			expect(resizer.tagName).toBe('IFRAME');
+				chart.destroy();
 
-			chart.destroy();
+				expect(wrapper.childNodes.length).toBe(1);
+				expect(wrapper.firstChild.tagName).toBe('CANVAS');
 
-			expect(wrapper.childNodes.length).toBe(1);
-			expect(wrapper.firstChild.tagName).toBe('CANVAS');
+				done();
+			});
 		});
 	});
 
@@ -657,6 +821,89 @@ describe('Chart', function() {
 			chart.update();
 			expect(chart.tooltip._options).toEqual(jasmine.objectContaining(newTooltipConfig));
 		});
+
+		it ('should reset the tooltip on update', function() {
+			var chart = acquireChart({
+				type: 'line',
+				data: {
+					labels: ['A', 'B', 'C', 'D'],
+					datasets: [{
+						data: [10, 20, 30, 100]
+					}]
+				},
+				options: {
+					responsive: true,
+					tooltip: {
+						mode: 'nearest'
+					}
+				}
+			});
+
+			// Trigger an event over top of a point to
+			// put an item into the tooltip
+			var meta = chart.getDatasetMeta(0);
+			var point = meta.data[1];
+
+			var node = chart.canvas;
+			var rect = node.getBoundingClientRect();
+
+			var evt = new MouseEvent('mousemove', {
+				view: window,
+				bubbles: true,
+				cancelable: true,
+				clientX: rect.left + point._model.x,
+				clientY: 0
+			});
+
+			// Manually trigger rather than having an async test
+			node.dispatchEvent(evt);
+
+			// Check and see if tooltip was displayed
+			var tooltip = chart.tooltip;
+
+			expect(chart.lastActive).toEqual([point]);
+			expect(tooltip._lastActive).toEqual([]);
+
+			// Update and confirm tooltip is reset
+			chart.update();
+			expect(chart.lastActive).toEqual([]);
+			expect(tooltip._lastActive).toEqual([]);
+		});
+
+		it ('should update the metadata', function() {
+			var cfg = {
+				data: {
+					labels: ['A', 'B', 'C', 'D'],
+					datasets: [{
+						type: 'line',
+						data: [10, 20, 30, 0]
+					}]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						xAxes: [{
+							type: 'time'
+						}],
+						yAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: 'Value'
+							}
+						}]
+					}
+				}
+			};
+			var chart = acquireChart(cfg);
+			var meta = chart.getDatasetMeta(0);
+			expect(meta.type).toBe('line');
+
+			// change the dataset to bar and check that meta was updated
+			chart.config.data.datasets[0].type = 'bar';
+			chart.update();
+			meta = chart.getDatasetMeta(0);
+			expect(meta.type).toBe('bar');
+		});
 	});
 
 	describe('plugin.extensions', function() {
@@ -685,6 +932,8 @@ describe('Chart', function() {
 					'beforeDatasetDraw',
 					'afterDatasetDraw',
 					'afterDatasetsDraw',
+					'beforeTooltipDraw',
+					'afterTooltipDraw',
 					'afterDraw',
 					'afterRender',
 				],
@@ -756,6 +1005,48 @@ describe('Chart', function() {
 				'before-2', 'after-2',
 				'before-0', 'after-0'
 			]);
+		});
+	});
+
+	describe('controller.update', function() {
+		beforeEach(function() {
+			this.chart = acquireChart({
+				type: 'doughnut',
+				options: {
+					animation: {
+						easing: 'linear',
+						duration: 500
+					}
+				}
+			});
+
+			this.addAnimationSpy = spyOn(Chart.animationService, 'addAnimation');
+		});
+
+		it('should add an animation with the default options', function() {
+			this.chart.update();
+
+			expect(this.addAnimationSpy).toHaveBeenCalledWith(
+				this.chart,
+				jasmine.objectContaining({easing: 'linear'}),
+				undefined,
+				undefined
+			);
+		});
+
+		it('should add an animation with the provided options', function() {
+			this.chart.update({
+				duration: 800,
+				easing: 'easeOutBounce',
+				lazy: false,
+			});
+
+			expect(this.addAnimationSpy).toHaveBeenCalledWith(
+				this.chart,
+				jasmine.objectContaining({easing: 'easeOutBounce'}),
+				800,
+				false
+			);
 		});
 	});
 });

@@ -1,0 +1,96 @@
+/* Auth */
+.auth {
+	&.login-full-bg {
+		background: url("../images/auth/login_1.jpg");
+		background-size: cover;
+	}
+
+	&.register-full-bg {
+		background: url("../images/auth/register_1.jpg");
+		background-size: cover;
+	}
+
+	.auth-form-dark {
+		background: rgba($black, .6);
+		color: $white;
+
+		.form-control {
+			border-color: rgba($white, .2);
+			color: $white;
+			@include input-placeholder {
+				color: $white;
+			}
+		}
+	}
+
+	.auth-form-light {
+		background: $white;
+		color: $black;
+
+		.form-control {
+			border-color: rgba($black, .2);
+			color: $black;
+			@include input-placeholder {
+				color: $black;
+			}
+		}
+	}
+
+	.auth-form-transparent {
+		background: transparent;
+		color: $white;
+
+		form {
+			.form-group {
+				.form-control {
+					padding-left: 1rem;
+					padding-right: 1rem;
+					border-color: rgba($white, .2);
+				}
+			}
+		}
+	}
+
+	form {
+		.form-group {
+			position: relative;
+
+			label {
+				margin-bottom: 0;
+				vertical-align: bottom;
+				font-size: 0.8125rem;
+				font-family: $type-1;
+			}
+
+			.form-control {
+				background: transparent;
+				border-top: 0;
+				border-left: 0;
+				border-right: 0;
+				border-radius: 0;
+				padding-left: 0;
+				padding-right: 2.5rem;
+				font-size: 0.9375rem;
+			}
+
+			i {
+				position: absolute;
+				right: 1rem;
+				height: 18px;
+				top: calc((100% - 18px) / 2);
+			}
+		}
+
+		.btn {
+			font-size: 1.25rem;
+		}
+
+		.auth-link {
+			font-size: $default-font-size;
+
+			&:hover {
+				color: initial;
+			}
+		}
+	}
+}
