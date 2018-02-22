@@ -1,4 +1,0 @@
-/**
- * Export `gulp-inject-partials`
- */
-module.exports = require('./src');
