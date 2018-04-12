@@ -28,6 +28,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
+    "clean": "rm -rf ./node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bootstrapdash",
