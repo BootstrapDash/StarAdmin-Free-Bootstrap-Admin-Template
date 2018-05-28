@@ -1,6 +1,4 @@
 /* Forms */
-
-
 .input-group-append,
 .input-group-prepend {
   background: color(white);
@@ -20,6 +18,7 @@
   font-size: $input-font-size;
   padding: $btn-padding-y .75rem;
   line-height: 14px;
+  font-weight: 300;
 
   &.form-control-lg {
     padding: $input-btn-padding-y-lg .75rem;

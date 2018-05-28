@@ -1,5 +1,4 @@
 /* Checkboxes and Radios */
-
 .form-check,
 .form-radio {
   position: relative;
@@ -10,6 +9,7 @@
   .form-check-label {
     display: block;
     padding-left: 30px;
+
     .rtl & {
       padding-left: 0;
       padding-right: 30px;
@@ -22,6 +22,7 @@
       margin-top: 4px\9;
       top: 0;
       left: 0;
+
       .rtl & {
         left: auto;
         right: 0;
@@ -40,6 +41,7 @@
     font-size: $default-font-size;
     line-height: 1.5;
     padding-left: 10px;
+
     input {
       &:checked {
         +.input-helper {
@@ -81,11 +83,13 @@
       &:before {
         position: absolute;
         content: "";
-        top: 2px;
+        top: 50%;
+        @include transform(translateY(-50%));
         width: 18px;
         height: 18px;
         border-radius: 2px;
         left: 0;
+
         .rtl & {
           left: auto;
           right: 0;
@@ -115,14 +119,16 @@
         transform: scale(0);
         content: '\F12C';
         position: absolute;
-        font-size: .9375rem;
+        font-size: 0.9375rem;
         font-weight: bold;
         left: 0;
+
         .rtl & {
           left: auto;
           right: 0;
         }
-        top: 2px;
+        top: 14%;
+        @include transform(translateY(-14%));
         color: theme-color(info);
       }
     }
@@ -181,8 +187,10 @@
         &:before {
           position: absolute;
           content: "";
-          top: 2px;
+          top: 50%;
+          @include transform(translateY(-50%));
           left: 0;
+
           .rtl & {
             left: auto;
             right: 0;
@@ -205,8 +213,10 @@
           height: 8px;
           background: theme-color(danger);
           border-radius: 50%;
-          top: 8px;
+          top: 30%;
+          @include transform(translateY(-30%));
           left: 6px;
+
           .rtl & {
             left: auto;
             right: 6px;
@@ -232,6 +242,8 @@
           &:before {
             background-color: $white;
             border: 2px solid $border-color;
+            top: 30%;
+            @include transform(translateY(-30%));
           }
 
           &:after {
@@ -277,13 +289,17 @@
             &:before {
               background: theme-color(success);
               border-color: theme-color(success);
+              top: 50%;
+              @include transform(translateY(-50%));
             }
 
             &:after {
               width: 20px;
               height: 20px;
-              top: 2px;
+              top: 50%;
+              @include transform(translateY(-50%));
               left: -2px;
+
               .rtl & {
                 left: auto;
                 right: -2px;

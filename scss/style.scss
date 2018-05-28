@@ -5,8 +5,6 @@
   Version:	2.0
 -------------------------------------------------------------------*/
 
-
-
 /*-------------------------------------------------------------------
   ===== Table of Contents =====
 
@@ -38,12 +36,16 @@
     + Dashboard
   * Components
     + Badges
+    + Bootstrap Progress
     + Buttons
     + Cards
     + Checkboxes and Radios
     + Dropdowns
     + Forms
     + Icons
+    + Lists
+    + Nav
+    + New Account
     + Preview
     + Tables
   * Landing screens
@@ -51,27 +53,32 @@
     + Error
 -------------------------------------------------------------------*/
 
-
 /*-------------------------------------------------------------------*/
+
 /* === Import Bootstrap functions and variables === */
+
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
-
 /*-------------------------------------------------------------------*/
+
 /* === Import template variables === */
-@import "variables";
 
+@import "variables";
 /*-------------------------------------------------------------------*/
+
 /* === SCSS Compass Functions === */
+
 @import "../node_modules/compass-mixins/lib/compass";
 @import "../node_modules/compass-mixins/lib/animate";
-
 /*-------------------------------------------------------------------*/
+
 /* === Boostrap Main SCSS === */
-@import "../node_modules/bootstrap/scss/bootstrap";
 
+@import "../node_modules/bootstrap/scss/bootstrap";
 /*-------------------------------------------------------------------*/
+
 /* === Template mixins === */
+
 @import "mixins/animation";
 @import "mixins/background";
 @import "mixins/blockqoute";
@@ -80,9 +87,10 @@
 @import "mixins/cards";
 @import "mixins/misc";
 @import "mixins/text";
-
 /*-------------------------------------------------------------------*/
+
 /* === Core Styles === */
+
 @import "reset";
 @import "fonts";
 @import "functions";
@@ -94,20 +102,26 @@
 @import "utilities";
 @import "demo";
 @import "dashboard";
-
 /*-------------------------------------------------------------------*/
+
 /* === Components === */
+
 @import "components/badges";
+@import "components/bootstrap-progress";
 @import "components/buttons";
 @import "components/cards";
 @import "components/checkbox-radio";
 @import "components/dropdown";
 @import "components/forms";
 @import "components/icons";
+@import "components/lists";
+@import "components/nav";
+@import "components/new-account";
 @import "components/preview";
 @import "components/tables";
-
 /*-------------------------------------------------------------------*/
+
 /* === Landing screens === */
+
 @import "landing-screens/auth";
 @import "landing-screens/error";

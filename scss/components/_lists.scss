@@ -1,0 +1,117 @@
+/* Lists */
+dl,
+ol,
+ul {
+  padding-left: 1rem;
+  font-size: $default-font-size;
+
+  li {
+    line-height: 1.8;
+  }
+}
+
+.list-arrow,
+.list-star,
+.list-ticked {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding-left: 1.5rem;
+
+    &:before {
+      font-family: "Material Design Icons";
+      margin-left: -1.5rem;
+      width: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.list-ticked {
+  li {
+    &:before {
+      content: '\F12D';
+      color: theme-color(danger);
+    }
+  }
+}
+
+.list-arrow {
+  li {
+    &:before {
+      content: '\F142';
+      color: theme-color(success);
+    }
+  }
+}
+
+.list-star {
+  li {
+    &:before {
+      content: '\F4CE';
+      color: theme-color(warning);
+    }
+  }
+}
+
+.bullet-line-list {
+  padding-left: 30px;
+  margin-bottom: 0;
+  position: relative;
+  list-style-type: none;
+
+  .rtl & {
+    padding-right: 0px;
+  }
+
+  li {
+    position: relative;
+    line-height: 1;
+    padding-bottom: 30px;
+
+    &:before {
+      width: 12px;
+      height: 12px;
+      left: -28px;
+      top: 13px;
+      border: 3px solid;
+      margin-right: 15px;
+      z-index: 2;
+      background: color(white);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      border-color: theme-color(primary);
+    }
+
+    &:after {
+      content: "";
+      border: 1px solid $border-color;
+      position: absolute;
+      bottom: 0;
+      left: -23px;
+      height: 100%;
+    }
+
+    &:first-child {
+      &:after {
+        content: "";
+        height: 80%;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &:after {
+        content: "";
+        top: 0;
+        height: 30%;
+      }
+    }
+  }
+}

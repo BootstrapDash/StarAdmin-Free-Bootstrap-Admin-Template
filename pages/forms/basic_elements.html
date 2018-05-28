@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Star Admin Free Bootstrap-4 Admin Dashboard Template</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="../../node_modules/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../../node_modules/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.addons.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/icheck/skins/all.css">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
@@ -21,82 +23,35 @@
 <body>
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="../../index.html">
+          <img src="../../images/logo.svg" alt="logo" />
+        </a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html">
+          <img src="../../images/logo-mini.svg" alt="logo" />
+        </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="mdi mdi-image-filter"></i>Gallery</a>
+            <a href="#" class="nav-link">Schedule
+              <span class="badge badge-primary ml-1">New</span>
+            </a>
           </li>
           <li class="nav-item active">
-            <a href="#" class="nav-link"><i class="mdi mdi-email-outline"></i>Inbox</a>
+            <a href="#" class="nav-link">
+              <i class="mdi mdi-elevation-rise"></i>Reports</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="mdi mdi-calendar"></i>Calendar</a>
+            <a href="#" class="nav-link">
+              <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="mdi mdi-bell-ring"></i>
-              <span class="count">4</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <a class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
-                </p>
-                <span class="badge badge-pill badge-warning float-right">View all</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="icon-info mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">Application Error</h6>
-                  <p class="font-weight-light small-text">
-                    Just now
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="icon-speech mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">Settings</h6>
-                  <p class="font-weight-light small-text">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="icon-envelope mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
-                  <p class="font-weight-light small-text">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <i class="mdi mdi-email-variant"></i>
+              <i class="mdi mdi-file-document-box"></i>
               <span class="count">7</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
@@ -111,7 +66,7 @@
                   <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium">David Grey
+                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">David Grey
                     <span class="float-right font-weight-light small-text">1 Minutes ago</span>
                   </h6>
                   <p class="font-weight-light small-text">
@@ -125,7 +80,7 @@
                   <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
+                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">Tim Cook
                     <span class="float-right font-weight-light small-text">15 Minutes ago</span>
                   </h6>
                   <p class="font-weight-light small-text">
@@ -139,7 +94,7 @@
                   <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
+                  <h6 class="preview-subject ellipsis font-weight-medium text-dark"> Johnson
                     <span class="float-right font-weight-light small-text">18 Minutes ago</span>
                   </h6>
                   <p class="font-weight-light small-text">
@@ -149,10 +104,93 @@
               </a>
             </div>
           </li>
-          <li class="nav-item d-none d-lg-block">
-            <a class="nav-link" href="#">
-              <img class="img-xs rounded-circle" src="../../images/faces/face4.jpg" alt="">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="mdi mdi-bell"></i>
+              <span class="count">4</span>
             </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
+                </p>
+                <span class="badge badge-pill badge-warning float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="mdi mdi-alert-circle-outline mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium text-dark">Application Error</h6>
+                  <p class="font-weight-light small-text">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="mdi mdi-comment-text-outline mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium text-dark">Settings</h6>
+                  <p class="font-weight-light small-text">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="mdi mdi-email-outline mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium text-dark">New user registration</h6>
+                  <p class="font-weight-light small-text">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-none d-xl-inline-block">
+            <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <span class="profile-text">Hello, Richard V.Welsh !</span>
+              <img class="img-xs rounded-circle" src="../../images/faces/face1.jpg" alt="Profile image">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <a class="dropdown-item p-0">
+                <div class="d-flex border-bottom">
+                  <div class="py-3 px-4 d-flex align-items-center justify-content-center">
+                    <i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"></i>
+                  </div>
+                  <div class="py-3 px-4 d-flex align-items-center justify-content-center border-left border-right">
+                    <i class="mdi mdi-account-outline mr-0 text-gray"></i>
+                  </div>
+                  <div class="py-3 px-4 d-flex align-items-center justify-content-center">
+                    <i class="mdi mdi-alarm-check mr-0 text-gray"></i>
+                  </div>
+                </div>
+              </a>
+              <a class="dropdown-item mt-2">
+                Manage Accounts
+              </a>
+              <a class="dropdown-item">
+                Change Password
+              </a>
+              <a class="dropdown-item">
+                Check Inbox
+              </a>
+              <a class="dropdown-item">
+                Sign Out
+              </a>
+            </div>
           </li>
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -167,35 +205,96 @@
         <ul class="nav">
           <li class="nav-item nav-profile">
             <div class="nav-link">
-              <div class="profile-image"> <img src="../../images/faces/face4.jpg" alt="image"/> <span class="online-status online"></span> </div>
-              <div class="profile-name">
-                <p class="name">Richard V.Welsh</p>
-                <p class="designation">Manager</p>
-                <div class="badge badge-teal mx-auto mt-3">Online</div>
+              <div class="user-wrapper">
+                <div class="profile-image">
+                  <img src="../../images/faces/face1.jpg" alt="profile image">
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name">Richard V.Welsh</p>
+                  <div>
+                    <small class="designation text-muted">Manager</small>
+                    <span class="status-indicator online"></span>
+                  </div>
+                </div>
               </div>
+              <button class="btn btn-success btn-block">New Project
+                <i class="mdi mdi-plus"></i>
+              </button>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="../../index.html"><img class="menu-icon" src="../../images/menu_icons/01.png" alt="menu icon"><span class="menu-title">Dashboard</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/widgets.html"><img class="menu-icon" src="../../images/menu_icons/02.png" alt="menu icon"><span class="menu-title">Widgets</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/buttons.html"><img class="menu-icon" src="../../images/menu_icons/03.png" alt="menu icon"><span class="menu-title">Buttons</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/forms/basic_elements.html"><img class="menu-icon" src="../../images/menu_icons/04.png" alt="menu icon"><span class="menu-title">Form</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/charts/chartjs.html"><img class="menu-icon" src="../../images/menu_icons/05.png" alt="menu icon"><span class="menu-title">Charts</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/tables/basic-table.html"><img class="menu-icon" src="../../images/menu_icons/06.png" alt="menu icon"><span class="menu-title">Table</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/icons/font-awesome.html"><img class="menu-icon" src="../../images/menu_icons/07.png" alt="menu icon"> <span class="menu-title">Icons</span></a></li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="../../images/menu_icons/08.png" alt="menu icon"> <span class="menu-title">General Pages</span><i class="menu-arrow"></i></a>
-            <div class="collapse" id="general-pages">
+            <a class="nav-link" href="../../index.html">
+              <i class="menu-icon mdi mdi-television"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="menu-icon mdi mdi-content-copy"></i>
+              <span class="menu-title">Basic UI Elements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/blank-page.html">Blank Page</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html">Login</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html">Register</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html">404</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html">500</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a>
+                </li>
               </ul>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/typography.html"><img class="menu-icon" src="../../images/menu_icons/09.png" alt="menu icon"> <span class="menu-title">Typography</span></a></li>
-          <li class="nav-item purchase-button"><a class="nav-link" href="https://www.bootstrapdash.com/product/star-admin-pro/" target="_blank">Get full version</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/forms/basic_elements.html">
+              <i class="menu-icon mdi mdi-backup-restore"></i>
+              <span class="menu-title">Form elements</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/charts/chartjs.html">
+              <i class="menu-icon mdi mdi-chart-line"></i>
+              <span class="menu-title">Charts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/tables/basic-table.html">
+              <i class="menu-icon mdi mdi-table"></i>
+              <span class="menu-title">Tables</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/icons/font-awesome.html">
+              <i class="menu-icon mdi mdi-sticker"></i>
+              <span class="menu-title">Icons</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="menu-icon mdi mdi-restart"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/samples/blank-page.html"> Blank Page </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/samples/login.html"> Login </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/samples/register.html"> Register </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
       <!-- partial -->
@@ -350,7 +449,9 @@
                       <div class="form-group">
                         <div class="input-group">
                           <div class="input-group-prepend bg-info">
-                            <span class="input-group-text bg-transparent"><i class="mdi mdi-shield-outline text-white"></i></span>
+                            <span class="input-group-text bg-transparent">
+                              <i class="mdi mdi-shield-outline text-white"></i>
+                            </span>
                           </div>
                           <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="colored-addon1">
                         </div>
@@ -358,7 +459,9 @@
                       <div class="form-group">
                         <div class="input-group">
                           <div class="input-group-prepend bg-primary border-primary">
-                            <span class="input-group-text bg-transparent"><i class="mdi mdi mdi-menu text-white"></i></span>
+                            <span class="input-group-text bg-transparent">
+                              <i class="mdi mdi mdi-menu text-white"></i>
+                            </span>
                           </div>
                           <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="colored-addon2">
                         </div>
@@ -367,7 +470,9 @@
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="colored-addon3">
                           <div class="input-group-append bg-primary border-primary">
-                            <span class="input-group-text bg-transparent"><i class="mdi mdi-menu text-white"></i></span>
+                            <span class="input-group-text bg-transparent">
+                              <i class="mdi mdi-menu text-white"></i>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -453,26 +558,22 @@
                         <div class="form-group">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input">
-                              Default
+                              <input type="checkbox" class="form-check-input"> Default
                             </label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input" checked>
-                              Checked
+                              <input type="checkbox" class="form-check-input" checked> Checked
                             </label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input" disabled>
-                              Disabled
+                              <input type="checkbox" class="form-check-input" disabled> Disabled
                             </label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input" disabled checked>
-                              Disabled checked
+                              <input type="checkbox" class="form-check-input" disabled checked> Disabled checked
                             </label>
                           </div>
                         </div>
@@ -481,28 +582,24 @@
                         <div class="form-group">
                           <div class="form-radio">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="" checked>
-                              Option one
+                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="" checked> Option one
                             </label>
                           </div>
                           <div class="form-radio">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                              Option two
+                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"> Option two
                             </label>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="form-radio disabled">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios3" value="option3" disabled>
-                              Option three is disabled
+                              <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios3" value="option3" disabled> Option three is disabled
                             </label>
                           </div>
                           <div class="form-radio disabled">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadio2" id="optionsRadios4" value="option4" disabled checked>
-                              Option four is selected and disabled
+                              <input type="radio" class="form-check-input" name="optionsRadio2" id="optionsRadios4" value="option4" disabled checked> Option four is selected and disabled
                             </label>
                           </div>
                         </div>
@@ -523,26 +620,22 @@
                         <div class="form-group">
                           <div class="form-check form-check-flat">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input">
-                              Default
+                              <input type="checkbox" class="form-check-input"> Default
                             </label>
                           </div>
                           <div class="form-check form-check-flat">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input" checked>
-                              Checked
+                              <input type="checkbox" class="form-check-input" checked> Checked
                             </label>
                           </div>
                           <div class="form-check form-check-flat">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input" disabled>
-                              Disabled
+                              <input type="checkbox" class="form-check-input" disabled> Disabled
                             </label>
                           </div>
                           <div class="form-check form-check-flat">
                             <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input" disabled checked>
-                              Disabled checked
+                              <input type="checkbox" class="form-check-input" disabled checked> Disabled checked
                             </label>
                           </div>
                         </div>
@@ -551,28 +644,24 @@
                         <div class="form-group">
                           <div class="form-radio form-radio-flat">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="flatRadios1" id="flatRadios1" value="" checked>
-                              Option one
+                              <input type="radio" class="form-check-input" name="flatRadios1" id="flatRadios1" value="" checked> Option one
                             </label>
                           </div>
                           <div class="form-radio form-radio-flat">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="flatRadios2" id="flatRadios2" value="option2">
-                              Option two
+                              <input type="radio" class="form-check-input" name="flatRadios2" id="flatRadios2" value="option2"> Option two
                             </label>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="form-radio form-radio-flat disabled">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="flatRadios3" id="flatRadios3" value="option3" disabled>
-                              Option three is disabled
+                              <input type="radio" class="form-check-input" name="flatRadios3" id="flatRadios3" value="option3" disabled> Option three is disabled
                             </label>
                           </div>
                           <div class="form-radio form-radio-flat disabled">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="flatRadios4" id="flatRadios4" value="option4" disabled checked>
-                              Option four is selected and disabled
+                              <input type="radio" class="form-check-input" name="flatRadios4" id="flatRadios4" value="option4" disabled checked> Option four is selected and disabled
                             </label>
                           </div>
                         </div>
@@ -624,7 +713,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Date of Birth</label>
                           <div class="col-sm-9">
-                            <input class="form-control" placeholder="dd/mm/yyyy"/>
+                            <input class="form-control" placeholder="dd/mm/yyyy" />
                           </div>
                         </div>
                       </div>
@@ -649,16 +738,14 @@
                           <div class="col-sm-4">
                             <div class="form-radio">
                               <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
-                                Free
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked> Free
                               </label>
                             </div>
                           </div>
                           <div class="col-sm-5">
                             <div class="form-radio">
                               <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
-                                Professional
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2"> Professional
                               </label>
                             </div>
                           </div>
@@ -737,8 +824,11 @@
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
           <div class="container-fluid clearfix">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+              <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
+              <i class="mdi mdi-heart text-danger"></i>
+            </span>
           </div>
         </footer>
         <!-- partial -->
@@ -749,9 +839,8 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <script src="../../vendors/js/vendor.bundle.addons.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <!-- End plugin js for this page-->

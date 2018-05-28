@@ -1,0 +1,94 @@
+{
+  "_args": [
+    [
+      "mdi@2.1.19",
+      "/var/www/html/star_pro"
+    ]
+  ],
+  "_from": "mdi@2.1.19",
+  "_id": "mdi@2.1.19",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/mdi",
+  "_nodeVersion": "6.11.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/mdi-2.1.19.tgz_1512976805406_0.5178085812367499"
+  },
+  "_npmUser": {
+    "email": "admin@templarian.com",
+    "name": "templarian"
+  },
+  "_npmVersion": "5.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "mdi",
+    "raw": "mdi@2.1.19",
+    "rawSpec": "2.1.19",
+    "scope": null,
+    "spec": "2.1.19",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mdi/-/mdi-2.1.19.tgz",
+  "_shasum": "492bfc0c4fd0c510ebd55301cc76eb03a7a2f34b",
+  "_shrinkwrap": null,
+  "_spec": "mdi@2.1.19",
+  "_where": "/var/www/html/star_pro",
+  "author": {
+    "name": "Austin Andrews",
+    "url": "http://twitter.com/templarian"
+  },
+  "bugs": {
+    "url": "https://github.com/Templarian/MaterialDesign/issues"
+  },
+  "dependencies": {},
+  "deprecated": "The mdi package was renamed to @mdi/font after v2.2.43. Please rename in your package.json for future updates.",
+  "description": "Dist for Material Design Webfont. This includes the Stock and Community icons in a single webfont collection.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-WErwab4jq/jcCeo4aecQ5UH1WXu2Eto5Rdb0AiBFcUw8CHmF/UeV+hf9wKyH17X+c3Z+jaS3jDKW7fu0R0HmWQ==",
+    "shasum": "492bfc0c4fd0c510ebd55301cc76eb03a7a2f34b",
+    "tarball": "https://registry.npmjs.org/mdi/-/mdi-2.1.19.tgz"
+  },
+  "gitHead": "208e40759c9b7293d3d6f6789c11c164f7c15c22",
+  "homepage": "http://materialdesignicons.com",
+  "keywords": [
+    "design",
+    "icons",
+    "material",
+    "webfont"
+  ],
+  "licenses": [
+    {
+      "type": "OFL-1.1",
+      "url": "http://scripts.sil.org/OFL"
+    },
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.html"
+    }
+  ],
+  "main": "preview.html",
+  "maintainers": [
+    {
+      "name": "templarian",
+      "email": "admin@templarian.com"
+    }
+  ],
+  "name": "mdi",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Templarian/MaterialDesign-Webfont.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "css/materialdesignicons.css",
+  "version": "2.1.19"
+}

@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      "tinymce@4.6.4",
+      "/var/www/html/star_pro"
+    ]
+  ],
+  "_from": "tinymce@4.6.4",
+  "_id": "tinymce@4.6.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tinymce",
+  "_nodeVersion": "7.2.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/tinymce-4.6.4.tgz_1497358883831_0.8865360538475215"
+  },
+  "_npmUser": {
+    "email": "is-accounts@ephox.com",
+    "name": "ephox"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "tinymce",
+    "raw": "tinymce@4.6.4",
+    "rawSpec": "4.6.4",
+    "scope": null,
+    "spec": "4.6.4",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tinymce/-/tinymce-4.6.4.tgz",
+  "_shasum": "7415559f266de24bea7e69d59e43e1e61e7d11a4",
+  "_shrinkwrap": null,
+  "_spec": "tinymce@4.6.4",
+  "_where": "/var/www/html/star_pro",
+  "bugs": {
+    "url": "http://www.tinymce.com/develop/bugtracker.php"
+  },
+  "dependencies": {},
+  "description": "Web based JavaScript HTML WYSIWYG editor control.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7415559f266de24bea7e69d59e43e1e61e7d11a4",
+    "tarball": "https://registry.npmjs.org/tinymce/-/tinymce-4.6.4.tgz"
+  },
+  "keywords": [
+    "editor",
+    "html",
+    "javascript",
+    "richtext",
+    "tinymce",
+    "wysiwyg"
+  ],
+  "license": "LGPL-2.1",
+  "main": "tinymce.js",
+  "maintainers": [
+    {
+      "name": "ephox",
+      "email": "is-accounts@ephox.com"
+    },
+    {
+      "name": "spocke",
+      "email": "spocke@moxiecode.com"
+    }
+  ],
+  "name": "tinymce",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "4.6.4"
+}

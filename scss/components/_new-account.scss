@@ -1,0 +1,80 @@
+/* New Account */
+.new-accounts {
+  overflow: hidden;
+  position: relative;
+
+  ul.chats {
+    height: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    overflow-x: hidden;
+
+    li.chat-persons {
+      padding: 15px 0;
+      display: block;
+      border-bottom: $border-property;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .btn {
+        &.btn-xs {
+          padding: 0.2rem 0.75rem;
+        }
+      }
+
+      a {
+        @extend .d-flex;
+        @extend .align-items-center;
+        text-decoration: none;
+
+        span.pro-pic {
+          display: inline-block;
+          padding: 0;
+          width: 20%;
+          max-width: 40px;
+
+          img {
+            max-width: 100%;
+            width: 100%;
+            @include border-radius(100%);
+          }
+        }
+
+        div.user {
+          width: 60%;
+          @extend .d-flex;
+          @extend .flex-column;
+          padding: 5px 10px 0 15px;
+
+          p.u-name {
+            margin: 0;
+            color: $black;
+            @extend %ellipsor;
+          }
+
+          p.u-designation {
+            margin: 0;
+            color: $black;
+            @extend .text-small;
+            @extend %ellipsor;
+          }
+        }
+
+        p.joined-date {
+          text-align: right;
+          margin-left: auto;
+          margin-bottom: 0;
+          @extend .text-small;
+          @extend .text-gray;
+
+          .rtl &{
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}

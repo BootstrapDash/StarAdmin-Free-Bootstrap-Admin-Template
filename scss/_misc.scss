@@ -11,12 +11,16 @@ html {
 *:fullscreen *:-ms-fullscreen {
   overflow: auto !important;
 }
+
 .page-body-wrapper {
   min-height: calc(100vh - #{$navbar-height});
   @include display-flex();
   @include flex-direction(row);
   padding-left: 0;
   padding-right: 0;
+  &:not(.auth-page) {
+    padding-top: $navbar-height;
+  }
   &.full-page-wrapper {
     width: 100%;
     min-height: 100vh;
@@ -48,12 +52,12 @@ html {
 
 .scroll-container {
   position: relative;
-  &.horizontally{
+  &.horizontally {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
   }
-  &.vertically{
+  &.vertically {
     overflow-y: hidden;
     height: 100%;
     max-height: 100%;

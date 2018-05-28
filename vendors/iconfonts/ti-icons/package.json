@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      "ti-icons@^0.1.2",
+      "/var/www/html/star_pro"
+    ]
+  ],
+  "_from": "ti-icons@>=0.1.2 <0.2.0",
+  "_id": "ti-icons@0.1.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ti-icons",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ti-icons-0.1.2.tgz_1482994361970_0.1251560573000461"
+  },
+  "_npmUser": {
+    "email": "xuan.0211@gmail.com",
+    "name": "xuan.0211"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ti-icons",
+    "raw": "ti-icons@^0.1.2",
+    "rawSpec": "^0.1.2",
+    "scope": null,
+    "spec": ">=0.1.2 <0.2.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ti-icons/-/ti-icons-0.1.2.tgz",
+  "_shasum": "8bd9b96d2fabd1ffe1efc7534d3dd3b989651f93",
+  "_shrinkwrap": null,
+  "_spec": "ti-icons@^0.1.2",
+  "_where": "/var/www/html/star_pro",
+  "author": {
+    "name": "themify.me"
+  },
+  "bugs": {
+    "url": "https://github.com/lykmapipo/themify-icons/issues"
+  },
+  "dependencies": {},
+  "description": "Pixel-perfect, hand-crafted icons that draw inspiration from Apple iOS 7",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8bd9b96d2fabd1ffe1efc7534d3dd3b989651f93",
+    "tarball": "https://registry.npmjs.org/ti-icons/-/ti-icons-0.1.2.tgz"
+  },
+  "gitHead": "ad5ed84802fea2b865ce07220435a3a16b266837",
+  "homepage": "https://github.com/lykmapipo/themify-icons#readme",
+  "keywords": [
+    "draw",
+    "iOS",
+    "icons",
+    "line",
+    "perfect",
+    "pixel"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "xuan.0211",
+      "email": "xuan.0211@gmail.com"
+    }
+  ],
+  "name": "ti-icons",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lykmapipo/themify-icons.git"
+  },
+  "scripts": {},
+  "version": "0.1.2"
+}

@@ -1,6 +1,4 @@
 /* Tables */
-
-
 .table {
   margin-bottom: 0;
 
@@ -8,7 +6,7 @@
     th {
       border-top: 0;
       border-bottom-width: 1px;
-      font-family: $type-1;
+      font-family: $type-2;
       font-weight: 500;
 
       i {
@@ -22,13 +20,21 @@
     vertical-align: middle;
     font-size: $default-font-size;
     line-height: 1;
+    white-space: nowrap;
 
     img {
-      max-width: 100%;
+      @extend .img-xs;
+      border-radius: 100%;
     }
 
     .badge {
       margin-bottom: 0;
+    }
+
+    .form-check,
+    .form-radio {
+      margin-top: 0;
+      margin-bottom: -0px;
     }
   }
 
@@ -39,6 +45,25 @@
     th,
     tr {
       border: none;
+    }
+  }
+
+  &.table-bordered {
+    thead {
+      border: 1px solid $border-color;
+      border-bottom: none;
+      tr {
+        th {
+          border-left: none;
+          border-right: none;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {}
+      }
     }
   }
 }

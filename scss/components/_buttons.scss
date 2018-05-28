@@ -28,6 +28,19 @@
     @include border-radius(50px);
   }
 
+  &.btn-icons {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+
+    i {
+      margin: auto;
+      line-height: initial;
+    }
+  }
+
   &.btn-fw {
     min-width: $button-fixed-width;
   }
@@ -62,18 +75,15 @@
 
   &.btn-danger,
   &.btn-info,
+  &.btn-success,
   &.btn-teal,
   &.btn-warning {
     color: $white;
   }
 
-  &.btn-light {
-    color: $black;
-    border-color: lighten($black, 85%);
-  }
-
   &.btn-outline-light {
-    @include button-outline-variant(theme-color(light), color(white));
+    border-color: darken(theme-color(light),15%);
+    color: darken(theme-color(light),15%);
   }
 
   &.btn-outline-secondary {
@@ -161,9 +171,21 @@
     @include social-button(social-color($color));
   }
 }
+/*social buttons*/
+@each $color, $value in $social-colors {
+  .btn-social-outline-#{$color} {
+    @include btn-social-outline-variant(social-color($color));
+  }
+}
 /* inverse buttons */
 @each $color, $value in $theme-colors {
   .btn-inverse-#{$color} {
     @include button-inverse-variant($value);
+  }
+}
+/* Inverse Outlined Buttons */
+@each $color, $value in $theme-colors {
+  .btn-inverse-outline-#{$color} {
+    @include button-inverse-outline-variant($value);
   }
 }

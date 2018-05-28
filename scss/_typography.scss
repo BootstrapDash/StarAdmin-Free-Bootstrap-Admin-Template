@@ -1,10 +1,9 @@
 /* Typography */
 
-
+:root,
 body {
   font-size: 1rem;
   font-family: $type-1;
-  font-weight: initial;
 }
 
 .h1,
@@ -20,6 +19,7 @@ h4,
 h5,
 h6 {
   font-family: $type-1;
+  font-weight: 500;
 }
 
 p {
@@ -57,7 +57,7 @@ h6 {
 }
 
 p {
-  font-size: 0.88rem;
+  font-size: $default-font-size;
 }
 
 .display-1 {
@@ -105,8 +105,10 @@ address {
     margin-bottom: 0;
   }
 }
+
 //blockqoute color variations
-@each $color, $value in $theme-colors {
+@each $color,
+$value in $theme-colors {
   .blockquote-#{$color} {
     @include blockquote($value);
   }
@@ -118,10 +120,12 @@ address {
 }
 
 .card-title {
-  color: color(black);
-  margin-bottom: 1.125rem;
+  font-family: $type-2;
+  font-weight: 500;
+  color: #404852;
+  margin-bottom: 22px;
+  font-size: 14px;
   text-transform: capitalize;
-
   .rtl & {
     text-align: right;
   }
@@ -137,7 +141,6 @@ address {
 .card-description {
   margin-bottom: 0.9375rem;
   font-family: $type-1;
-
   .rtl & {
     text-align: right;
   }
@@ -151,12 +154,13 @@ address {
   font-weight: 500;
 }
 
-.font-weight-bold {
+.font-weight-semibold {
   font-weight: 600;
 }
 
+small,
 .text-small {
-  font-size: $default-font-size;
+  font-size: 12px;
 }
 
 .icon-lg {

@@ -1,6 +1,5 @@
 /* Footer */
 
-
 .footer {
   background: $footer-bg;
   color: $footer-color;
@@ -12,7 +11,6 @@
   border-top: $border-width solid $border-color;
   font-size: calc(#{$default-font-size} - 0.05rem);
   font-family: $type-1;
-
   a {
     color: theme-color(success);
     font-size: inherit;

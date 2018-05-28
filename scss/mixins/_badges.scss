@@ -3,8 +3,14 @@
   border: 1px solid $color;
   color: $white;
 }
+
 // Badge outlined variations
 @mixin badge-outline-variations($color) {
   color: $color;
   border: 1px solid $color;
+}
+
+@mixin badge-inverse-variations($color) {
+  background: rgba($color, 0.3);
+  color: $color;
 }
