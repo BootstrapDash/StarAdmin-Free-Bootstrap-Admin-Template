@@ -1,0 +1,16 @@
+/* Layouts */
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../shared/variables";
+@import "./variables";
+@import "../shared/mixins/misc";
+@import "../shared/mixins/animation";
+@import "./nav";
+@import "./navbar";
+@import "./sidebar";
+@import "./footer";
+@import "./layouts";
+@import "./card";
+@import "./misc";
+@import "./dashboard";

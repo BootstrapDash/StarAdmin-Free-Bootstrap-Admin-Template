@@ -1,0 +1,177 @@
+/* Demo Styles */
+// Add spacing to Boostrap components for demo purpose
+.template-demo {
+  >.btn {
+    @extend .mt-2;
+    @extend .mr-2;
+  }
+
+  >.btn-toolbar {
+    @extend .mt-2;
+    @extend .mr-2;
+  }
+
+  >.btn-group {
+    @extend .mt-2;
+    @extend .mr-2;
+
+    .btn {
+      margin: 0 !important;
+    }
+  }
+
+  .progress {
+    margin-top: 1.5rem;
+  }
+
+  .circle-progress {
+    @extend .mt-2;
+  }
+
+  >h2,
+  >h3,
+  >h4,
+  >h5,
+  >h6,
+  >h1 {
+    border-top: 1px solid $border-color;
+    padding: 0.5rem 0 0;
+  }
+
+  .ul-slider {
+    &.noUi-horizontal {
+      margin-top: 2rem;
+    }
+
+    &.noUi-vertical {
+      margin-right: 2rem;
+    }
+  }
+
+  .dropdown {
+    display: inline-block;
+    @extend .mr-2;
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    .breadcrumb {
+      margin-bottom: 1.375rem;
+    }
+
+    &:last-child {
+      .breadcrumb {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .editable-form {
+    >.form-group {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  .circle-progress {
+    padding: 15px;
+  }
+
+  .circle-progress-block {
+    @extend .mb-3;
+    @extend .px-2;
+  }
+}
+
+.demo-modal {
+  position: static;
+  display: block;
+
+  .modal-dialog {
+    margin-top: 0 !important;
+
+    &.modal-lg {
+      max-width: 100%;
+    }
+  }
+}
+
+
+.documentation {
+  padding-top: 0;
+  max-width: 100%;
+
+  .content-wrapper {
+    padding-top: 0;
+    min-height: calc(100vh - #{63px});
+  }
+}
+
+.doc-table-contents,
+.doc-header {
+  position: fixed;
+}
+
+.doc-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  z-index: 2;
+  background: $content-bg;
+}
+
+.doc-content {
+  padding-top: 157px;
+}
+
+.doc-table-contents {
+  overflow: auto;
+  max-height: calc(100% - 157px);
+
+  ul {
+    li {
+      margin-top: 10px;
+
+      &:before {
+        font-size: .5rem;
+      }
+    }
+  }
+}
+
+.doc-credits {
+  ul {
+    li {
+      margin-bottom: 10px;
+
+      a {
+        margin-left: .25rem;
+      }
+    }
+  }
+}
+
+.demo_blank_card {
+  &.card-1 {
+    height: 100vh;
+    min-height: 400px;
+  }
+
+  &.card-2 {
+    height: 320px;
+  }
+
+  &.card-3 {
+    height: 500px;
+  }
+}
+
+.loader-demo-box {
+  @extend .border;
+  @extend .border-secondary;
+  @extend .rounded;
+  width: 100%;
+  height: 200px;
+  @extend .d-flex;
+  @extend .align-items-center;
+}

@@ -1,0 +1,20 @@
+.navbar {
+    &.fixed-top {
+        +.page-body-wrapper {
+            padding-top: $navbar-height;
+        }
+    }
+}
+
+// Adjust the spacing from top if the purchase banner exist
+.purchase-banner-active {
+    .navbar {
+        &.fixed-top {
+            top: $purchase-banner-height;
+
+            +.page-body-wrapper {
+                padding-top: calc(#{$navbar-height} + #{$purchase-banner-height});
+            }
+        }
+    }
+}

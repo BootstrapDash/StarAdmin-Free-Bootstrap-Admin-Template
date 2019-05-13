@@ -1,0 +1,190 @@
+/*------------------------------------------------------------------
+ [Master Stylesheet]
+
+  Project:	Star Admin Free 
+  Version:	3.5
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+  ===== Table of Contents =====
+
+  * Bootstrap functions
+  * Template variables
+  * Boostrap Main SCSS
+  * Template mixins
+    + Animation Mixins
+    + Accordion Mixins
+    + Background Mixins
+    + Badges Mixins
+    + BlockQuote Mixins
+    + Buttons Mixins
+    + Breadcrumbs Mixins
+    + Cards Mixins
+    + Color Functions Mixins
+    + Miscellaneous Mixins
+    + No-ui-slider Mixins
+    + Pagination Mixins
+    + Popover Mixins
+    + Tabs Mixins
+    + Tooltip Mixins
+    + Text Mixins
+  * Core Styles
+    + Reset Styles
+    + Fonts
+    + Functions
+    + Typography
+    + Miscellaneous
+    + Layouts
+    + Utilities
+    + Demo styles
+    + Dashboard
+  * Components
+    + Accordions
+    + Badges
+    + Bootstrap Alerts
+    + Boostrap Progress
+    + Buttons
+    + Breadcrumbs
+    + Cards
+    + Checkboxes and Radios
+    + Dropdowns
+    + Forms
+    + Google Maps
+    + Icons
+    + Lists
+    + Loaders
+    + Modals
+    + New Accounts
+    + Pagination
+    + Popovers
+    + Portfolio
+    + Preview
+    + Pricing Table
+    + Tables
+    + Tabs
+    + Tooltips
+    + Timeline
+    + Todo List
+    + Settings Panel
+    + User Profile
+    + Purchase Banner
+  * Email
+    + Mail Sidebar
+    + Mail List Container
+    + Message Content
+  * Plugin Overrides
+    + Ace Editor
+    + Avgrund Popup
+    + Bootstrap Tour
+    + Chartjs
+    + Chartist
+    + CodeMirror
+    + Colcade
+    + Colorpicker
+    + Context Menu
+    + Data Tables
+    + Datepicker
+    + Dropify
+    + Dropzone
+    + Flot chart
+    + Full Calendar
+    + Google Charts
+    + Icheck
+    + Jquery File Upload
+    + Js-grid
+    + Jvectormap
+    + Light Gallery
+    + Listify
+    + No-ui-slider
+    + Owl-carousel
+    + Progressbar-js
+    + Pws-tabs
+    + Quill Editor
+    + Rating
+    + Select2
+    + Summernote Editor
+    + SweetAlert
+    + Switchery
+    + Tags
+    + TinyMCE Editor
+    + Toast
+    + Typeahead
+    + Wysi Editor
+    + X-editable
+    + Wizard
+  * Screens
+    + Auth
+    + Error
+    + Lock Screen
+    + Landing
+    + Profile Page
+    + Invoice
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+
+/* === Import Bootstrap functions and variables === */
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+/*-------------------------------------------------------------------*/
+
+/* === Import template variables === */
+
+@import "variables";
+/*-------------------------------------------------------------------*/
+
+/* === Boostrap Main SCSS === */
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+/*-------------------------------------------------------------------*/
+
+/* === Template mixins === */
+
+@import "mixins/animation";
+@import "mixins/background";
+@import "mixins/blockqoute";
+@import "mixins/buttons";
+@import "mixins/cards";
+@import "mixins/misc";
+@import "mixins/text";
+/*-------------------------------------------------------------------*/
+
+/* === Core Styles === */
+
+@import "reset";
+@import "fonts";
+@import "functions";
+@import "typography";
+@import "misc";
+@import "utilities";
+@import "demo";
+@import "dashboard";
+/*-------------------------------------------------------------------*/
+
+/* === Components === */
+
+@import "components/bootstrap-progress";
+@import "components/buttons";
+@import "components/cards";
+@import "components/checkbox-radio";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/icons";
+@import "components/lists";
+@import "components/preview";
+@import "components/tables";
+@import "components/timeline";
+/*-------------------------------------------------------------------*/
+
+/* === Plugin overrides === */
+
+@import "components/plugin-overrides/chartjs";
+@import "components/purchase-banner";
+/*-------------------------------------------------------------------*/
+
+/* === Landing screens === */
+
+@import "screens/auth";
+@import "screens/error";
+/*-------------------------------------------------------------------*/

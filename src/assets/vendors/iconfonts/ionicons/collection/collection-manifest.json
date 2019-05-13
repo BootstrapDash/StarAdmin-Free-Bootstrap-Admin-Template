@@ -1,0 +1,125 @@
+{
+  "components": [
+    {
+      "tag": "ion-icon",
+      "dependencies": [],
+      "componentClass": "Icon",
+      "componentPath": "icon/icon.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "icon/icon.css"
+          ]
+        }
+      },
+      "assetPaths": [
+        "icon/svg"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "aria-label"
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "flipRtl",
+          "type": "Boolean",
+          "attr": "flip-rtl"
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "attr": "icon",
+          "watch": [
+            "loadIcon"
+          ]
+        },
+        {
+          "name": "ios",
+          "type": "String",
+          "attr": "ios"
+        },
+        {
+          "name": "lazy",
+          "type": "Boolean",
+          "attr": "lazy"
+        },
+        {
+          "name": "md",
+          "type": "String",
+          "attr": "md"
+        },
+        {
+          "name": "mode",
+          "type": "String",
+          "attr": "mode"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name",
+          "watch": [
+            "loadIcon"
+          ]
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src",
+          "watch": [
+            "loadIcon"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "isVisible"
+        },
+        {
+          "name": "svgContent"
+        }
+      ],
+      "context": [
+        {
+          "name": "isServer",
+          "id": "isServer"
+        },
+        {
+          "name": "resourcesUrl",
+          "id": "resourcesUrl"
+        },
+        {
+          "name": "doc",
+          "id": "document"
+        },
+        {
+          "name": "win",
+          "id": "window"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.17.0",
+    "typescriptVersion": "3.2.2"
+  },
+  "bundles": []
+}

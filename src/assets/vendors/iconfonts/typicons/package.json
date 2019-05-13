@@ -1,0 +1,62 @@
+{
+  "_from": "typicons.font",
+  "_id": "typicons.font@2.0.9",
+  "_inBundle": false,
+  "_integrity": "sha1-yqFcPQySIZNWNC2coTit2nk7lUg=",
+  "_location": "/typicons.font",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "typicons.font",
+    "name": "typicons.font",
+    "escapedName": "typicons.font",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/typicons.font/-/typicons.font-2.0.9.tgz",
+  "_shasum": "caa15c3d0c92219356342d9ca138adda793b9548",
+  "_spec": "typicons.font",
+  "_where": "/Applications/XAMPP/xamppfiles/htdocs/Star-Admin/star_pro",
+  "author": {
+    "name": "Stephen Hutchings",
+    "url": "http://www.s-ings.com"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenhutchings/typicons.font/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Typicons are free-to-use vector icons embedded in a webfont for easy use in your user interfaces, whether it be on the web or in a native application.",
+  "files": [
+    "src/font/typicons.css",
+    "src/font/typicons.svg",
+    "src/font/typicons.eot",
+    "src/font/typicons.ttf",
+    "src/font/typicons.woff",
+    "src/svg/"
+  ],
+  "homepage": "http://typicons.com/",
+  "keywords": [
+    "icon",
+    "fonts",
+    "icons",
+    "font-face",
+    "webfont"
+  ],
+  "license": "(CC-BY-SA and SIL)",
+  "main": "src/font/typicons.css",
+  "name": "typicons.font",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenhutchings/typicons.font.git"
+  },
+  "style": "src/font/typicons.css",
+  "version": "2.0.9"
+}

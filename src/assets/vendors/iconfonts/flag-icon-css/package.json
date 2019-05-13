@@ -1,0 +1,62 @@
+{
+  "_from": "flag-icon-css@2.9.0",
+  "_id": "flag-icon-css@2.9.0",
+  "_inBundle": false,
+  "_integrity": "sha512-SeHvGEB43XFPZiJz6lFFRGHfp+Db+s1qGiClW70cZauQVbPM42wImlNUEuXSXs94kPchz7xvoxP0QK1y6FxLfg==",
+  "_location": "/flag-icon-css",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "flag-icon-css@2.9.0",
+    "name": "flag-icon-css",
+    "escapedName": "flag-icon-css",
+    "rawSpec": "2.9.0",
+    "saveSpec": null,
+    "fetchSpec": "2.9.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/flag-icon-css/-/flag-icon-css-2.9.0.tgz",
+  "_shasum": "5793c15244e3c63ae36631478a758a3fc29c86be",
+  "_spec": "flag-icon-css@2.9.0",
+  "_where": "/Applications/XAMPP/xamppfiles/htdocs/Star-Admin/star_pro/3.0",
+  "author": {
+    "name": "Panayiotis Lipiridis",
+    "email": "lipiridis@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lipis/flag-icon-css/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "[![npm version](https://badge.fury.io/js/flag-icon-css.svg)](https://badge.fury.io/js/flag-icon-css) [![Bower version](https://badge.fury.io/bo/flag-icon-css.svg)](https://badge.fury.io/bo/flag-icon-css)",
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-connect": "1.0.2",
+    "grunt-contrib-cssmin": "2.2.1",
+    "grunt-contrib-less": "1.4.1",
+    "grunt-contrib-watch": "1.0.0",
+    "svgo": "1.0.3"
+  },
+  "homepage": "https://github.com/lipis/flag-icon-css#readme",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "name": "flag-icon-css",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lipis/flag-icon-css.git"
+  },
+  "scripts": {
+    "_svgo:min": "svgo",
+    "_svgo:pretty": "svgo --pretty --indent=2 --disable=cleanupIDs",
+    "svgo:min": "npm run _svgo:min -- -f flags/1x1 && npm run _svgo:min -- -f flags/4x3",
+    "svgo:pretty": "npm run _svgo:pretty -- -f flags/1x1 && npm run _svgo:pretty -- -f flags/4x3"
+  },
+  "version": "2.9.0"
+}

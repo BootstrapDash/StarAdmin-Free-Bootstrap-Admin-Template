@@ -1,0 +1,32 @@
+.item-purchase-banner {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: $purchase-banner-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    z-index: 9990;
+    background: $purchase-banner-bg;
+    color: $purchase-banner-color;
+
+    .banner-text {
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: 15px;
+        font-weight: 400;
+        color: $purchase-banner-color;
+    }
+
+    .banner-button {
+        background-image: linear-gradient(109.6deg, rgba(11, 133, 234, 1) 11.2%, rgba(34, 63, 201, 1) 91.1%);
+        border: none;
+        color: $purchase-banner-color;
+    }
+
+    .toggler-close {
+        margin-left: auto;
+        color: $purchase-banner-color;
+    }
+}

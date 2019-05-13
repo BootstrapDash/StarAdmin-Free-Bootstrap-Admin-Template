@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Modern-dashboard-/-leftmenu" transform="translate(-39.000000, -28.000000)">
+            <g id="Group" transform="translate(39.000000, 28.000000)">
+                <g id="Group-2">
+                    <path d="M0,0 L10.5,0 C16.2989899,-1.06525716e-15 21,4.70101013 21,10.5 L21,10.5 C21,16.2989899 16.2989899,21 10.5,21 L0,21 L0,0 Z" id="Rectangle" fill="#00E196"></path>
+                    <g id="Group-10" transform="translate(6.500000, 6.000000) scale(-1, 1) translate(-6.500000, -6.000000) ">
+                        <rect id="Rectangle" fill="#0400AC" transform="translate(3.000000, 3.000000) scale(-1, 1) translate(-3.000000, -3.000000) " x="0" y="0" width="6" height="6"></rect>
+                        <rect id="Rectangle-Copy-58" fill="#0400AC" transform="translate(9.500000, 9.000000) scale(-1, 1) translate(-9.500000, -9.000000) " x="6" y="6" width="7" height="6"></rect>
+                        <rect id="Rectangle-Copy-59" fill="#FF0283" transform="translate(9.500000, 3.000000) scale(-1, 1) translate(-9.500000, -3.000000) " x="6" y="0" width="7" height="6"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

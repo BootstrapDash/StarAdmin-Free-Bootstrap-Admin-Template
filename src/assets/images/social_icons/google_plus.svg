@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="49px" viewBox="0 0 49 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-60.0%" y="-60.0%" width="220.0%" height="220.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cards/Card_10" transform="translate(-26.000000, -81.000000)">
+            <g id="Group" transform="translate(35.000000, 85.000000)">
+                <circle id="Oval-Copy-38" fill="#D8362A" filter="url(#filter-1)" cx="15.5" cy="20.5" r="12.5"></circle>
+                <circle id="Oval-Copy-39" fill="#FF413D" cx="16" cy="16" r="16"></circle>
+                <path d="M22.9999629,15.2221522 L16.4666691,15.2221522 L16.4666691,17.3999407 L20.4526337,17.3999407 C19.8580269,19.293257 18.0895614,20.6666234 15.9999444,20.6666234 C13.4225733,20.6666234 11.3333272,18.5772179 11.3333272,15.9999444 C11.3333272,13.4225596 13.4226474,11.3333024 15.9999444,11.3333024 C17.2978279,11.3333024 18.4717238,11.8632663 19.3176068,12.7184261 L20.8984033,11.0001695 C19.6359024,9.76306789 17.907196,9 15.9999444,9 C12.133999,8.99996291 9,12.1339785 9,15.9999444 C9,19.8659102 12.133999,23 15.9999815,23 C19.3864435,23 22.3513549,20.5950046 23,17.3999777 L23,15.2221893 L22.9999629,15.2221522 L22.9999629,15.2221522 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

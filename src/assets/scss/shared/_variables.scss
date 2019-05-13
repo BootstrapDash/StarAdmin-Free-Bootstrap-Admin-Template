@@ -1,0 +1,260 @@
+////////// COLOR SYSTEM //////////
+$blue: #00aeef;
+$indigo: #6610f2;
+$purple: #ab8ce4;
+$pink: #E91E63;
+$red: #ff0017;
+$orange: #fb9678;
+$yellow: #ffd500;
+$green: #3bd949;
+$teal: #58d8a3;
+$cyan: #57c7d4;
+$black: #000;
+$white: #ffffff;
+$white-smoke: #f4f4f4;
+$ghost-white: #f7fafc;
+$violet: #41478a;
+$darkslategray: #2e383e;
+$dodger-blue: #3498db;
+$blue-teal-gradient: linear-gradient(120deg, #556cdc, #128bfc, #18bef1);
+$blue-teal-gradient-light: linear-gradient(120deg, rgba(0, 228, 208, 0.7), rgba(89, 131, 232, 0.7));
+$theme-colors: (primary: #2196f3, secondary: #dde4eb, success:#19d895, info: #8862e0, warning: #ffaf00, danger: #ff6258, light: #fbfbfb, dark: #252C46);
+$colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, white-smoke: #f3f5f6, gray: $gray-600, gray-light: #8ba2b5, gray-lightest: #f7f7f9, gray-dark: #292b2c);
+////////// COLOR SYSTEM //////////
+////////// SOCIAL COLORS //////////
+$social-colors: (twitter: #4DBFF5, facebook: #648ACA, google: #E55F4B, linkedin: #0177b4, pinterest: #cc2127, youtube: #e52d27, github: #333333, behance: #1769ff, dribbble: #ea4c89, reddit: #ff4500);
+////////// SOCIAL COLORS //////////
+////////// FONTS //////////
+$type-1: 'roboto',
+sans-serif;
+$type-2: $type-1;
+$default-font-size: 0.875rem; //14px
+$text-muted: #858585 !default;
+$text-gray: #4d4c4c !default;
+$body-color: #001737 !default;
+$border-color:#d5dfe6 !default;
+$accent-color: #fff;
+////////// FONT VARIABLES //////////
+////////// BOOTSTRAP BREAKPOINTS //////////
+$grid-breakpoints-xs: 0px;
+$grid-breakpoints-sm: 576px;
+$grid-breakpoints-md: 768px;
+$grid-breakpoints-lg: 992px;
+$grid-breakpoints-xl: 1200px;
+////////// BOOTSTRAP BREAKPOINTS //////////
+
+////////// COLOR VARIABLES //////////
+$content-bg:#F3F3F3 !default;
+////////// COLOR VARIABLES //////////
+
+///////// SETTINGS PANEL ////////
+$settings-panel-width: 300px;
+
+///////// BUTTONS ////////
+$button-fixed-width: 120px;
+$btn-padding-y: 0.4rem;
+$btn-padding-x: 1rem;
+$btn-line-height: 1;
+$btn-padding-y-xs: .5rem;
+$btn-padding-x-xs: .75rem;
+$btn-padding-y-sm: 0.50rem;
+$btn-padding-x-sm: 0.81rem;
+$btn-padding-y-lg: 0.94rem;
+$btn-padding-x-lg: 1.94rem;
+$btn-font-size: .875rem;
+$btn-font-size-xs: .625rem;
+$btn-font-size-sm: .875rem;
+$btn-font-size-lg: .875rem;
+$btn-border-radius: .1875rem;
+$btn-border-radius-xs: .1875rem;
+$btn-border-radius-sm: .1875rem;
+$btn-border-radius-lg: .1875rem;
+$social-btn-padding: 13px;
+$social-btn-icon-size: 1rem;
+///////// BUTTONS ////////
+/////////  FORMS /////////
+$input-bg: lighten($card-bg, 4%) !default;
+$input-border-radius: 2px;
+$input-placeholder-color: #c9c8c8 !default;
+$input-font-size: .75rem;
+$input-padding-y: .56rem;
+$input-padding-x: 1.375rem;
+$input-line-height: 1;
+$input-padding-y-sm: .5rem;
+$input-padding-x-sm: .81rem;
+$input-line-height-sm: 1;
+$input-padding-y-lg: .94rem;
+$input-padding-x-lg: 1.94rem;
+$input-line-height-lg: 1;
+$custom-switch-width: 2.25rem;
+$custom-control-indicator-size:1.25rem;
+$custom-switch-indicator-size: 1rem;
+$custom-switch-indicator-border-radius: 50px;
+$custom-control-indicator-checked-bg:#33ac2e !default;
+$custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default;
+$form-check-label-input-helper-bg: theme-color(light) !default;
+///////// FORMS /////////
+////////  DROPDOWNS ///////
+$dropdown-bg: #fff !default;
+$dropdown-hover-bg:theme-color(light) !default;
+$dropdown-hover-color: $body-color !default;
+$dropdown-divider-bg: $border-color !default;
+$dropdown-link-color: $body-color !default;
+$dropdown-header-color: $body-color !default;
+$dropdown-toggle-arrow-color: #fff !default;
+////////  DROPDOWNS ///////
+//////// TABLES ////////
+$table-hover-bg: #edf2f7 !default;
+$table-color:$body-color !default;
+$table-cell-padding: 12px 15px;
+$table-head-cell-color:$body-color;
+$border-cell-color: $border-color;
+$table-border-color: $border-color !default;
+$table-accent-bg: theme-color(light) !default;
+$table-inverse-bg: #2a2b32 !default;
+$table-inverse-color: color(white) !default;
+$table-striped-order: even !default;
+//////// TABLES ////////
+////////// MEASUREMENT AND PROPERTY VARIABLES //////////
+$boxed-container-width: 1200px;
+$border-property: 1px solid $border-color !default;
+$card-bg: #fff !default;
+$card-spacing-y: 1.875rem;
+$card-padding-y: 1.88rem;
+$card-padding-x: 1.81rem;
+$grid-gutter-width: 25px;
+$action-transition-duration: 0.25s;
+$action-transition-timing-function: ease;
+////////// OTHER VARIABLES //////////
+////////// BREAD CRUMBS VARIABLES //////////
+// default styles
+$breadcrumb-padding-y: 0.56rem;
+$breadcrumb-padding-x: 1.13rem;
+$breadcrumb-item-padding: .5rem;
+$breadcrumb-margin-bottom: 1rem;
+$breadcrumb-font-size: $default-font-size;
+$breadcrumb-bg: transparent;
+$breadcrumb-border-color: $border-color !default;
+$breadcrumb-divider-color: $gray-600 !default;
+$breadcrumb-active-color: $gray-700 !default;
+$breadcrumb-divider: "/";
+$breadcrumb-item-color: $black !default;
+// custom styles
+$breadcrumb-custom-padding-y: 0;
+$breadcrumb-custom-padding-x: 0;
+$breadcrumb-custom-item-padding-y: 0.56rem;
+$breadcrumb-custom-item-padding-x: 10px;
+$breadcrumb-item-bg: #dbe3e6 !default;
+////////// BREAD CRUMBS VARIABLES //////////
+////////// MODALS VARIABLES //////////
+$modal-inner-padding: 15px;
+$modal-dialog-margin: 10px;
+$modal-dialog-margin-y-sm-up: 30px;
+$modal-title-line-height: $line-height-base;
+$modal-content-bg: $content-bg !default;
+$modal-content-box-shadow-xs: 0 3px 9px rgba($black, .5) !default;
+$modal-content-box-shadow-sm-up: 0 5px 15px rgba($black, .5) !default;
+$modal-backdrop-bg: $black !default;
+$modal-backdrop-opacity: .5;
+$modal-header-border-color: $border-color !default;
+$modal-content-border-color: $border-color !default;
+$modal-footer-border-color: $border-color !default;
+$modal-header-border-width: $border-width;
+$modal-content-border-width: $border-width;
+$modal-footer-border-width: $border-width;
+$modal-header-padding-x: 26px;
+$modal-header-padding-y: 25px;
+$modal-body-padding-x: 26px;
+$modal-body-padding-y: 35px;
+$modal-footer-padding-x: 31px;
+$modal-footer-padding-y: 15px;
+$modal-lg: 90%;
+$modal-md: 500px;
+$modal-sm: 300px;
+$modal-transition: transform .4s ease;
+////////// MODALS VARIABLES //////////
+////////// TOOLTIP VARIABLES //////////
+//default styles
+$tooltip-font-size: .75rem;
+$tooltip-padding-y: .4rem;
+$tooltip-padding-x: .75rem;
+$tooltip-border-radius: .375rem;
+$tooltip-bg: theme-color(dark) !default;
+$tooltip-arrow-color: $tooltip-bg !default;
+////////// TOOLTIP VARIABLES //////////
+////////// POPOVER VARIABLES //////////
+//default styles
+$popover-bg: lighten($card-bg, 4%) !default;
+$popover-text-color: $black !default;
+$popover-border-color: $border-color !default;
+$popover-arrow-color: $popover-bg !default;
+$popover-arrow-outer-color: $popover-border-color !default;
+$popover-header-bg: $popover-bg !default;
+////////// POPOVER VARIABLES //////////
+////////// EMAIL VARIABLES //////////
+$email-view-wrapper-bg: $card-bg !default;
+$emal-menu-item-hover-color: rgba(240, 244, 249, 0.8) !default;
+$emal-menu-item-active-bg:rgba(theme-color(primary), 0.3) !default;
+$emal-menu-item-active-color: theme-color(primary) !default;
+////////// EMAIL VARIABLES //////////
+
+$avgrund-popin-bg: #fff !default;
+$avgrund-close-color:#fff !default;
+$progressbar-bg: darken($content-bg, 5%) !default;
+
+$tour-bg: #fff !default;
+$popover-title-bg:theme-color(primary) !default;
+$popover-title-color: #fff !default;
+
+$chartjs-tooltip-box-shadow:0px 0px 15px -5px rgba(0, 0, 0, 0.6) !default;
+
+
+$colcade-grid-bg: rgba(77, 199, 160, 0.2) !default;
+$colcade-grid-bg-item:rgb(77, 199, 160) !default;
+
+$context-menu-item-color:$black !default;
+$context-menu-hover-bg:$black !default;
+$context-menu-hover-color:#fff !default;
+
+$dropify-wrapper-hover-bg:linear-gradient(135deg, #F2F7F8 25%, transparent 25%, transparent 50%, #F2F7F8 50%, #F2F7F8 75%, transparent 75%, transparent) !default;
+$dropify-infos-bg:rgba(255, 255, 255, .9) !default;
+$dropify-infos-inner-filename-color:theme-color(primary) !default;
+$dropify-infos-message:#333 !default;
+$dropify-clear-bg:#fff !default;
+$dropify-clear-color:color(gray) !default;
+
+$jvectormap-container: $white !default;
+
+
+$noUi-base-bg:color(gray-lightest) !default;
+$noUi-connect-bg:theme-color(primary) !default;
+$noUi-origin-bg:theme-color(success) !default;
+
+$select2-selected-item-bg: theme-color(primary) !default;
+
+$inputtag-tab-bg:theme-color(primary) !default;
+$inputtag-tab-color:#fff !default;
+
+$typeahead-bg:#fff !default;
+$tt-query-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075) !default;
+$typeahead-tt-hint-color:color(gray) !default;
+$typeahead-tt-menu:color(white) !default;
+$tt-box-shadow:0 5px 10px rgba(0, 0, 0, .2) !default;
+$tt-suggestion-hover-bg:theme-color(primary) !default;
+$tt-suggestion-hover-color:color(white) !default;
+
+$wysieditor-code-bg:#ddd !default;
+$wysieditor-code-toolbar-bg:color(white) !default;
+$wysieditor-code-toolbar-color:theme-color(primary) !default;
+
+$timeline-badge-border-color:#fff !default;
+$timeline-badge-color: $white !default;
+$timeline-panel-box-shadow:1px 2px 35px 0 rgba(1, 1, 1, 0.1) !default;
+
+$bullet-line-list-shape-bg: color(white) !default;
+$alert-event-bg: rgba(theme-color(primary), 0.2) !default;
+$chat-container-height:950px;
+
+$purchase-banner-height: 55px;
+$purchase-banner-bg:#000;
+$purchase-banner-color: $white;

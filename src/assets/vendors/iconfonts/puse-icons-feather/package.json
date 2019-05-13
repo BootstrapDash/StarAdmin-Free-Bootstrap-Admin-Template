@@ -1,0 +1,69 @@
+{
+  "_from": "puse-icons-feather@1.1.0",
+  "_id": "puse-icons-feather@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-PkrDuzU6f7hnje0GrqBvUKU1k4w=",
+  "_location": "/puse-icons-feather",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "puse-icons-feather@1.1.0",
+    "name": "puse-icons-feather",
+    "escapedName": "puse-icons-feather",
+    "rawSpec": "1.1.0",
+    "saveSpec": null,
+    "fetchSpec": "1.1.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/puse-icons-feather/-/puse-icons-feather-1.1.0.tgz",
+  "_shasum": "3e4ac3bb353a7fb8678ded06aea06f50a535938c",
+  "_spec": "puse-icons-feather@1.1.0",
+  "_where": "/Applications/XAMPP/xamppfiles/htdocs/Star-Admin/star_pro/3.0",
+  "author": {
+    "name": "Cole Bemis",
+    "email": "info@colebemis.com"
+  },
+  "bugs": {
+    "url": "https://github.com/puse/icons-feather/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Mushex Antaranian",
+      "email": "mushex@antaranian.com"
+    }
+  ],
+  "deprecated": false,
+  "description": "A growing collection of beautifully simple icons.",
+  "devDependencies": {
+    "faiton": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "feather.css",
+    "fonts/"
+  ],
+  "homepage": "http://colebemis.com/feather/",
+  "keywords": [
+    "icon",
+    "font",
+    "feather",
+    "puse"
+  ],
+  "name": "puse-icons-feather",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/puse/icons-feather.git"
+  },
+  "scripts": {
+    "build": "make build",
+    "prepublish": "make build-dev"
+  },
+  "style": "feather.css",
+  "version": "1.1.0"
+}

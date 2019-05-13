@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="49px" viewBox="0 0 50 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-60.0%" y="-60.0%" width="220.0%" height="220.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cards/Card_10" transform="translate(-26.000000, -370.000000)">
+            <g id="Group-6" transform="translate(35.000000, 374.000000)">
+                <circle id="Oval-Copy-40" fill="#D8362A" filter="url(#filter-1)" cx="16" cy="20.5" r="12.5"></circle>
+                <circle id="Oval-Copy-41" fill="#D8362A" cx="16" cy="16" r="16"></circle>
+                <path d="M22.8551602,13.159088 C22.8551602,13.159088 23,14.3181863 23,15.4772588 L23,16.5454489 C23,17.6818137 22.8551602,18.840912 22.8551602,18.840912 C22.8551602,18.840912 22.7103477,19.818194 22.3,20.2500013 C21.768957,20.7954502 21.1655078,20.8181837 20.9,20.8409172 C18.9448398,21 16,21 16,21 C16,21 12.3551602,20.9772665 11.2448398,20.8636764 C10.931043,20.795476 10.231043,20.8182094 9.7,20.250027 C9.28967969,19.8182197 9.14483984,18.8409378 9.14483984,18.8409378 C9.14483984,18.8409378 9,17.704573 9,16.5454747 L9,15.4772845 C9,14.3181863 9.14483984,13.159088 9.14483984,13.159088 C9.14483984,13.159088 9.26550781,12.1818318 9.7,11.7499987 C10.231043,11.2045498 10.8344922,11.1818163 11.1,11.1590828 C13.0551602,11.0227335 16,11 16,11 C16,11 18.9448398,11.0227335 20.9,11.1590828 C21.1655078,11.1818163 21.768957,11.1818163 22.3,11.7499987 C22.7103203,12.181806 22.8551602,13.159088 22.8551602,13.159088 Z M14,14 L14,19 L19,16.5576193 L14,14 Z" id="Combined-Shape-Copy-4" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

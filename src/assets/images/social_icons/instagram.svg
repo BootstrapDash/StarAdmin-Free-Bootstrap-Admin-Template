@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="49px" viewBox="0 0 50 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-60.0%" y="-60.0%" width="220.0%" height="220.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#F77F2E" offset="0%"></stop>
+            <stop stop-color="#DF0F94" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cards/Card_10" transform="translate(-26.000000, -298.000000)">
+            <g id="Group-4" transform="translate(35.000000, 302.000000)">
+                <circle id="Oval-Copy-33" fill="#D8362A" filter="url(#filter-1)" cx="16" cy="20.5" r="12.5"></circle>
+                <circle id="Oval" fill="url(#linearGradient-2)" cx="16" cy="16" r="16"></circle>
+                <g id="Group-5" transform="translate(9.000000, 9.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M9.82932451,0 L4.17067549,0 C1.87095533,0 0,1.87095533 0,4.17067549 L0,9.82932451 C0,12.1290447 1.87095533,14 4.17067549,14 L9.82932451,14 C12.1290447,14 14,12.1290447 14,9.82932451 L14,4.17067549 C13.9999746,1.87095533 12.1290193,0 9.82932451,0 Z M12.5916005,9.82932451 C12.5916005,11.3548747 11.3548747,12.5916005 9.82932451,12.5916005 L4.17067549,12.5916005 C2.64512535,12.5916005 1.40839948,11.3548747 1.40839948,9.82932451 L1.40839948,4.17067549 C1.40839948,2.64509994 2.64512535,1.40839948 4.17067549,1.40839948 L9.82932451,1.40839948 C11.3548747,1.40839948 12.5916005,2.64509994 12.5916005,4.17067549 L12.5916005,9.82932451 L12.5916005,9.82932451 Z" id="Shape"></path>
+                    <path d="M7,3 C4.79439646,3 3,4.79440275 3,6.99998597 C3,9.20556918 4.79439646,11 7,11 C9.20560354,11 11,9.20559725 11,6.99998597 C11,4.79437469 9.20560354,3 7,3 Z M7,9.44416611 C5.65012595,9.44416611 4.55585649,8.34989282 4.55585649,7.00001403 C4.55585649,5.65013525 5.65015402,4.55586195 7,4.55586195 C8.34987405,4.55586195 9.44414351,5.65013525 9.44414351,7.00001403 C9.44414351,8.34986475 8.34984598,9.44416611 7,9.44416611 Z" id="Shape"></path>
+                    <circle id="Oval" cx="10" cy="3" r="1"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

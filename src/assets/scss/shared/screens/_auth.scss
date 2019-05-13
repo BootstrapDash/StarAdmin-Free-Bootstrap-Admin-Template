@@ -1,0 +1,112 @@
+/* Auth */
+
+.full-page-wrapper {
+  min-height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.auth {
+  min-height: 100vh;
+
+  &.auth-bg-1 {
+    background: url("../../images/auth/login_1.jpg");
+    background-size: cover;
+  }
+
+  &.register-bg-1 {
+    background: url("../../images/auth/register.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  &.theme-one {
+    .auto-form-wrapper {
+      background: $card-bg;
+      padding: 40px 40px 10px;
+      border-radius: 4px;
+      box-shadow: 0 -25px 37.7px 11.3px rgba(8, 143, 220, 0.07);
+
+      .form-group {
+        .input-group {
+          height: 44px;
+
+          .form-control {
+            border: 1px solid darken($border-color, 5%);
+            border-right: none;
+            border-radius: 6px 0 0 6px;
+            height: 44px;
+            line-height: 4px;
+            display: inline-block;
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+            &:focus {
+              border-right: none;
+              border-color: darken($border-color, 5%);
+            }
+          }
+
+          .input-group-append {
+            border-left: none;
+
+            .input-group-text {
+              border-radius: 0 6px 6px 0;
+              border-left: none;
+              border-color: darken($border-color, 5%);
+              color: #b6b6b6;
+            }
+          }
+        }
+
+        .submit-btn {
+          font-family: $type-1;
+          font-size: 13px;
+          padding: 12px 8px;
+          font-weight: 600;
+        }
+      }
+
+      .g-login {
+        border: 1px solid $border-color;
+        padding: 13px;
+        font-size: 12px;
+        font-weight: 600;
+        background: transparent;
+      }
+    }
+
+    .auth-footer {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin-right: 10px;
+        line-height: 1;
+        padding-right: 10px;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+
+        &:last-child {
+          margin-right: 0;
+          border-right: none;
+        }
+
+        a {
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      @media (max-width: $grid-breakpoints-sm) {
+        justify-content: center;
+      }
+    }
+
+    .footer-text {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}

@@ -1,0 +1,79 @@
+#chartjs-tooltip {
+  background: lighten($card-bg, 4%);
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: $chartjs-tooltip-box-shadow;
+  transition: 0.3s ease;
+
+  table {
+    tr {
+      th {
+        color: $text-muted;
+      }
+
+      td {
+        display: flex;
+        align-items: center;
+        line-height: 1px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+
+        span {
+          width: 7px;
+          height: 7px;
+          display: inline-block;
+          border-radius: 100px;
+          margin-right: 7px;
+          color: $body-color;
+        }
+      }
+    }
+  }
+}
+
+.chartjs-legend {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+
+    li {
+      margin-right: 8%;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      color: $text-muted;
+
+      span {
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        margin-right: 10px;
+        display: inline-block;
+        font-size: $default-font-size;
+      }
+    }
+  }
+
+  .rtl & {
+    ul {
+      padding-right: 0;
+
+      li {
+        margin-right: 0;
+        margin-left: 8%;
+
+        span {
+          margin-right: 0;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

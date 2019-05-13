@@ -1,0 +1,160 @@
+/* Tables */
+
+.table {
+  margin-bottom: 0;
+
+  thead {
+    th {
+      border-top: 0;
+      border-bottom-width: 1px;
+      font-family: $type-2;
+      font-weight: 500;
+      color: $table-head-cell-color;
+      border-bottom-color: $border-color;
+
+      i {
+        margin-left: 0.325rem;
+      }
+    }
+  }
+
+  tbody {
+    td {
+      border-top-color: $border-color;
+    }
+  }
+
+  td,
+  th {
+    vertical-align: middle;
+    font-size: $default-font-size;
+    line-height: 1;
+    white-space: nowrap;
+    height: 35px;
+    padding: $table-cell-padding;
+
+    img {
+      &:not(.thumb-image) {
+        @extend .img-ss;
+        border-radius: 100%;
+      }
+
+      &.thumb-image {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $border-color;
+      }
+    }
+
+    .badge {
+      margin-bottom: 0;
+    }
+
+    .form-check,
+    .form-radio {
+      margin-top: 0;
+      margin-bottom: -0px;
+    }
+  }
+
+  td {
+    color: $table-color;
+
+    .form-check {
+      .form-check-label {
+        input:checked+.input-helper {
+          &:after {
+            line-height: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  &.table-borderless {
+    border: none;
+
+    td,
+    th,
+    tr {
+      border: none;
+    }
+  }
+
+  &.table-bordered {
+    thead {
+      border: 1px solid $border-color;
+      border-bottom: none;
+
+      tr {
+        &:not(.enable-border) {
+          th {
+            border-left: none;
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    td {
+      border-color: $border-color;
+    }
+
+    &.table-edge-border-0 {
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+
+      thead {
+        border-left: none;
+        border-right: none;
+      }
+
+      th,
+      td {
+        &:first-child {
+          border-left: 1px solid transparent;
+        }
+
+        &:last-child {
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  &.table-striped {
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background: $table-accent-bg;
+        }
+
+        &:nth-child(even) {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &.table-stretched {
+
+    thead,
+    tbody {
+      tr {
+
+        th,
+        td {
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            padding-right: 0;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

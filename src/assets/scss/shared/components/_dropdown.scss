@@ -1,0 +1,104 @@
+/* Dropdowns */
+
+.dropdown {
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+
+    &:after {
+      border: none;
+      content: "\F140";
+      font-family: "Material Design Icons";
+      font-size: 20px;
+      color: $dropdown-toggle-arrow-color;
+      text-rendering: auto;
+      line-height: inherit;
+      vertical-align: 0;
+    }
+
+    &.arrow-disabled {
+      border: none;
+      outline: none;
+      box-shadow: none;
+
+      &:focus,
+      &:visited,
+      &:active {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  font-size: $default-font-size;
+  border: 1px solid $border-color;
+
+  @media (max-width: 992px) {
+    position: unset;
+  }
+
+  .dropdown-header {
+    background: $dropdown-bg;
+    color: $body-color;
+
+    * {
+      background: inherit;
+      color: inherit;
+    }
+  }
+
+  a:not([href]):not([tabindex]):hover,
+  a:not([href]):not([tabindex]):focus {
+    &.dropdown-item {
+      background: $dropdown-bg;
+      color: $body-color;
+
+      &:hover {
+        background: $dropdown-hover-bg;
+        color: $dropdown-hover-color;
+      }
+
+      &:active {
+        background: initial;
+      }
+    }
+  }
+
+  .dropdown-item {
+    background: $dropdown-bg;
+    color: $body-color;
+
+    &:hover {
+      background: $dropdown-hover-bg;
+      color: $dropdown-hover-color;
+    }
+
+    &:active {
+      background: initial;
+    }
+  }
+
+  &.dropdown-menu-left {
+    left: 0 !important;
+    right: auto !important;
+
+    @media (max-width: 991px) {
+      right: 0 !important;
+    }
+  }
+
+  &.dropdown-menu-right {
+    left: auto !important;
+    right: 0 !important;
+
+    @media (max-width: 991px) {
+      left: 0 !important;
+    }
+  }
+}

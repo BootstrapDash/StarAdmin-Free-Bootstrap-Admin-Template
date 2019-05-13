@@ -1,0 +1,107 @@
+////////// COLOR VARIABLES //////////
+$body-text-color: $body-color;
+$accent-color: #fff;
+$content-bg:#F3F3F3;
+$footer-bg: #dbdbdb;
+$footer-color: color(dark);
+$border-color: #cdd6dc;
+$footer-height: 60px;
+$card-bg:#dde4eb;
+$card-accent-color: #030aac;
+$card-dropshadow: 0 0 0 0 rgba(90, 113, 208, 0.11),
+0 4px 16px 0 rgba(167, 175, 183, 0.33);
+$iconholder-primary-bg:#2944b5;
+$iconholder-primary-color: #fff;
+$iconholder-primary-border-color:#4e55c5;
+$boxed-layout-bg: lighten(color(gray), 50%);
+////////// COLOR VARIABLES //////////
+
+////////// SIDEBAR ////////
+$sidebar-width-lg: 270px;
+$sidebar-width-mini: 185px;
+$sidebar-width-icon: 70px;
+$sidebar-light-bg: $white;
+$sidebar-box-shadow: 0 0 3px 1px #a7a3a3;
+$sidebar-gradient-color-1:#5768f3;
+$sidebar-gradient-color-2:#1c45ef;
+$sidebar-gradient:linear-gradient(to top, $sidebar-gradient-color-1, $sidebar-gradient-color-2);
+$sidebar-light-menu-color: #fff;
+$sidebar-light-submenu-color: $sidebar-light-menu-color;
+$sidebar-light-category-color: rgba(255, 255, 255, 0.7);
+$sidebar-light-menu-icon-color: $sidebar-light-menu-color;
+$sidebar-light-menu-arrow-color: #bfccda;
+$sidebar-profile-name-color: #fff !default;
+$sidebar-profile-designation-color:#fff !default;
+
+$sidebar-light-menu-active-bg: #fff;
+$sidebar-light-menu-active-color: #fff;
+
+$sidebar-light-menu-hover-bg: darken($sidebar-gradient-color-1, 20%);
+$sidebar-light-menu-hover-color:#fff;
+$sidebar-light-submenu-hover-bg: initial;
+$sidebar-light-submenu-hover-color: #000;
+$sidebar-light-submenu-line-color: darken($sidebar-gradient-color-1, 18%);
+$sidebar-navlink-menu-item-hover-color:darken($sidebar-light-menu-color, 5%);
+$sidebar-nav-item-profile-border-color:1px solid rgba(#fff, 0.11);
+$sidebar-nav-item-profile-bg:rgba(255, 255, 255, 0.1);
+$sidebar-nav-item-profile-color: #fff;
+$sidebar-nav-category-border-color:rgba(255, 255, 255, 0.13);
+$sidebar-nav-item-dot-color:#fff;
+
+
+$sidebar-dark-bg: #252C46;
+$sidebar-dark-menu-color: #9F9EA3;
+$sidebar-dark-menu-active-bg: lighten($sidebar-dark-bg, 5%);
+$sidebar-dark-menu-active-color: $white;
+$sidebar-dark-menu-hover-bg: $sidebar-dark-menu-active-bg;
+$sidebar-dark-menu-hover-color: $sidebar-dark-menu-color;
+$sidebar-dark-submenu-color: $sidebar-dark-menu-color;
+$sidebar-dark-submenu-hover-bg: initial;
+$sidebar-dark-submenu-hover-color: #000;
+$sidebar-dark-category-color: #999999;
+$sidebar-dark-menu-icon-color: #9F9EA3;
+$sidebar-dark-profile-name-color: #404852;
+$sidebar-dark-profile-title-color: #8d9498;
+$sidebar-menu-font-size: 15px;
+$sidebar-icon-size: 16px;
+$sidebar-menu-padding: 15px 30px 15px 55px;
+$sidebar-menu-padding-rtl: 15px 70px 15px 30px;
+$nav-link-height: 52px;
+$sidebar-submenu-padding: 0 0 0 4rem;
+$sidebar-submenu-font-size: $sidebar-menu-font-size;
+$sidebar-submenu-item-padding: .75rem 1rem;
+$sidebar-icon-font-size: .9375rem;
+$sidebar-arrow-font-size: .625rem;
+$sidebar-profile-bg: transparent;
+$sidebar-profile-padding: 0rem 1.625rem 2.25rem 1.188rem;
+$sidebar-mini-menu-padding: .8125rem 1rem .8125rem 1rem;
+$sidebar-icon-only-menu-padding: .5rem 1.625rem .5rem 1.188rem;
+$sidebar-icon-only-submenu-width: 200px;
+$sidebar-icon-only-collapse-shadow: 0 1px 15px 1px rgba(113, 106, 202, .08);
+$rtl-sidebar-submenu-padding: 0 3.45rem 0 0;
+///////// SIDEBAR ////////
+
+///////// NAVBAR ////////
+$navbar-bg: #fff;
+$navbar-height: 63px;
+$navbar-light-color: #202339;
+$navbar-font-size: $sidebar-menu-font-size;
+$navbar-icon-font-size: 1.25rem;
+$navbar-dropdown-toggle-arrow-color:grey;
+$navbar-count-indicator-bg:#FF0017;
+$navbar-dropdown-border-color:rgba(182, 182, 182, 0.1);
+$navbar-dropdown-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.13);
+$navbar-menu-wrapper-color:#001737;
+$navbar-menu-wrapper-box-shadow:0 4px 16px 0 rgba(167, 175, 183, 0.33);
+///////// NAVBAR ////////
+$page-header-toolbar-btn-color: theme-color(primary);
+$fc-button-bg:theme-color(primary);
+$fc-button-color: #fff;
+$fc-state-active-bg:darken(theme-color(primary), 5%);
+$fc-state-active-color:$white;
+$fc-navigation-button-color: theme-color(primary);
+$fc-today-button-bg:theme-color(primary);
+$fc-today-button-color: #fff;
+$fc-event-bg:theme-color(success);
+$fc-event-color:$white;
+$fc-more-cell-color:theme-color(dark);

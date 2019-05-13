@@ -1,0 +1,13 @@
+.card {
+    box-shadow: $card-dropshadow;
+    border: solid 1px $card-bg;
+    border-radius: 0px;
+
+    .card-title {
+        color: $body-text-color;
+    }
+
+    .card-header {
+        background: $accent-color;
+    }
+}

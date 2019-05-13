@@ -1,0 +1,65 @@
+{
+  "tags": [
+    {
+      "label": "ion-icon",
+      "description": "",
+      "attributes": [
+        {
+          "label": "aria-label",
+          "description": "Specifies the label to use for accessibility. Defaults to the icon name.",
+          "required": false
+        },
+        {
+          "label": "color",
+          "description": "The color to use for the background of the item.",
+          "required": false
+        },
+        {
+          "label": "flip-rtl",
+          "description": "Specifies whether the icon should horizontally flip when `dir` is `\"rtl\"`.",
+          "required": false
+        },
+        {
+          "label": "icon",
+          "description": "A combination of both `name` and `src`. If a `src` url is detected\nit will set the `src` property. Otherwise it assumes it's a built-in named\nSVG and set the `name` property.",
+          "required": false
+        },
+        {
+          "label": "ios",
+          "description": "Specifies which icon to use on `ios` mode.",
+          "required": false
+        },
+        {
+          "label": "lazy",
+          "description": "If enabled, ion-icon will be loaded lazily when it's visible in the viewport.\nDefault, `false`.",
+          "required": false
+        },
+        {
+          "label": "md",
+          "description": "Specifies which icon to use on `md` mode.",
+          "required": false
+        },
+        {
+          "label": "mode",
+          "description": "The mode determines which platform styles to use.\nPossible values are: `\"ios\"` or `\"md\"`.",
+          "required": false
+        },
+        {
+          "label": "name",
+          "description": "Specifies which icon to use from the built-in set of icons.",
+          "required": false
+        },
+        {
+          "label": "size",
+          "description": "The size of the icon.\nAvailable options are: `\"small\"` and `\"large\"`.",
+          "required": false
+        },
+        {
+          "label": "src",
+          "description": "Specifies the exact `src` of an SVG file to use.",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
