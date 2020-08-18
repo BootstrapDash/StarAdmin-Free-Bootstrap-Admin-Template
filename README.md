@@ -9,7 +9,7 @@ Although the template has a design like none other, it is easily customizable to
 
 <hr style="margin-bottom: 30px">
 
-[![N|Solid](screenshot.jpg)](http://www.bootstrapdash.com/demo/star-admin-free/jquery/src/demo_1/index.html)
+[![N|Solid](screenshot.jpg)](http://www.bootstrapdash.com/demo/star-admin-free/jquery/src/index.html)
 
 <h1>Credits:</h1>
 
