@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "puse-icons-feather@1.1.0",
+      "/Users/jyothish/Documents/star-free"
+    ]
+  ],
   "_from": "puse-icons-feather@1.1.0",
   "_id": "puse-icons-feather@1.1.0",
   "_inBundle": false,
@@ -19,9 +25,8 @@
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/puse-icons-feather/-/puse-icons-feather-1.1.0.tgz",
-  "_shasum": "3e4ac3bb353a7fb8678ded06aea06f50a535938c",
-  "_spec": "puse-icons-feather@1.1.0",
-  "_where": "/Applications/XAMPP/xamppfiles/htdocs/Star-Admin/star_pro/3.0",
+  "_spec": "1.1.0",
+  "_where": "/Users/jyothish/Documents/star-free",
   "author": {
     "name": "Cole Bemis",
     "email": "info@colebemis.com"
@@ -29,14 +34,12 @@
   "bugs": {
     "url": "https://github.com/puse/icons-feather/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Mushex Antaranian",
       "email": "mushex@antaranian.com"
     }
   ],
-  "deprecated": false,
   "description": "A growing collection of beautifully simple icons.",
   "devDependencies": {
     "faiton": "^1.0.1"

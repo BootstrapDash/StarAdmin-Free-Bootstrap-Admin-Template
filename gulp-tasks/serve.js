@@ -10,30 +10,8 @@ var autoprefixer = require('gulp-autoprefixer');
 // const del = require('del');
 
 
-
-
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function () {
-
-    browserSync.init({
-        port: 3000,
-        server: "./src",
-        ghostMode: false,
-        notify: false
-    });
-
-    gulp.watch('./src/assets/scss/**/*.scss', ['sass']);
-    gulp.watch('./src/assets/**/*.scss').on('change', browserSync.reload);
-    gulp.watch('./src/assets/**/*.html').on('change', browserSync.reload);
-    gulp.watch('./src/assets/**/*.css').on('change', browserSync.reload);
-
-});
-
 gulp.task('sass', function () {
-    // del(['css/*.css', 'css/maps/*.css.map']).then(paths => {
-    //     console.log('Deleted files and folders:\n', paths.join('\n'));
-    // });
-    return gulp.src('./src/assets/scss/**/*.scss')
+    return gulp.src('src/assets/scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber({
             errorHandler: function (err) {
@@ -46,18 +24,38 @@ gulp.task('sass', function () {
         }))
         .pipe(sass())
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./src/assets/css'))
+        .pipe(gulp.dest('src/assets/css'))
         .pipe(browserSync.stream());
 });
+
+// Static Server + watching scss/html files
+gulp.task('serve', gulp.series('sass', function () {
+
+    browserSync.init({
+        port: 3000,
+        server: "src",
+        ghostMode: false,
+        notify: false
+    });
+
+    // gulp.watch('./src/assets/scss/**/*.scss', gulp.series('sass'));
+    // gulp.watch(['./src/assets/js/**/*.js', './**/*.html', './src/assets/css/**/*.css']).on('change', browserSync.reload);
+
+    gulp.watch('src/assets/scss/**/*.scss', gulp.series['sass']);
+    gulp.watch('src/assets/**/*.scss').on('change', browserSync.reload);
+    gulp.watch('src/assets/**/*.html').on('change', browserSync.reload);
+    gulp.watch('src/assets/**/*.css').on('change', browserSync.reload);
+
+}));
 
 
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./src/assets/scss/**/*.scss');
+    gulp.watch('src/assets/scss/**/*.scss');
 });
 
 
@@ -73,6 +71,6 @@ gulp.task('serve:lite', function () {
 
     gulp.watch('**/*.css').on('change', browserSync.reload);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('**/*.js').on('change', browserSync.reload);
 
 });
